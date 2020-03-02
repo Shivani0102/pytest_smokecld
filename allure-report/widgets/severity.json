@@ -1,0 +1,421 @@
+[ {
+  "uid" : "e63269fa355a9df5",
+  "name" : "test_verifyexpander_222476",
+  "time" : {
+    "start" : 1583132670903,
+    "stop" : 1583132677833,
+    "duration" : 6930
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "feebb6d67b88b5e4",
+  "name" : "test_verify_addparamusingcompoperator_222511",
+  "time" : {
+    "start" : 1583132854411,
+    "stop" : 1583132894640,
+    "duration" : 40229
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "795fd96261da7694",
+  "name" : "test_openworkbooktype",
+  "time" : {
+    "start" : 1583132661640,
+    "stop" : 1583132664878,
+    "duration" : 3238
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "84e4514d3cc453d1",
+  "name" : "test_addconditioninfilter",
+  "time" : {
+    "start" : 1583133058806,
+    "stop" : 1583133067154,
+    "duration" : 8348
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "650aa6c9800e2d17",
+  "name" : "test_verify_groupbyfeature_222507",
+  "time" : {
+    "start" : 1583132829327,
+    "stop" : 1583132838405,
+    "duration" : 9078
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8b8de76de81163ac",
+  "name" : "test_verifysavebutton_222481",
+  "time" : {
+    "start" : 1583132698973,
+    "stop" : 1583132731952,
+    "duration" : 32979
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8cdc186977056248",
+  "name" : "test_versionnumber_222470",
+  "time" : {
+    "start" : 1583132641910,
+    "stop" : 1583132641969,
+    "duration" : 59
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ca727b1ffa06511f",
+  "name" : "test_Start_222466",
+  "time" : {
+    "start" : 1583132641507,
+    "stop" : 1583132641507,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ebd64d86b60d245",
+  "name" : "test_openworkbook_222483",
+  "time" : {
+    "start" : 1583132732406,
+    "stop" : 1583132784380,
+    "duration" : 51974
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "212e737a9cec9850",
+  "name" : "test_verifychippopup_222488",
+  "time" : {
+    "start" : 1583132814844,
+    "stop" : 1583132820185,
+    "duration" : 5341
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5261f0af1fe135ea",
+  "name" : "test_graphscreen_222485",
+  "time" : {
+    "start" : 1583132784393,
+    "stop" : 1583132796151,
+    "duration" : 11758
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fb448e5a3c2163cf",
+  "name" : "test_verify_hierarichalgrouping_222508",
+  "time" : {
+    "start" : 1583132838408,
+    "stop" : 1583132854407,
+    "duration" : 15999
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2123922ccfc3b6c4",
+  "name" : "test_verifyoptionchip",
+  "time" : {
+    "start" : 1583132677836,
+    "stop" : 1583132679931,
+    "duration" : 2095
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "48a0705e8529e8f0",
+  "name" : "test_removeworkbook",
+  "time" : {
+    "start" : 1583133184735,
+    "stop" : 1583133184735,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "95cd1842ea06182d",
+  "name" : "test_verify_parameteringallery_222514",
+  "time" : {
+    "start" : 1583132919694,
+    "stop" : 1583132934354,
+    "duration" : 14660
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "21d79d5a55712458",
+  "name" : "test_verify_stringtypeparameter_222538",
+  "time" : {
+    "start" : 1583133073321,
+    "stop" : 1583133084983,
+    "duration" : 11662
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "46a70b8019957976",
+  "name" : "test_closerawdata",
+  "time" : {
+    "start" : 1583133050006,
+    "stop" : 1583133051297,
+    "duration" : 1291
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a166784d6263c2d",
+  "name" : "test_logoverify_222469",
+  "time" : {
+    "start" : 1583132641838,
+    "stop" : 1583132641907,
+    "duration" : 69
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ec1a0f2d3b6b3cfd",
+  "name" : "test_usersaveworkbook_222482",
+  "time" : {
+    "start" : 1583132731968,
+    "stop" : 1583132732402,
+    "duration" : 434
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "52f6876ecbc87f4d",
+  "name" : "test_rawdata",
+  "time" : {
+    "start" : 1583132825962,
+    "stop" : 1583132829324,
+    "duration" : 3362
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4105de4fa95f4173",
+  "name" : "test_verifyshortinfo",
+  "time" : {
+    "start" : 1583132641972,
+    "stop" : 1583132643758,
+    "duration" : 1786
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "117187d166e7992a",
+  "name" : "test_verify_reloadchip_222486",
+  "time" : {
+    "start" : 1583132796155,
+    "stop" : 1583132814840,
+    "duration" : 18685
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6d4e712d11585a62",
+  "name" : "test_filtersavebuttononed",
+  "time" : {
+    "start" : 1583133084987,
+    "stop" : 1583133100116,
+    "duration" : 15129
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dc5047dd02c2cf8d",
+  "name" : "test_maximize_222468",
+  "time" : {
+    "start" : 1583132641559,
+    "stop" : 1583132641835,
+    "duration" : 276
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3696f17c2e1acaf",
+  "name" : "test_verifyfilterwind_222475",
+  "time" : {
+    "start" : 1583132643763,
+    "stop" : 1583132654331,
+    "duration" : 10568
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1584671ae4d43a49",
+  "name" : "test_verify_addmultiplecondition_222540",
+  "time" : {
+    "start" : 1583133100121,
+    "stop" : 1583133148644,
+    "duration" : 48523
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "823fa018c3a2a784",
+  "name" : "test_verifydataimporttemplateselements",
+  "time" : {
+    "start" : 1583132654335,
+    "stop" : 1583132657751,
+    "duration" : 3416
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5f9f64a435a8ac7b",
+  "name" : "test_verifyremoveparameter_222515",
+  "time" : {
+    "start" : 1583132934356,
+    "stop" : 1583132951692,
+    "duration" : 17336
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "14d5f52e75a67262",
+  "name" : "test_verify_draganddropui_222489",
+  "time" : {
+    "start" : 1583132820187,
+    "stop" : 1583132825954,
+    "duration" : 5767
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5925e7329588df26",
+  "name" : "test_filterbuildersetminmax",
+  "time" : {
+    "start" : 1583133067158,
+    "stop" : 1583133073318,
+    "duration" : 6160
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b1648f6dce4e2c65",
+  "name" : "test_verify_logparameter_222523",
+  "time" : {
+    "start" : 1583132951696,
+    "stop" : 1583133014301,
+    "duration" : 62605
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3a609e7d99287e6d",
+  "name" : "test_close_fil",
+  "time" : {
+    "start" : 1583133148652,
+    "stop" : 1583133184731,
+    "duration" : 36079
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cbe240cc5b65e8d2",
+  "name" : "test_verifyremovechip",
+  "time" : {
+    "start" : 1583132679936,
+    "stop" : 1583132698969,
+    "duration" : 19033
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d0c11638e7172b",
+  "name" : "test_filtername",
+  "time" : {
+    "start" : 1583133055690,
+    "stop" : 1583133058801,
+    "duration" : 3111
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b041d9ed3f16cddb",
+  "name" : "test_verify_editnumericvalue_222532",
+  "time" : {
+    "start" : 1583133023547,
+    "stop" : 1583133050002,
+    "duration" : 26455
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dc5189d4dfdd374",
+  "name" : "test_addchip",
+  "time" : {
+    "start" : 1583132664881,
+    "stop" : 1583132670899,
+    "duration" : 6018
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3bbf0f76b1f0026",
+  "name" : "test_clickfilter",
+  "time" : {
+    "start" : 1583133051301,
+    "stop" : 1583133052221,
+    "duration" : 920
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "19ef7e77a4ef2c28",
+  "name" : "test_addchipinfilter",
+  "time" : {
+    "start" : 1583133052224,
+    "stop" : 1583133055678,
+    "duration" : 3454
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aea201cd4e353aa3",
+  "name" : "test_verify_attrinexpressioneditor_222531",
+  "time" : {
+    "start" : 1583133014303,
+    "stop" : 1583133023544,
+    "duration" : 9241
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "77b8f4411cbb6dfa",
+  "name" : "test_verifyworkbooktypeelement",
+  "time" : {
+    "start" : 1583132657755,
+    "stop" : 1583132660752,
+    "duration" : 2997
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d7bdaf3d09eba28f",
+  "name" : "test_workbookexplorer",
+  "time" : {
+    "start" : 1583132660756,
+    "stop" : 1583132661640,
+    "duration" : 884
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "80b8dc3d3436a762",
+  "name" : "test_verify_Cparameteringrid_222513",
+  "time" : {
+    "start" : 1583132894643,
+    "stop" : 1583132919691,
+    "duration" : 25048
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

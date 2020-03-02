@@ -1,0 +1,80 @@
+{
+  "uid" : "117187d166e7992a",
+  "name" : "test_verify_reloadchip_222486",
+  "fullName" : "test_assaycld#test_verify_reloadchip_222486",
+  "historyId" : "8834bdd1d68b7e7e722217a1cf553015",
+  "time" : {
+    "start" : 1583132796155,
+    "stop" : 1583132814840,
+    "duration" : 18685
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "teardown_module",
+    "time" : {
+      "start" : 1583132630110,
+      "stop" : 1583132630110,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "teardown_module::0",
+    "time" : {
+      "start" : 1583133184736,
+      "stop" : 1583133184737,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_assaycld"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-JOUUUT6"
+  }, {
+    "name" : "thread",
+    "value" : "6740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_assaycld"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "117187d166e7992a.json",
+  "parameterValues" : [ ]
+}
