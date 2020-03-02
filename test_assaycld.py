@@ -1091,31 +1091,31 @@ def test_galleryimagesequence():
     verify5 = lp.gallery_image_sequence_assay2()
     assert verify5 == True, "assay2 not found"
 
-#
-# """TestCase T35893"""
-#
-#
-# def test_gallersetting():
-#     # global test
-#     # test = "767"
-#     lp.time_start()
-#     lp.gallery_setting()
-#     visible = lp.visible()
-#     assert visible == True, "visible not found"
-#     show = lp.show_rank()
-#     assert show == True, "show rank not found"
-#     column = lp.column_name()
-#     assert column == True, "column name not found"
-#     footer = lp.column_footer()
-#     assert footer == True, "column footer not found"
-#     height = lp.row_height()
-#     assert height == True, "row height not found"
-#     digit = lp.digits_after_comma()
-#     assert digit == True, "digit after comma not found"
-#     pen = lp.pen_reject_approval()
-#     assert pen == True, "pen reject approval not found"
-#
-#
+
+"""TestCase T35893"""
+
+
+def test_gallersetting():
+    # global test
+    # test = "767"
+    lp.time_start()
+    lp.gallery_setting()
+    visible = lp.visible()
+    assert visible == True, "visible not found"
+    show = lp.show_rank()
+    assert show == True, "show rank not found"
+    column = lp.column_name()
+    assert column == True, "column name not found"
+    footer = lp.column_footer()
+    assert footer == True, "column footer not found"
+    height = lp.row_height()
+    assert height == True, "row height not found"
+    digit = lp.digits_after_comma()
+    assert digit == True, "digit after comma not found"
+    pen = lp.pen_reject_approval()
+    assert pen == True, "pen reject approval not found"
+
+
 # """testcase C222574"""
 #
 #
