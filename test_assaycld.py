@@ -1060,37 +1060,37 @@ def test_closefilt():
     lp.verify_closefilter()
 
 
-# """testcase 753"""
-#
-#
-# def test_opengallery():
-#     # global test
-#     # test = "753"
-#     lp.time_start()
-#     verify = lp.open_gallery()
-#     assert verify == "Gallery"
-#
-#
-# """testcase T35969"""
-#
-#
-# def test_galleryimagesequence():
-#     # global test
-#     # test = "768"
-#     lp.time_start()
-#     verify = lp.gallery_image_sequence_empty()
-#     assert verify == True, "empty not found"
-#     verify1 = lp.gallery_image_sequence_load()
-#     assert verify1 == True, "Load not found"
-#     verify2 = lp.gallery_image_sequence_culture()
-#     assert verify2 == True, "culture not found"
-#     verify3 = lp.gallery_image_sequence_assay()
-#     assert verify3 == True, "Assay not found"
-#     verify4 = lp.gallery_image_sequence_culture2()
-#     assert verify4 == True, "Culture not found"
-#     verify5 = lp.gallery_image_sequence_assay2()
-#     assert verify5 == True, "assay2 not found"
-#
+"""testcase 753"""
+
+
+def test_opengallery():
+    # global test
+    # test = "753"
+    lp.time_start()
+    verify = lp.open_gallery()
+    assert verify == "Gallery"
+
+
+"""testcase T35969"""
+
+
+def test_galleryimagesequence():
+    # global test
+    # test = "768"
+    lp.time_start()
+    verify = lp.gallery_image_sequence_empty()
+    assert verify == True, "empty not found"
+    verify1 = lp.gallery_image_sequence_load()
+    assert verify1 == True, "Load not found"
+    verify2 = lp.gallery_image_sequence_culture()
+    assert verify2 == True, "culture not found"
+    verify3 = lp.gallery_image_sequence_assay()
+    assert verify3 == True, "Assay not found"
+    verify4 = lp.gallery_image_sequence_culture2()
+    assert verify4 == True, "Culture not found"
+    verify5 = lp.gallery_image_sequence_assay2()
+    assert verify5 == True, "assay2 not found"
+
 #
 # """TestCase T35893"""
 #
