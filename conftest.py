@@ -2,6 +2,7 @@ from appium import webdriver
 import subprocess
 import os
 import pytest
+from pathlib import Path
 import time
 from selenium.webdriver import ActionChains
 from testrail import *
@@ -61,6 +62,13 @@ def driver():
             os.remove(appdata + "\Assay Analyzer 2.0\D37712\CustomParameters.dat")
     except:
         print("customparam file not found")
+
+    desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
+    try:
+        if os.path.isfile(desktop + "\Assay Analyzer Version 20191129.2.json"):
+            os.remove(appdata + "\Assay Analyzer Version 20191129.2.json")
+    except:
+        print("json file not found")
     path = os.getcwd() + "/open_tejas.bat"
     subprocess.call(path)
     desired_caps = {}

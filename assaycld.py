@@ -223,7 +223,9 @@ class assaycld():
         time.sleep(2)
         self.driver.find_element_by_accessibility_id(
             "AutomationId_WorkbookExplorer_AdditionalButton_AddChipFolder(s)").click()
+        time.sleep(2)
         self.driver.find_element_by_name("Desktop (pinned)").click()
+        time.sleep(2)
         self.driver.find_element_by_name("D37712").click()
         # driver.find_element_by_accessibility_id("0").click()
         self.driver.find_element_by_accessibility_id("1").click()
@@ -4110,7 +4112,7 @@ class assaycld():
     def verify_Resetsection(self):
         verify = self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_AppLevel_Reset").is_displayed()
-        self.driver.find_element_by_accessibility_id("AutomationId_SettingsWindow_Apply").click()
+        self.driver.find_element_by_accessibility_id("AutomationId_SettingsWindow_Cancel").click()
         return verify
 
     """testcase T42441"""
@@ -4120,6 +4122,26 @@ class assaycld():
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_SettingsMenu_MenuElement_DefaultColumns").click()
         time.sleep(2)
+        self.driver.find_element_by_accessibility_id(
+            "AutomationId_SettingsWindow_WbLevel_DefaultColumnsView_DefaultColumns_Add").click()
+        actionchains = ActionChains(self.driver)
+        self.driver.find_element_by_accessibility_id(
+            "AutomationId_SettingsWindow_WbLevel_DefaultColumnEditorView_ColumnName").click()
+
+        self.driver.find_element_by_accessibility_id(
+            "AutomationId_SettingsWindow_WbLevel_DefaultColumnEditorView_ColumnName").send_keys("demo")
+
+        time.sleep(2)
+        self.driver.find_element_by_accessibility_id(
+            "AutomationId_SettingsWindow_WbLevel_DefaultColumnEditorView_ColumnTypes").click()
+        time.sleep(3)
+        actionchains.send_keys(Keys.ARROW_DOWN).perform()
+        actionchains.send_keys(Keys.RETURN).perform()
+        self.driver.find_element_by_accessibility_id(
+            "AutomationId_SettingsWindow_WbLevel_DefaultColumnEditorView_Alternates_Add").click()
+
+        self.driver.find_element_by_accessibility_id(
+            "AutomationId_SettingsWindow_WbLevel_DefaultColumnEditorView_Apply").click()
         self.driver.find_element_by_name("PenId").click()
         for x in range(0, 18):
             actionchains.send_keys(Keys.ARROW_DOWN).perform()
