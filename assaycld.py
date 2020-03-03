@@ -2881,8 +2881,12 @@ class assaycld():
     """----------------------------------------------------------------------------"""
 
     def deleteworkbook(self):
-        desktop = str(os.path.join(Path.home(), "Desktop\D37712\workbooktest.workbook"))
-        os.remove(desktop)
+        desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
+        try:
+            if os.path.isfile(desktop + "\workbooktest.workbook"):
+                os.remove(desktop + "\workbooktest.workbook")
+        except:
+            print("workbook file not found")
 
     """----------------------------------------------------------------------------"""
     """testcase T42387"""
@@ -3640,7 +3644,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_ScatterPlot_XAxis_Values").click()
         self.driver.find_element_by_name("Empty:Device_Id").click()
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_ScatterPlot_YAxis_Values").click()
-        self.driver.find_element_by_name("Empty:Cell_Type").click()
+        self.driver.find_element_by_name("Empty:Cell_Count").click()
         time.sleep(1)
         # verifymsg=self.driver.find_element_by_name("Both X and Y cannot be string type").is_displayed()
         # return verifymsg

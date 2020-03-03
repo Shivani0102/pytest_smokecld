@@ -99,206 +99,206 @@ def test_logoverify_222469():
     assert response == True, "logo not found"
 
 
-# """testcase C222470"""
-#
-#
-# def test_versionnumber_222470():
-#     global test
-#     test = str(test_case_ids[3])
-#     verify = lp.verify_version_number()
-#     assert verify == True, "version number not found"
-#
-#
-# """testcase T222471"""
-#
-#
-# def test_verifyshortinfo():
-#     global test
-#     test = str(test_case_ids[4])
-#     verify = lp.verify_shortinformation()
-#     assert verify == True, "content not found"
-#
-#
-# """testcase C222475"""
-#
-#
-# def test_verifyfilterwind_222475():
-#     global test
-#     test = str(test_case_ids[5])
-#     verify = lp.verify_filterbuilder()
-#     assert verify == True, "filter builder window not found"
-#
-#
-# """testcase T35914"""
-#
-#
-# def test_verifydataimporttemplateselements():
-#     # global test
-#     # test = "126379"
-#     lp.verify_data_import_templates_element()
-#     cld = lp.verify_data_import_templates_element_cld()
-#     assert cld == True, "cld not found"
-#     add = lp.verify_data_import_templates_element_add()
-#     assert add == True, "add button not found"
-#     edit = lp.verify_data_import_templates_element_edit()
-#     assert edit == True, "edit button not found"
-#     copy = lp.verify_data_import_templates_element_copy()
-#     assert copy == True, "copy button not found"
-#     remove = lp.verify_data_import_templates_element_remove()
-#     assert remove == True, "Remove button not found"
-#     imp = lp.verify_data_import_templates_element_import()
-#     assert imp == True, "import button not found"
-#     export = lp.verify_data_import_templates_element_export()
-#     assert export == True, "export button not found"
-#
-#
-# """testcase T35915"""
-#
-#
-# def test_verifyworkbooktypeelement():
-#     # global test
-#     # test = "126387"
-#     lp.time_start()
-#     lp.verify_workbook_type_element()
-#     custom = lp.verify_workbook_type_element_custom()
-#     assert custom == True, "custom not found"
-#     add = lp.verify_workbook_type_element_add()
-#     assert add == True, "add button not found"
-#     edit = lp.verify_workbook_type_element_edit()
-#     assert edit == True, "edit button not found"
-#     copy = lp.verify_workbook_type_element_copy()
-#     assert copy == True, "copy button not found"
-#     remove = lp.verify_workbook_type_element_remove()
-#     assert remove == True, "remove button not found"
-#
-#
-# """testcase T35885"""
-#
-#
-# def test_workbookexplorer():
-#     # global test
-#     # test = "747"
-#     lp.time_start()
-#     save = lp.workbook_explorer_save()
-#     assert save == True, "save button not found"
-#     openworkbook = lp.workbook_explorer_openworkbook()
-#     assert openworkbook == True, "open workbook button not found"
-#     addchip = lp.workbook_explorer_addchip()
-#     assert addchip == True, "add chip button not found"
-#     addfilter = lp.workbook_explorer_addfilter()
-#     assert addfilter == True, "add filter button not found"
-#     addgraph = lp.workbook_explorer_addgraph()
-#     assert addgraph == True, "add graph button not found"
-#
-#
-# """Testcase T36382"""
-#
-#
-# def test_openworkbooktype():
-#     # global test
-#     # test = "126395"
-#     lp.time_start()
-#     verify = lp.open_workbook_type()
-#     assert verify == True, "CLD workbook not open"
-#
-#
-# """testcase T35886"""
-#
-#
-# def test_addchip():
-#     # global test
-#     # test = "748"
-#     lp.time_start()
-#     chip = lp.add_chip()
-#     assert chip == True, "chip not found"
-#
-#
-# """testcase C222476"""
-#
-#
-# def test_verifyexpander_222476():
-#     global test
-#     test = str(test_case_ids[6])
-#     lp.time_start()
-#     verify = lp.verify_expander()
-#     assert verify == True, "expander not working"
-#
-#
-# """testcase T35887"""
-#
-#
-# def test_verifyoptionchip():
-#     # global test
-#     # test = "749"
-#     lp.time_start()
-#     lp.verify_option_chip()
-#     timeline = lp.verify_timeline()
-#     assert timeline == True, "view in timeline not found"
-#     gallery = lp.verify_gallery()
-#     assert gallery == True, "view in gallery not found"
-#     rawdata = lp.verify_rawdata()
-#     assert rawdata == True, "view in rawdata not found"
-#     remove = lp.verify_remove()
-#     assert remove == True, "remove not found"
-#     reload = lp.verify_reload()
-#     assert reload == True, "reload not found"
-#     folder = lp.verify_containing_folder()
-#     assert folder == True, "containing folder not found"
-#
-#
-# """testcase C222480"""
-#
-#
-# def test_verifyremovechip():
-#     global test
-#     test = str(test_case_ids[7])
-#     lp.time_start()
-#     verify = lp.verify_removechip()
-#     assert verify == False, "chip not removed"
-#
-#
-# """testcase C222481"""
-#
-#
-# def test_verifysavebutton_222481():
-#     global test
-#     test = str(test_case_ids[8])
-#     lp.time_start()
-#     chip = lp.add_chip()
-#     assert chip == True, "chip not found"
-#     verify = lp.verify_saveworkbookbutton()
-#     assert verify == True, "explorer pane not found"
-#
-#
-# """testcase 222482"""
-#
-#
-# def test_usersaveworkbook_222482():
-#     global test
-#     test = str(test_case_ids[9])
-#     lp.time_start()
-#     lp.verify_usersaveworkbook()
-#     # assert verify == True, "workbook not saved"
-#
-#
-# """testcase C222483"""
-#
-#
-# def test_openworkbook_222483():
-#     global test
-#     test = str(test_case_ids[10])
-#     lp.time_start()
-#     lp.verify_changeworkbook()
-#     lp.add_chip()
-#     verify = lp.verify_useropenworkbook()
-#     assert verify == True, "workbook not found"
-#
-#
-# """testcase T42384"""
-#
-# """containinffolder"""
-#
-# """testcase 222485"""
+"""testcase C222470"""
+
+
+def test_versionnumber_222470():
+    global test
+    test = str(test_case_ids[3])
+    verify = lp.verify_version_number()
+    assert verify == True, "version number not found"
+
+
+"""testcase T222471"""
+
+
+def test_verifyshortinfo():
+    global test
+    test = str(test_case_ids[4])
+    verify = lp.verify_shortinformation()
+    assert verify == True, "content not found"
+
+
+"""testcase C222475"""
+
+
+def test_verifyfilterwind_222475():
+    global test
+    test = str(test_case_ids[5])
+    verify = lp.verify_filterbuilder()
+    assert verify == True, "filter builder window not found"
+
+
+"""testcase T35914"""
+
+
+def test_verifydataimporttemplateselements():
+    # global test
+    # test = "126379"
+    lp.verify_data_import_templates_element()
+    cld = lp.verify_data_import_templates_element_cld()
+    assert cld == True, "cld not found"
+    add = lp.verify_data_import_templates_element_add()
+    assert add == True, "add button not found"
+    edit = lp.verify_data_import_templates_element_edit()
+    assert edit == True, "edit button not found"
+    copy = lp.verify_data_import_templates_element_copy()
+    assert copy == True, "copy button not found"
+    remove = lp.verify_data_import_templates_element_remove()
+    assert remove == True, "Remove button not found"
+    imp = lp.verify_data_import_templates_element_import()
+    assert imp == True, "import button not found"
+    export = lp.verify_data_import_templates_element_export()
+    assert export == True, "export button not found"
+
+
+"""testcase T35915"""
+
+
+def test_verifyworkbooktypeelement():
+    # global test
+    # test = "126387"
+    lp.time_start()
+    lp.verify_workbook_type_element()
+    custom = lp.verify_workbook_type_element_custom()
+    assert custom == True, "custom not found"
+    add = lp.verify_workbook_type_element_add()
+    assert add == True, "add button not found"
+    edit = lp.verify_workbook_type_element_edit()
+    assert edit == True, "edit button not found"
+    copy = lp.verify_workbook_type_element_copy()
+    assert copy == True, "copy button not found"
+    remove = lp.verify_workbook_type_element_remove()
+    assert remove == True, "remove button not found"
+
+
+"""testcase T35885"""
+
+
+def test_workbookexplorer():
+    # global test
+    # test = "747"
+    lp.time_start()
+    save = lp.workbook_explorer_save()
+    assert save == True, "save button not found"
+    openworkbook = lp.workbook_explorer_openworkbook()
+    assert openworkbook == True, "open workbook button not found"
+    addchip = lp.workbook_explorer_addchip()
+    assert addchip == True, "add chip button not found"
+    addfilter = lp.workbook_explorer_addfilter()
+    assert addfilter == True, "add filter button not found"
+    addgraph = lp.workbook_explorer_addgraph()
+    assert addgraph == True, "add graph button not found"
+
+
+"""Testcase T36382"""
+
+
+def test_openworkbooktype():
+    # global test
+    # test = "126395"
+    lp.time_start()
+    verify = lp.open_workbook_type()
+    assert verify == True, "CLD workbook not open"
+
+
+"""testcase T35886"""
+
+
+def test_addchip():
+    # global test
+    # test = "748"
+    lp.time_start()
+    chip = lp.add_chip()
+    assert chip == True, "chip not found"
+
+
+"""testcase C222476"""
+
+
+def test_verifyexpander_222476():
+    global test
+    test = str(test_case_ids[6])
+    lp.time_start()
+    verify = lp.verify_expander()
+    assert verify == True, "expander not working"
+
+
+"""testcase T35887"""
+
+
+def test_verifyoptionchip():
+    # global test
+    # test = "749"
+    lp.time_start()
+    lp.verify_option_chip()
+    timeline = lp.verify_timeline()
+    assert timeline == True, "view in timeline not found"
+    gallery = lp.verify_gallery()
+    assert gallery == True, "view in gallery not found"
+    rawdata = lp.verify_rawdata()
+    assert rawdata == True, "view in rawdata not found"
+    remove = lp.verify_remove()
+    assert remove == True, "remove not found"
+    reload = lp.verify_reload()
+    assert reload == True, "reload not found"
+    folder = lp.verify_containing_folder()
+    assert folder == True, "containing folder not found"
+
+
+"""testcase C222480"""
+
+
+def test_verifyremovechip():
+    global test
+    test = str(test_case_ids[7])
+    lp.time_start()
+    verify = lp.verify_removechip()
+    assert verify == False, "chip not removed"
+
+
+"""testcase C222481"""
+
+
+def test_verifysavebutton_222481():
+    global test
+    test = str(test_case_ids[8])
+    lp.time_start()
+    chip = lp.add_chip()
+    assert chip == True, "chip not found"
+    verify = lp.verify_saveworkbookbutton()
+    assert verify == True, "explorer pane not found"
+
+
+"""testcase 222482"""
+
+
+def test_usersaveworkbook_222482():
+    global test
+    test = str(test_case_ids[9])
+    lp.time_start()
+    lp.verify_usersaveworkbook()
+    # assert verify == True, "workbook not saved"
+
+
+"""testcase C222483"""
+
+
+def test_openworkbook_222483():
+    global test
+    test = str(test_case_ids[10])
+    lp.time_start()
+    lp.verify_changeworkbook()
+    lp.add_chip()
+    verify = lp.verify_useropenworkbook()
+    assert verify == True, "workbook not found"
+
+
+"""testcase T42384"""
+
+"""containinffolder"""
+
+"""testcase 222485"""
 
 
 def test_graphscreen_222485():
@@ -1942,539 +1942,539 @@ def test_closesetting():
     lp.close_graph()
 
 
-#
-# """Settings"""
-#
-# """testcase C222666"""
-#
-#
-# def test_verify_colortheme_222666():
-#     global test
-#     test = str(test_case_ids[102])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_colortheme()
-#     assert verify == True, "Dark option not found"
-#     verify1 = lp.verify_primaryoption()
-#     assert verify1 == True, "Light option not found"
-#     verify2 = lp.verify_scndrycolortheme()
-#     assert verify2 == True, "Blue option not found"
-#     verify3 = lp.verify_secondaryoption()
-#     assert verify3 == True, "Orange option not found"
-#
-#
-# """testcase C222668"""
-#
-#
-# def test_verify_exportsettings_222668():
-#     global test
-#     test = str(test_case_ids[103])
-#     lp.time_start()
-#     verify = lp.verify_exportsettings()
-#     assert verify == True, "saveas window not found"
-#     lp.verify_saveexportsetting()
-#     verify1 = lp.verify_exportconfirmation()
-#     assert verify1 == True, "export confirmation message not found"
-#
-#
-# """testcase C222667"""
-#
-#
-# def test_verify_importsettings_222667():
-#     global test
-#     test = str(test_case_ids[104])
-#     lp.time_start()
-#     verify = lp.verify_importsettings()
-#     assert verify == True, "open window not found"
-#     verify = lp.verify_savedfile()
-#     assert verify == True, "file not found"
-#     verify = lp.verify_importconfirmation()
-#     assert verify == True, "confirmation message not found"
-#     lp.verify_applychanges()
-#
-#
-# """testcase C222669"""
-#
-#
-# def test_verify_resetsettings_222669():
-#     global test
-#     test = str(test_case_ids[105])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_resetsettings()
-#     assert verify == True, "confirmation message not found"
-#
-#
-# """testcase C222670"""
-#
-#
-# def test_verify_columncsv_222670():
-#     global test
-#     test = str(test_case_ids[106])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     lp.verify_columncsv()
-#     lp.verify_opensettings()
-#     verify = lp.verify_savedcsvcol()
-#     assert verify == True, "column not saved for csv"
-#
-#
-# """testcase C222671"""
-#
-#
-# def test_verify_thumbnails_222671():
-#     global test
-#     test = str(test_case_ids[107])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_thumbnail()
-#     assert verify == True, "Low thumbnail not found"
-#     verify = lp.verify_thumbnail1()
-#     assert verify == True, "Medium thumbnail not found"
-#     verify = lp.verify_thumbnail2()
-#     assert verify == True, "High thumbnail not found"
-#     verify = lp.verify_thumbnail3()
-#     assert verify == True, "Original thumbnail not found"
-#     lp.verify_opensettings()
-#     verify = lp.verify_changedthumbnail()
-#     assert verify == True, "Pen and Channel area not selected"
-#
-#
-# """testcase C222672"""
-#
-#
-# def test_verify_thumbnailalert_222672():
-#     global test
-#     test = str(test_case_ids[108])
-#     lp.time_start()
-#     verify = lp.verify_thumbnailalert()
-#     assert verify == True, "alert message not found"
-#     lp.verify_default()
-#
-#
-# """testcase C222673"""
-#
-#
-# def test_verify_thumbnaildisplay_222673():
-#     global test
-#     test = str(test_case_ids[109])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_thumbnaildisplay()
-#     assert verify == True, "image type not found"
-#
-#
-# """testcase C222674"""
-#
-#
-# def test_verify_workbookcolumn_222674():
-#     global test
-#     test = str(test_case_ids[110])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_workbookcolumn()
-#     assert verify == True, "default column window not found"
-#     lp.verify_addcolumn()
-#     verify = lp.verify_addedcolumn()
-#     assert verify == True, "added column not found"
-#
-#
-# """testcase C222676"""
-#
-#
-# def test_verify_updatecol_222676():
-#     global test
-#     test = str(test_case_ids[111])
-#     lp.time_start()
-#     lp.verify_updatecol()
-#     verify = lp.verify_editwin()
-#     assert verify == True, "edit window not found"
-#     verify = lp.verify_changedcol()
-#     assert verify == True, "changes not found in default column"
-#
-#
-# """testcase C222677"""
-#
-#
-# def test_verify_reloadpaneoption_222677():
-#     global test
-#     test = str(test_case_ids[112])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_reloadpaneoption()
-#     assert verify == True, "reload pane checkbox not found"
-#     # lp.verify_selectreloadpane()
-#     # assert verify1 == True, "reload pane checkbox is not selected"
-#
-#
-# """testcase C222679"""
-#
-#
-# def test_verify_defaultparam_222679():
-#     global test
-#     test = str(test_case_ids[113])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_defaultparam()
-#     assert verify == True, "CLD chip not found"
-#     verify1 = lp.verify_sectionformulas()
-#     assert verify1 == True, "Formula section not found"
-#     verify2 = lp.verify_doublingtime()
-#     assert verify2 == True, "doublint time section not found"
-#     verify3 = lp.verify_rQP()
-#     assert verify3 == True, "rQP section not found"
-#     lp.open_gallery()
-#     verify4 = lp.verify_section1ingallery()
-#     assert verify4 == True, "doubling time not found in gallery"
-#     verify5 = lp.verify_section2ingallery()
-#     assert verify5 == True, "rQP not found in gallery"
-#     lp.close_gallery()
-#
-#
-# """comment from below"""
-#
-# """testcase C222680"""
-#
-#
-# def test_verify_columnsections_222680():
-#     global test
-#     test = str(test_case_ids[114])
-#     lp.verify_opensettings()
-#     lp.verify_columnsections()
-#     lp.open_gallery()
-#     verify = lp.verify_unselectattrcolumn()
-#     assert verify == False, "cell type column is not unselected"
-#
-#
-# def test_closegall():
-#     lp.close_gallery()
-#
-#
-# """testcase C222681"""
-#
-#
-# def test_verify_defaultThemeviews():
-#     global test
-#     test = str(test_case_ids[115])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_defaultThemeviews()
-#     assert verify == True, "theme option not found"
-#     verify1 = lp.verify_theme1()
-#     assert verify1 == True, "primary color scheme not found"
-#     verify2 = lp.verify_theme2()
-#     assert verify2 == True, "secondary color scheme not found"
-#     verify3 = lp.verify_importsection()
-#     assert verify3 == True, "Import settings button not found"
-#     verify4 = lp.verify_exportsection()
-#     assert verify4 == True, "Export settings button not found"
-#     verify5 = lp.verify_Resetsection()
-#     assert verify5 == True, "Reset settings button not found"
-#
-#
-# """testcase C222682"""
-#
-#
-# def test_verify_alternatename_222682():
-#     global test
-#     test = str(test_case_ids[116])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_alternatename()
-#     assert verify == True, "alternate name not found"
-#     verify1 = lp.verify_renamealternate()
-#     assert verify1 == True, "alert message not found"
-#
-#
-# """testcase C222683"""
-#
-#
-# def test_verify_Targetcols_222683():
-#     global test
-#     test = str(test_case_ids[117])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_Targetcols()
-#     assert verify == True, "Area_Pixels is not selected"
-#     verify1 = lp.verify_targetcol1()
-#     assert verify1 == True, "Median_Brightness is not selected"
-#     verify2 = lp.verify_targetcol2()
-#     assert verify2 == True, "Max_Background_Brightness is not selected"
-#     verify3 = lp.verify_targetcol3()
-#     assert verify3 == True, "Diameter_Microns is not selected"
-#     verify4 = lp.verify_targetcol4()
-#     assert verify4 == True, "CentroidX_Microns is not selected"
-#     verify5 = lp.verify_targetcol5()
-#     assert verify5 == True, "CentroidY_Microns is not selected"
-#
-#
-# """testcase C222684"""
-#
-#
-# def test_verify_Template_222684():
-#     global test
-#     test = str(test_case_ids[118])
-#     lp.time_start()
-#     # lp.verify_opensettings()
-#     verify = lp.verify_Template()
-#     assert verify == True, "cld chip not found in template"
-#     verify1 = lp.verify_templatechip()
-#     assert verify1 == True, "T-cells chip not found in template"
-#     verify2 = lp.verify_addbuttonenable()
-#     assert verify2 == True, "add button is not enabled"
-#     verify3 = lp.verify_importbuttonenable()
-#     assert verify3 == True, "import button is not enabled"
-#     verify4 = lp.verify_editbuttondisable()
-#     assert verify4 == False, "edit button is enabled"
-#     verify5 = lp.verify_copybuttondisable()
-#     assert verify5 == False, "copy button is enabled"
-#     verify6 = lp.verify_removebuttondisable()
-#     assert verify6 == False, "remove button is enabled"
-#     verify7 = lp.verify_exportbuttondisable()
-#     assert verify7 == False, "export button is enabled"
-#     verify8 = lp.verify_removechipdisable()
-#     assert verify8 == False, "remove button is enabled for chip"
-#     # lp.cancel()
-#
-#
-# """testcase C222685"""
-#
-#
-# def test_verify_newdataimport_222685():
-#     global test
-#     test = str(test_case_ids[119])
-#     lp.time_start()
-#     verify = lp.verify_newdataimport()
-#     assert verify == True, "New data template window not found"
-#     verify1 = lp.verify_templatewindow()
-#     assert verify1 == True, "expression editor window not found"
-#     verify2 = lp.verify_editorcsv()
-#     assert verify2 == True, "csv in preview not found"
-#     verify3 = lp.verify_savedtemplate()
-#     assert verify3 == True, "Saved template not found"
-#
-#
-# """testcase C222686"""
-#
-#
-# def test_verify_editsavedtemp_222686():
-#     global test
-#     test = str(test_case_ids[120])
-#     lp.time_start()
-#     verify = lp.verify_editsavedtemp()
-#     assert verify == True, "changes not saved for template"
-#
-#
-# """testcase C222687"""
-#
-#
-# def test_verify_copytemplate_222687():
-#     global test
-#     test = str(test_case_ids[121])
-#     lp.time_start()
-#     verify = lp.verify_copytemplate()
-#     assert verify == True, "edit template window not found"
-#     verify = lp.verify_changecopy()
-#     assert verify == False, "changes not found"
-#     verify = lp.verify_savedcopy()
-#     assert verify == True, "saved test copy not found"
-#
-#
-# """testcase C222688"""
-#
-#
-# def test_verify_removetemp_222688():
-#     global test
-#     test = str(test_case_ids[122])
-#     lp.time_start()
-#     verify = lp.verify_removetemp()
-#     assert verify == True, "test copy template not removed"
-#
-#
-# """testcase C222689"""
-#
-#
-# def test_verify_exporttemplate_222689():
-#     global test
-#     test = str(test_case_ids[123])
-#     lp.time_start()
-#     verify = lp.verify_exporttemplate()
-#     assert verify == True, "save as dialog not found"
-#     verify = lp.verify_exportedtemplate()
-#     assert verify == True, "exported template not found"
-#
-#
-# """testcase C222690"""
-#
-#
-# def test_verify_importtemplate_222690():
-#     global test
-#     test = str(test_case_ids[124])
-#     lp.time_start()
-#     verify = lp.verify_importtemplate()
-#     assert verify == True, "open dialog not found"
-#     verify1 = lp.verify_selecttemplate()
-#     assert verify1 == True, "import file not found"
-#     verify2 = lp.verify_templateinlist()
-#     assert verify2 == True, "imported template not found"
-#
-#
-# """testcase C222691"""
-#
-#
-# def test_createfiltertemp_222691():
-#     global test
-#     test = str(test_case_ids[125])
-#     lp.time_start()
-#     verify = lp.createfiltertemp()
-#     assert verify == True, "filter template creation window not found"
-#     lp.verify_opensettings()
-#     verify1 = lp.verify_savedfiltertemp()
-#     assert verify1 == True, "saved filter template demotemp not found"
-#     verify2 = lp.verify_savedfiltertemp1()
-#     assert verify2 == True, "saved filter template demotemp1 not found"
-#     # lp.verify_resetsettings()
-#
-#
-# """testcase C222693"""
-#
-#
-# def test_verify_workflowtype_222693():
-#     global test
-#     test = str(test_case_ids[126])
-#     lp.time_start()
-#     # lp.verify_opensettings()
-#     verify = lp.verify_workflowtype()  # incomplete
-#     assert verify == True, "workflow window not found"
-#     verify1 = lp.verify_workflowname()
-#     assert verify1 == True, "name label not found"
-#     verify2 = lp.verify_dataimport()
-#     assert verify2 == True, "Data Import not found"
-#     verify3 = lp.verify_filtertemp()
-#     assert verify3 == True, "Filter Templates not found"
-#     verify4 = lp.verify_filterSave()
-#     assert verify4 == True, "save button not found"
-#     verify5 = lp.verify_filterCancel()
-#     assert verify5 == True, "cancel button not found"
-#     verify6 = lp.verify_entername()
-#     assert verify6 == False, "demo is pre-selected"
-#     verify8 = lp.verify_checkfiltertemp()
-#     assert verify8 == False, "demo is pre-selected"
-#     verify9 = lp.verify_saveworkflow()
-#     assert verify9 == True, "saved workflow not found"
-#     lp.verify_opensettings()
-#     verify10 = lp.verify_savedbook()
-#     assert verify10 == True, "changes to setting not found"
-#
-#
-# """testcase C222694"""
-#
-#
-# def test_verify_editworbook_222694():
-#     global test
-#     test = str(test_case_ids[127])
-#     lp.time_start()
-#     verify = lp.verify_editworbook()
-#     assert verify == True, "edited workbook not found"
-#     lp.verify_opensettings()
-#
-#
-# """testcase C222695"""
-#
-#
-# def test_verify_copyworkbook_222695():
-#     global test
-#     test = str(test_case_ids[128])
-#     lp.time_start()
-#     verify = lp.verify_copyworkbook()
-#     assert verify == True, "workbook copy not found"
-#     lp.verify_opensettings()
-#
-#
-# """testcase C222696"""
-#
-#
-# def test_verify_removeworkbook_222696():
-#     global test
-#     test = str(test_case_ids[129])
-#     lp.time_start()
-#     lp.verify_removeworkbook()
-#     lp.verify_opensettings()
-#     verify = lp.verify_removedworkbook()
-#     assert verify == False, "demoflowedit - Copy workbook not removed"
-#     lp.verify_applysetting()
-#     lp.verify_opensettings()
-#
-#
-# """testcase C222697"""
-#
-#
-# def test_verify_selectedtemplate_222697():
-#     global test
-#     test = str(test_case_ids[130])
-#     lp.time_start()
-#     verify = lp.verify_selectedtemplate()
-#     assert verify == True, "selected data template not found"
-#     verify = lp.verify_Formula1()
-#     assert verify == True, "selected formula1 not found"
-#     verify = lp.verify_Formula2()
-#     assert verify == True, "selected formula2 not found"
-#
-#
-# """testcase C222698"""
-#
-#
-# def test_verify_editbackbutton_222698():
-#     global test
-#     test = str(test_case_ids[131])
-#     lp.time_start()
-#     lp.verify_opensettings()
-#     verify = lp.verify_editbackbutton()
-#     assert verify == True, "backbutton not found"
-#     verify1 = lp.verify_unchangedworkbook()
-#     assert verify1 == True, "unchanged demoflowedit workbook not found"
-#
-#
-# """testcase C222699"""
-#
-#
-# def test_verify_wrkbookinfile_222699():
-#     global test
-#     test = str(test_case_ids[132])
-#     lp.time_start()
-#     verify = lp.verify_wrkbookinfile()
-#     assert verify == True, "workbooktype not found in file > new workbook"
-#
-#
-# """testcase C222700"""
-#
-#
-# def test_verify_templateinwrkbook_222700():
-#     global test
-#     test = str(test_case_ids[133])
-#     lp.time_start()
-#     lp.verify_templateinwrkbook()
-#     lp.verify_opensettings()
-#     verify1 = lp.verify_savedfiltertemp()
-#     assert verify1 == True, "saved filter template demotemp not found"
-#     verify2 = lp.verify_savedfiltertemp1()
-#     assert verify2 == True, "saved filter template demotemp1 not found"
-#
-#
-# """testcase C222703"""
-#
-#
-# def test_verify_filterbuilder_222703():
-#     global test
-#     test = str(test_case_ids[134])
-#     lp.time_start()
-#     lp.verify_Filterbuilder()
-#     lp.verify_opensettings()
-#     verify1 = lp.verify_savedfiltertemp()
-#     assert verify1 == True, "saved filter template demotemp not found"
-#     verify2 = lp.verify_savedfiltertemp1()
-#     assert verify2 == True, "saved filter template demotemp1 not found"
-#     lp.canceltempwindow()
+
+"""Settings"""
+
+"""testcase C222666"""
+
+
+def test_verify_colortheme_222666():
+    global test
+    test = str(test_case_ids[102])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_colortheme()
+    assert verify == True, "Dark option not found"
+    verify1 = lp.verify_primaryoption()
+    assert verify1 == True, "Light option not found"
+    verify2 = lp.verify_scndrycolortheme()
+    assert verify2 == True, "Blue option not found"
+    verify3 = lp.verify_secondaryoption()
+    assert verify3 == True, "Orange option not found"
+
+
+"""testcase C222668"""
+
+
+def test_verify_exportsettings_222668():
+    global test
+    test = str(test_case_ids[103])
+    lp.time_start()
+    verify = lp.verify_exportsettings()
+    assert verify == True, "saveas window not found"
+    lp.verify_saveexportsetting()
+    verify1 = lp.verify_exportconfirmation()
+    assert verify1 == True, "export confirmation message not found"
+
+
+"""testcase C222667"""
+
+
+def test_verify_importsettings_222667():
+    global test
+    test = str(test_case_ids[104])
+    lp.time_start()
+    verify = lp.verify_importsettings()
+    assert verify == True, "open window not found"
+    verify = lp.verify_savedfile()
+    assert verify == True, "file not found"
+    verify = lp.verify_importconfirmation()
+    assert verify == True, "confirmation message not found"
+    lp.verify_applychanges()
+
+
+"""testcase C222669"""
+
+
+def test_verify_resetsettings_222669():
+    global test
+    test = str(test_case_ids[105])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_resetsettings()
+    assert verify == True, "confirmation message not found"
+
+
+"""testcase C222670"""
+
+
+def test_verify_columncsv_222670():
+    global test
+    test = str(test_case_ids[106])
+    lp.time_start()
+    lp.verify_opensettings()
+    lp.verify_columncsv()
+    lp.verify_opensettings()
+    verify = lp.verify_savedcsvcol()
+    assert verify == True, "column not saved for csv"
+
+
+"""testcase C222671"""
+
+
+def test_verify_thumbnails_222671():
+    global test
+    test = str(test_case_ids[107])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_thumbnail()
+    assert verify == True, "Low thumbnail not found"
+    verify = lp.verify_thumbnail1()
+    assert verify == True, "Medium thumbnail not found"
+    verify = lp.verify_thumbnail2()
+    assert verify == True, "High thumbnail not found"
+    verify = lp.verify_thumbnail3()
+    assert verify == True, "Original thumbnail not found"
+    lp.verify_opensettings()
+    verify = lp.verify_changedthumbnail()
+    assert verify == True, "Pen and Channel area not selected"
+
+
+"""testcase C222672"""
+
+
+def test_verify_thumbnailalert_222672():
+    global test
+    test = str(test_case_ids[108])
+    lp.time_start()
+    verify = lp.verify_thumbnailalert()
+    assert verify == True, "alert message not found"
+    lp.verify_default()
+
+
+"""testcase C222673"""
+
+
+def test_verify_thumbnaildisplay_222673():
+    global test
+    test = str(test_case_ids[109])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_thumbnaildisplay()
+    assert verify == True, "image type not found"
+
+
+"""testcase C222674"""
+
+
+def test_verify_workbookcolumn_222674():
+    global test
+    test = str(test_case_ids[110])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_workbookcolumn()
+    assert verify == True, "default column window not found"
+    lp.verify_addcolumn()
+    verify = lp.verify_addedcolumn()
+    assert verify == True, "added column not found"
+
+
+"""testcase C222676"""
+
+
+def test_verify_updatecol_222676():
+    global test
+    test = str(test_case_ids[111])
+    lp.time_start()
+    lp.verify_updatecol()
+    verify = lp.verify_editwin()
+    assert verify == True, "edit window not found"
+    verify = lp.verify_changedcol()
+    assert verify == True, "changes not found in default column"
+
+
+"""testcase C222677"""
+
+
+def test_verify_reloadpaneoption_222677():
+    global test
+    test = str(test_case_ids[112])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_reloadpaneoption()
+    assert verify == True, "reload pane checkbox not found"
+    # lp.verify_selectreloadpane()
+    # assert verify1 == True, "reload pane checkbox is not selected"
+
+
+"""testcase C222679"""
+
+
+def test_verify_defaultparam_222679():
+    global test
+    test = str(test_case_ids[113])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_defaultparam()
+    assert verify == True, "CLD chip not found"
+    verify1 = lp.verify_sectionformulas()
+    assert verify1 == True, "Formula section not found"
+    verify2 = lp.verify_doublingtime()
+    assert verify2 == True, "doublint time section not found"
+    verify3 = lp.verify_rQP()
+    assert verify3 == True, "rQP section not found"
+    lp.open_gallery()
+    verify4 = lp.verify_section1ingallery()
+    assert verify4 == True, "doubling time not found in gallery"
+    verify5 = lp.verify_section2ingallery()
+    assert verify5 == True, "rQP not found in gallery"
+    lp.close_gallery()
+
+
+"""comment from below"""
+
+"""testcase C222680"""
+
+
+def test_verify_columnsections_222680():
+    global test
+    test = str(test_case_ids[114])
+    lp.verify_opensettings()
+    lp.verify_columnsections()
+    lp.open_gallery()
+    verify = lp.verify_unselectattrcolumn()
+    assert verify == False, "cell type column is not unselected"
+
+
+def test_closegall():
+    lp.close_gallery()
+
+
+"""testcase C222681"""
+
+
+def test_verify_defaultThemeviews():
+    global test
+    test = str(test_case_ids[115])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_defaultThemeviews()
+    assert verify == True, "theme option not found"
+    verify1 = lp.verify_theme1()
+    assert verify1 == True, "primary color scheme not found"
+    verify2 = lp.verify_theme2()
+    assert verify2 == True, "secondary color scheme not found"
+    verify3 = lp.verify_importsection()
+    assert verify3 == True, "Import settings button not found"
+    verify4 = lp.verify_exportsection()
+    assert verify4 == True, "Export settings button not found"
+    verify5 = lp.verify_Resetsection()
+    assert verify5 == True, "Reset settings button not found"
+
+
+"""testcase C222682"""
+
+
+def test_verify_alternatename_222682():
+    global test
+    test = str(test_case_ids[116])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_alternatename()
+    assert verify == True, "alternate name not found"
+    verify1 = lp.verify_renamealternate()
+    assert verify1 == True, "alert message not found"
+
+
+"""testcase C222683"""
+
+
+def test_verify_Targetcols_222683():
+    global test
+    test = str(test_case_ids[117])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_Targetcols()
+    assert verify == True, "Area_Pixels is not selected"
+    verify1 = lp.verify_targetcol1()
+    assert verify1 == True, "Median_Brightness is not selected"
+    verify2 = lp.verify_targetcol2()
+    assert verify2 == True, "Max_Background_Brightness is not selected"
+    verify3 = lp.verify_targetcol3()
+    assert verify3 == True, "Diameter_Microns is not selected"
+    verify4 = lp.verify_targetcol4()
+    assert verify4 == True, "CentroidX_Microns is not selected"
+    verify5 = lp.verify_targetcol5()
+    assert verify5 == True, "CentroidY_Microns is not selected"
+
+
+"""testcase C222684"""
+
+
+def test_verify_Template_222684():
+    global test
+    test = str(test_case_ids[118])
+    lp.time_start()
+    # lp.verify_opensettings()
+    verify = lp.verify_Template()
+    assert verify == True, "cld chip not found in template"
+    verify1 = lp.verify_templatechip()
+    assert verify1 == True, "T-cells chip not found in template"
+    verify2 = lp.verify_addbuttonenable()
+    assert verify2 == True, "add button is not enabled"
+    verify3 = lp.verify_importbuttonenable()
+    assert verify3 == True, "import button is not enabled"
+    verify4 = lp.verify_editbuttondisable()
+    assert verify4 == False, "edit button is enabled"
+    verify5 = lp.verify_copybuttondisable()
+    assert verify5 == False, "copy button is enabled"
+    verify6 = lp.verify_removebuttondisable()
+    assert verify6 == False, "remove button is enabled"
+    verify7 = lp.verify_exportbuttondisable()
+    assert verify7 == False, "export button is enabled"
+    verify8 = lp.verify_removechipdisable()
+    assert verify8 == False, "remove button is enabled for chip"
+    # lp.cancel()
+
+
+"""testcase C222685"""
+
+
+def test_verify_newdataimport_222685():
+    global test
+    test = str(test_case_ids[119])
+    lp.time_start()
+    verify = lp.verify_newdataimport()
+    assert verify == True, "New data template window not found"
+    verify1 = lp.verify_templatewindow()
+    assert verify1 == True, "expression editor window not found"
+    verify2 = lp.verify_editorcsv()
+    assert verify2 == True, "csv in preview not found"
+    verify3 = lp.verify_savedtemplate()
+    assert verify3 == True, "Saved template not found"
+
+
+"""testcase C222686"""
+
+
+def test_verify_editsavedtemp_222686():
+    global test
+    test = str(test_case_ids[120])
+    lp.time_start()
+    verify = lp.verify_editsavedtemp()
+    assert verify == True, "changes not saved for template"
+
+
+"""testcase C222687"""
+
+
+def test_verify_copytemplate_222687():
+    global test
+    test = str(test_case_ids[121])
+    lp.time_start()
+    verify = lp.verify_copytemplate()
+    assert verify == True, "edit template window not found"
+    verify = lp.verify_changecopy()
+    assert verify == False, "changes not found"
+    verify = lp.verify_savedcopy()
+    assert verify == True, "saved test copy not found"
+
+
+"""testcase C222688"""
+
+
+def test_verify_removetemp_222688():
+    global test
+    test = str(test_case_ids[122])
+    lp.time_start()
+    verify = lp.verify_removetemp()
+    assert verify == True, "test copy template not removed"
+
+
+"""testcase C222689"""
+
+
+def test_verify_exporttemplate_222689():
+    global test
+    test = str(test_case_ids[123])
+    lp.time_start()
+    verify = lp.verify_exporttemplate()
+    assert verify == True, "save as dialog not found"
+    verify = lp.verify_exportedtemplate()
+    assert verify == True, "exported template not found"
+
+
+"""testcase C222690"""
+
+
+def test_verify_importtemplate_222690():
+    global test
+    test = str(test_case_ids[124])
+    lp.time_start()
+    verify = lp.verify_importtemplate()
+    assert verify == True, "open dialog not found"
+    verify1 = lp.verify_selecttemplate()
+    assert verify1 == True, "import file not found"
+    verify2 = lp.verify_templateinlist()
+    assert verify2 == True, "imported template not found"
+
+
+"""testcase C222691"""
+
+
+def test_createfiltertemp_222691():
+    global test
+    test = str(test_case_ids[125])
+    lp.time_start()
+    verify = lp.createfiltertemp()
+    assert verify == True, "filter template creation window not found"
+    lp.verify_opensettings()
+    verify1 = lp.verify_savedfiltertemp()
+    assert verify1 == True, "saved filter template demotemp not found"
+    verify2 = lp.verify_savedfiltertemp1()
+    assert verify2 == True, "saved filter template demotemp1 not found"
+    # lp.verify_resetsettings()
+
+
+"""testcase C222693"""
+
+
+def test_verify_workflowtype_222693():
+    global test
+    test = str(test_case_ids[126])
+    lp.time_start()
+    # lp.verify_opensettings()
+    verify = lp.verify_workflowtype()  # incomplete
+    assert verify == True, "workflow window not found"
+    verify1 = lp.verify_workflowname()
+    assert verify1 == True, "name label not found"
+    verify2 = lp.verify_dataimport()
+    assert verify2 == True, "Data Import not found"
+    verify3 = lp.verify_filtertemp()
+    assert verify3 == True, "Filter Templates not found"
+    verify4 = lp.verify_filterSave()
+    assert verify4 == True, "save button not found"
+    verify5 = lp.verify_filterCancel()
+    assert verify5 == True, "cancel button not found"
+    verify6 = lp.verify_entername()
+    assert verify6 == False, "demo is pre-selected"
+    verify8 = lp.verify_checkfiltertemp()
+    assert verify8 == False, "demo is pre-selected"
+    verify9 = lp.verify_saveworkflow()
+    assert verify9 == True, "saved workflow not found"
+    lp.verify_opensettings()
+    verify10 = lp.verify_savedbook()
+    assert verify10 == True, "changes to setting not found"
+
+
+"""testcase C222694"""
+
+
+def test_verify_editworbook_222694():
+    global test
+    test = str(test_case_ids[127])
+    lp.time_start()
+    verify = lp.verify_editworbook()
+    assert verify == True, "edited workbook not found"
+    lp.verify_opensettings()
+
+
+"""testcase C222695"""
+
+
+def test_verify_copyworkbook_222695():
+    global test
+    test = str(test_case_ids[128])
+    lp.time_start()
+    verify = lp.verify_copyworkbook()
+    assert verify == True, "workbook copy not found"
+    lp.verify_opensettings()
+
+
+"""testcase C222696"""
+
+
+def test_verify_removeworkbook_222696():
+    global test
+    test = str(test_case_ids[129])
+    lp.time_start()
+    lp.verify_removeworkbook()
+    lp.verify_opensettings()
+    verify = lp.verify_removedworkbook()
+    assert verify == False, "demoflowedit - Copy workbook not removed"
+    lp.verify_applysetting()
+    lp.verify_opensettings()
+
+
+"""testcase C222697"""
+
+
+def test_verify_selectedtemplate_222697():
+    global test
+    test = str(test_case_ids[130])
+    lp.time_start()
+    verify = lp.verify_selectedtemplate()
+    assert verify == True, "selected data template not found"
+    verify = lp.verify_Formula1()
+    assert verify == True, "selected formula1 not found"
+    verify = lp.verify_Formula2()
+    assert verify == True, "selected formula2 not found"
+
+
+"""testcase C222698"""
+
+
+def test_verify_editbackbutton_222698():
+    global test
+    test = str(test_case_ids[131])
+    lp.time_start()
+    lp.verify_opensettings()
+    verify = lp.verify_editbackbutton()
+    assert verify == True, "backbutton not found"
+    verify1 = lp.verify_unchangedworkbook()
+    assert verify1 == True, "unchanged demoflowedit workbook not found"
+
+
+"""testcase C222699"""
+
+
+def test_verify_wrkbookinfile_222699():
+    global test
+    test = str(test_case_ids[132])
+    lp.time_start()
+    verify = lp.verify_wrkbookinfile()
+    assert verify == True, "workbooktype not found in file > new workbook"
+
+
+"""testcase C222700"""
+
+
+def test_verify_templateinwrkbook_222700():
+    global test
+    test = str(test_case_ids[133])
+    lp.time_start()
+    lp.verify_templateinwrkbook()
+    lp.verify_opensettings()
+    verify1 = lp.verify_savedfiltertemp()
+    assert verify1 == True, "saved filter template demotemp not found"
+    verify2 = lp.verify_savedfiltertemp1()
+    assert verify2 == True, "saved filter template demotemp1 not found"
+
+
+"""testcase C222703"""
+
+
+def test_verify_filterbuilder_222703():
+    global test
+    test = str(test_case_ids[134])
+    lp.time_start()
+    lp.verify_Filterbuilder()
+    lp.verify_opensettings()
+    verify1 = lp.verify_savedfiltertemp()
+    assert verify1 == True, "saved filter template demotemp not found"
+    verify2 = lp.verify_savedfiltertemp1()
+    assert verify2 == True, "saved filter template demotemp1 not found"
+    lp.canceltempwindow()
 
 
 """----------------------------------------------------------------------"""
