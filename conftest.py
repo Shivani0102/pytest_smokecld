@@ -69,6 +69,7 @@ def driver():
             os.remove(appdata + "\Assay Analyzer Version 20191129.2.json")
     except:
         print("json file not found")
+
     path = os.getcwd() + "/open_tejas.bat"
     subprocess.call(path)
     desired_caps = {}
