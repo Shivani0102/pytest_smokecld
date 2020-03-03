@@ -66,7 +66,7 @@ def driver():
     desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
     try:
         if os.path.isfile(desktop + "\Assay Analyzer Version 20191129.2.json"):
-            os.remove(appdata + "\Assay Analyzer Version 20191129.2.json")
+            os.remove(desktop + "\Assay Analyzer Version 20191129.2.json")
     except:
         print("json file not found")
 

@@ -227,6 +227,7 @@ class assaycld():
         self.driver.find_element_by_name("Desktop (pinned)").click()
         time.sleep(2)
         self.driver.find_element_by_name("D37712").click()
+        time.sleep(2)
         # driver.find_element_by_accessibility_id("0").click()
         self.driver.find_element_by_accessibility_id("1").click()
         chip = self.driver.find_element_by_name("D37712").is_displayed()
@@ -325,8 +326,16 @@ class assaycld():
         # driver.find_element_by_name("Hide").click()
         return verify
 
-    def close_gallery(self):
+    def close_gallfil(self):
+        actionchains = ActionChains(self.driver)
+        self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
         time.sleep(2)
+        gallery = self.driver.find_element_by_name("Gallery")
+        actionchains.context_click(gallery).perform()
+        time.sleep(2)
+        self.driver.find_element_by_name("Hide").click()
+
+    def close_gallery(self):
         actionchains = ActionChains(self.driver)
         # self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
         gallery = self.driver.find_element_by_accessibility_id("AutomationId_Gallery")
@@ -2789,7 +2798,7 @@ class assaycld():
         time.sleep(5)
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
         try:
-            getcount = self.driver.find_element_by_name("Visible 1687 of 1758 pens").is_displayed()
+            getcount = self.driver.find_element_by_name("Visible 1756 of 1758 pens").is_displayed()
             return getcount
         except:
             b = False
@@ -3510,9 +3519,9 @@ class assaycld():
         return verify
 
     def verify_selecttooltipattr4(self):
-        self.driver.find_element_by_name("Empty:Cell_Type").click()
+        self.driver.find_element_by_name("Empty:Time_Stamp").click()
         time.sleep(3)
-        verify = self.driver.find_element_by_name("Empty:Cell_Type").is_selected()
+        verify = self.driver.find_element_by_name("Empty:Time_Stamp").is_selected()
         return verify
 
     def verify_selecttooltipattr5(self):
@@ -3530,7 +3539,7 @@ class assaycld():
         point[28].click()
         actionchains.move_to_element(point[30]).perform()
         time.sleep(3)
-        verify = self.driver.find_element_by_name("Empty:Cell_Type").is_displayed()
+        verify = self.driver.find_element_by_name("Empty:Time_Stamp").is_displayed()
         return verify
 
     """testcase T42328"""
@@ -3738,7 +3747,7 @@ class assaycld():
     """testcase T42294"""
 
     def verify_opensettings(self):
-        time.sleep(1)
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_MainWindow_NavigationMenu_MenuElement_File").click()
         self.driver.find_element_by_accessibility_id(
             "AutomationId_MainWindow_NavigationMenu_MenuElement_Settings").click()
@@ -4212,10 +4221,14 @@ class assaycld():
         return verify
 
     def verify_targetcol5(self):
-        desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
         verify = self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_ColumnsByCSVTypeView_ColumnsListBySelectedType_ColumnIsSelected_CentroidY_Microns").is_selected()
-        os.remove(desktop + "\Assay Analyzer Version 20191129.json")
+        desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
+        try:
+            if os.path.isfile(desktop + "\Assay Analyzer Version 20191129.2.json"):
+                os.remove(desktop + "\Assay Analyzer Version 20191129.2.json")
+        except:
+            print("json file not found")
         return verify
 
     """Template Builder"""
@@ -4460,6 +4473,7 @@ class assaycld():
 
         if data1 == True:
             self.driver.find_element_by_name("Yes").click()
+
         self.driver.find_element_by_name("OK").click()
         return verify
 
