@@ -1942,7 +1942,6 @@ def test_closesetting():
     lp.close_graph()
 
 
-
 """Settings"""
 
 """testcase C222666"""
