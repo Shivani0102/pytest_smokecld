@@ -328,16 +328,16 @@ class assaycld():
 
     def close_gallfil(self):
         actionchains = ActionChains(self.driver)
+        time.sleep(4)
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
-        time.sleep(2)
-        gallery = self.driver.find_element_by_name("Gallery")
+        gallery = self.driver.find_element_by_accessibility_id("AutomationId_Gallery")
         actionchains.context_click(gallery).perform()
         time.sleep(2)
         self.driver.find_element_by_name("Hide").click()
 
     def close_gallery(self):
         actionchains = ActionChains(self.driver)
-        # self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
+        self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
         gallery = self.driver.find_element_by_accessibility_id("AutomationId_Gallery")
         actionchains.context_click(gallery).perform()
         time.sleep(2)
