@@ -225,7 +225,7 @@ class assaycld():
             "AutomationId_WorkbookExplorer_AdditionalButton_AddChipFolder(s)").click()
         time.sleep(2)
         self.driver.find_element_by_name("Desktop (pinned)").click()
-        time.sleep(2)
+        time.sleep(3)
         self.driver.find_element_by_name("D37712").click()
         time.sleep(2)
         # driver.find_element_by_accessibility_id("0").click()
@@ -1614,6 +1614,7 @@ class assaycld():
     def verify_chipconfirmation(self):
         global actionchains
         actionchains = ActionChains(self.driver)
+        time.sleep(2)
         chip = self.driver.find_element_by_name("D37712")
         actionchains.context_click(chip).perform()
         time.sleep(3)

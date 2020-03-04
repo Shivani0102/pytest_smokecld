@@ -343,138 +343,135 @@ def test_verify_draganddropui_222489():
     assert verify == True, "ui has been changed"
 
 
-# test_verify_selecttooltipattr_222638
-# test_verify_filterredcount_222590
-#
-# """testcase C222490"""
-#
-#
-# def test_opentimeline_222490():
-#     global test
-#     test = str(test_case_ids[15])
-#     lp.time_start()
-#     verify = lp.verify_opentimeline()
-#     assert verify == "Chip Timeline"
-#
-#
-# """testcase C222491"""
-#
-#
-# def test_verify_switchtimeline_222491():
-#     global test
-#     test = str(test_case_ids[16])
-#     lp.time_start()
-#     verify = lp.verify_switchtimeline()
-#     assert verify == True, "chip timeline is not switched"
-#
-#
-# """testcase C222492 and C222495"""
-#
-#
-# def test_chiptimelineimagesequence_222492():
-#     global test
-#     test = str(test_case_ids[17])
-#     lp.time_start()
-#     lp.timeline_image_sequence_expander()
-#     sequence1 = lp.timeline_image_sequence1()
-#     assert sequence1 == True, "image sequence not found"
-#     sequence2 = lp.timeline_image_sequence2()
-#     assert sequence2 == True, "image sequence not found"
-#     sequence3 = lp.timeline_image_sequence3()
-#     assert sequence3 == True, "image sequence not found"
-#     sequence4 = lp.timeline_image_sequence4()
-#     assert sequence4 == True, "image sequence not found"
-#
-#
-# """testcase C222493"""
-#
-#
-# def test_verifychiptimelineelement_222493():
-#     global test
-#     test = str(test_case_ids[18])
-#     lp.time_start()
-#     view = lp.verify_chiptimeline_timeline_view()
-#     assert view == True, "timeline view not found"
-#     grid = lp.verify_chiptimeline_matching_grid()
-#     assert grid == True, "matching grid not found"
-#
-#
-# """testcase C222494"""
-#
-#
-# def test_verify_timelinegridview_222494():
-#     global test
-#     test = str(test_case_ids[19])
-#     lp.time_start()
-#     verify = lp.verify_timelinegridview()
-#     assert verify == True, "image sequence not found"
-#
-#
-# """testcase C222498"""
-#
-#
-# def test_verify_removechipfromtimeline_222498():
-#     global test
-#     test = str(test_case_ids[20])
-#     lp.time_start()
-#     verify = lp.verify_removechipfromtimeline()
-#     assert verify == False, "chip not deleted from timeline"
-#
-#
-# """testcase C222499"""
-#
-#
-# def test_verify_selectedchipdata_222499():
-#     global test
-#     test = str(test_case_ids[21])
-#     lp.time_start()
-#     verify = lp.verify_selectedchipdata()
-#     assert verify == True, "chipdata  not found"
-#
-#
-# """testcase C222500"""
-#
-#
-# def test_verify_timelinehistoryfile_222500():
-#     global test
-#     test = str(test_case_ids[22])
-#     lp.time_start()
-#     verify = lp.verify_timelinehistoryfile()
-#     assert verify == True
-#
-#     # """"testcase 42301"""
-#
-#     #
-#     # def test_verify_openhistoryxml():
-#     #     global test
-#     #     test = "42301"
-#     #     lp.time_start()
-#     #     verify = lp.verify_openhistoryxml()
-#     #     assert verify == True, "csv path not found"
-#
-#
-# """"testcase C222502"""
-#
-#
-# def test_verify_imageseqxml_222502():
-#     global test
-#     test = str(test_case_ids[23])
-#     lp.time_start()
-#     verify = lp.verify_imageseqxmlforempty()
-#     assert verify == True, "empty type not found"
-#     verify1 = lp.verify_imageseqxmlforload()
-#     assert verify1 == True, "load type not found"
-#     verify2 = lp.verify_imageseqxmlforassay()
-#     assert verify2 == True, "assay type not found"
-#     verify3 = lp.verify_imageseqxmlforculture()
-#     assert verify3 == True, "culture type not found"
-#     # lp.close_timeline()
-#
-#
-# def test_closetimeline():
-#     lp.time_start()
-#     lp.close_timeline()
-#
+"""testcase C222490"""
+
+
+def test_opentimeline_222490():
+    global test
+    test = str(test_case_ids[15])
+    lp.time_start()
+    verify = lp.verify_opentimeline()
+    assert verify == "Chip Timeline"
+
+
+"""testcase C222491"""
+
+
+def test_verify_switchtimeline_222491():
+    global test
+    test = str(test_case_ids[16])
+    lp.time_start()
+    verify = lp.verify_switchtimeline()
+    assert verify == True, "chip timeline is not switched"
+
+
+"""testcase C222492 and C222495"""
+
+
+def test_chiptimelineimagesequence_222492():
+    global test
+    test = str(test_case_ids[17])
+    lp.time_start()
+    lp.timeline_image_sequence_expander()
+    sequence1 = lp.timeline_image_sequence1()
+    assert sequence1 == True, "image sequence not found"
+    sequence2 = lp.timeline_image_sequence2()
+    assert sequence2 == True, "image sequence not found"
+    sequence3 = lp.timeline_image_sequence3()
+    assert sequence3 == True, "image sequence not found"
+    sequence4 = lp.timeline_image_sequence4()
+    assert sequence4 == True, "image sequence not found"
+
+
+"""testcase C222493"""
+
+
+def test_verifychiptimelineelement_222493():
+    global test
+    test = str(test_case_ids[18])
+    lp.time_start()
+    view = lp.verify_chiptimeline_timeline_view()
+    assert view == True, "timeline view not found"
+    grid = lp.verify_chiptimeline_matching_grid()
+    assert grid == True, "matching grid not found"
+
+
+"""testcase C222494"""
+
+
+def test_verify_timelinegridview_222494():
+    global test
+    test = str(test_case_ids[19])
+    lp.time_start()
+    verify = lp.verify_timelinegridview()
+    assert verify == True, "image sequence not found"
+
+
+"""testcase C222498"""
+
+
+def test_verify_removechipfromtimeline_222498():
+    global test
+    test = str(test_case_ids[20])
+    lp.time_start()
+    verify = lp.verify_removechipfromtimeline()
+    assert verify == False, "chip not deleted from timeline"
+
+
+"""testcase C222499"""
+
+
+def test_verify_selectedchipdata_222499():
+    global test
+    test = str(test_case_ids[21])
+    lp.time_start()
+    verify = lp.verify_selectedchipdata()
+    assert verify == True, "chipdata  not found"
+
+
+"""testcase C222500"""
+
+
+def test_verify_timelinehistoryfile_222500():
+    global test
+    test = str(test_case_ids[22])
+    lp.time_start()
+    verify = lp.verify_timelinehistoryfile()
+    assert verify == True
+
+    # """"testcase 42301"""
+
+    #
+    # def test_verify_openhistoryxml():
+    #     global test
+    #     test = "42301"
+    #     lp.time_start()
+    #     verify = lp.verify_openhistoryxml()
+    #     assert verify == True, "csv path not found"
+
+
+""""testcase C222502"""
+
+
+def test_verify_imageseqxml_222502():
+    global test
+    test = str(test_case_ids[23])
+    lp.time_start()
+    verify = lp.verify_imageseqxmlforempty()
+    assert verify == True, "empty type not found"
+    verify1 = lp.verify_imageseqxmlforload()
+    assert verify1 == True, "load type not found"
+    verify2 = lp.verify_imageseqxmlforassay()
+    assert verify2 == True, "assay type not found"
+    verify3 = lp.verify_imageseqxmlforculture()
+    assert verify3 == True, "culture type not found"
+    # lp.close_timeline()
+
+
+def test_closetimeline():
+    lp.time_start()
+    lp.close_timeline()
+
 
 """testcase 754"""
 
@@ -970,11 +967,10 @@ def test_closefil():
     lp.open_gallery()
     verify = lp.verify_filteringallery()
     assert verify == True, "pen count not matched"
-    # lp.close_gallfil()
 
 
-def test_closegall():
-    lp.close_gallfil()
+# def test_closegall():
+#     lp.close_gallfil()
 
 
 """testcase C222562"""
@@ -984,6 +980,7 @@ def test_verify_dragtofilter_222562():
     global test
     test = str(test_case_ids[49])
     lp.time_start()
+    lp.close_gallfil()
     lp.verify_dragtofilter()
     verify = lp.verify_drggedchip()
     assert verify == True, "added chip not displayed in filter"
@@ -1031,7 +1028,6 @@ def test_verify_removefiltergallery_222569():
     verify = lp.verify_removedfilter()
     assert verify == False, "filter not removed from gallery"
     lp.click()
-    lp.close_gallery()
 
 
 """testcase C222570"""
@@ -1041,6 +1037,7 @@ def test_verify_filterdroprefresh_222570():
     global test
     test = str(test_case_ids[53])
     lp.time_start()
+    lp.close_gallfil()
     lp.click_filter()
     verify = lp.verify_filterdroprefresh()
     assert verify == True
@@ -2485,7 +2482,6 @@ def test_removeworkbook():
 
 """-----------------------------------------------------------------------------------------------------------------------"""
 """old"""
-
 
 def test_close():
     lp.time_start()
