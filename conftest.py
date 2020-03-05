@@ -56,6 +56,11 @@ def driver():
     #         os.remove(appdata + "\Assay Analyzer 2.0\D37712\History.xml")
     # except:
     #     print("history file not found")
+    try:
+        if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\Pen States.dat"):
+            os.remove(appdata + "\Assay Analyzer 2.0\D37712\Pen States.dat")
+    except:
+        print("penstates file not found")
 
     try:
         if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\CustomParameters.dat"):
@@ -63,7 +68,7 @@ def driver():
     except:
         print("customparam file not found")
 
-    desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
+    desktop = str(os.path.join(Path.home(), "Desktop\D54823"))
     try:
         if os.path.isfile(desktop + "\Assay Analyzer Version 20191129.2.json"):
             os.remove(desktop + "\Assay Analyzer Version 20191129.2.json")
