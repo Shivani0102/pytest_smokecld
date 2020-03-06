@@ -4060,6 +4060,14 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_SettingsWindow_Apply").click()
         return verify
 
+    def removehistory(self):
+        appdata = os.getenv('APPDATA')
+        try:
+            if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\History.xml"):
+                os.remove(appdata + "\Assay Analyzer 2.0\D37712\History.xml")
+        except:
+            print("history file not found")
+
     def verify_section1ingallery(self):
         time.sleep(2)
         self.driver.find_element_by_accessibility_id("CellElement_0_0").click()

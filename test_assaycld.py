@@ -1445,23 +1445,6 @@ def test_verify_headersortingpersist_222617():
     assert verify == True, "default column pen not found"
     verify = lp.verify_changedcolumnsorting()
     assert verify == True, "changed column pen not found"
-
-
-"""testcase C222607"""
-
-
-def test_verify_rejectallpens_222607():
-    global test
-    test = str(test_case_ids[78])
-    lp.time_start()
-    verify = lp.verify_rejectallpens()
-    assert verify == True, "PenRejectApproval is not checked"
-    verify1 = lp.verify_clickrejectpen()
-    assert verify1 == True, "confirmation message not found"
-    verify2 = lp.verify_rejectedpen1()
-    assert verify2 == False, "pen_4 not rejected"
-    verify3 = lp.verify_rejectedpen2()
-    assert verify3 == False, "pen_5 not rejected"
     lp.close_gallery()
 
 
@@ -2471,6 +2454,25 @@ def test_verify_filterbuilder_222703():
     verify2 = lp.verify_savedfiltertemp1()
     assert verify2 == True, "saved filter template demotemp1 not found"
     lp.canceltempwindow()
+
+
+"""testcase C222607"""
+
+
+def test_verify_rejectallpens_222607():
+    global test
+    test = str(test_case_ids[78])
+    lp.time_start()
+    lp.open_gallery()
+    verify = lp.verify_rejectallpens()
+    assert verify == True, "PenRejectApproval is not checked"
+    verify1 = lp.verify_clickrejectpen()
+    assert verify1 == True, "confirmation message not found"
+    verify2 = lp.verify_rejectedpen1()
+    assert verify2 == False, "pen_4 not rejected"
+    verify3 = lp.verify_rejectedpen2()
+    assert verify3 == False, "pen_5 not rejected"
+    lp.close_gallery()
 
 
 """----------------------------------------------------------------------"""
