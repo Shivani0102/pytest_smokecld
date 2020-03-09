@@ -4475,6 +4475,7 @@ class assaycld():
         ).click()
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_AppLevel_TemplateBuilder_DataImportTemplatesView_Export").click()
+        time.sleep(4)
         verify = self.driver.find_element_by_name("Save As").is_displayed()
         self.driver.find_element_by_accessibility_id("1").click()
         try:
@@ -4496,9 +4497,10 @@ class assaycld():
         linedown = self.driver.find_elements_by_accessibility_id("DownButton")
         print(linedown)
         for x in range(0, 4):
-            linedown[2].click()
+            linedown[1].click()
 
         verify = self.driver.find_element_by_name("test.chiptemplate").is_displayed()
+        time.sleep(3)
         self.driver.find_element_by_accessibility_id("2").click()
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_AppLevel_TemplateBuilder_DataImportTemplatesView_Templates_Item_Test"
@@ -4518,6 +4520,7 @@ class assaycld():
     def verify_selecttemplate(self):
         verify = self.driver.find_element_by_name("test.chiptemplate").is_displayed()
         self.driver.find_element_by_name("test.chiptemplate").click()
+        time.sleep(3)
         self.driver.find_element_by_accessibility_id("1").click()
         return verify
 

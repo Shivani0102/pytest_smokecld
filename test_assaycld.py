@@ -2298,6 +2298,7 @@ def test_verify_importtemplate_222690():
     assert verify2 == True, "imported template not found"
 
 
+
 """testcase C222691"""
 
 
