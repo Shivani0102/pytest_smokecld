@@ -26,7 +26,7 @@ global execution_time
 execution_time = []
 
 global update_testrail
-update_testrail = True
+update_testrail = False
 
 """test case 222466"""
 test = ""
