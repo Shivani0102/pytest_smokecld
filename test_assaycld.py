@@ -26,7 +26,7 @@ global execution_time
 execution_time = []
 
 global update_testrail
-update_testrail = False
+update_testrail = True
 
 """test case 222466"""
 test = ""
@@ -1770,8 +1770,6 @@ def test_verify_stringtypevalidation_222648():
 
 
 def test_graphbuilderhistogram():
-    global test
-    test = "126365"
     lp.time_start()
     lp.add_graph_histogram()
     verify = lp.histogram_select_attribute()
@@ -1798,8 +1796,6 @@ def test_graphbuilderhistogram():
 
 
 def test_histogramselectxaxis():
-    global test
-    test = "126366"
     lp.time_start()
     verify = lp.histogram_select_xaxis()
     assert verify == True, "graph not found"
