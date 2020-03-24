@@ -3754,6 +3754,7 @@ class assaycld():
     def verify_opensettings(self):
         time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_MainWindow_NavigationMenu_MenuElement_File").click()
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id(
             "AutomationId_MainWindow_NavigationMenu_MenuElement_Settings").click()
         time.sleep(2)
@@ -4689,9 +4690,11 @@ class assaycld():
     """testcase T42361"""
 
     def verify_removeworkbook(self):
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_SettingsMenu_MenuElement_WorkbookTypes"
         ).click()
+        time.sleep(2)
         self.driver.find_element_by_name("demoflowedit - Copy").click()
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_AppLevel_TemplateBuilder_WorkflowsView_Workflows_Remove"
@@ -4702,6 +4705,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_SettingsMenu_MenuElement_WorkbookTypes"
         ).click()
+        time.sleep(2)
         try:
             verify = self.driver.find_element_by_name("demoflowedit - Copy").is_displayed()
             return verify
@@ -4719,6 +4723,7 @@ class assaycld():
             "AutomationId_SettingsWindow_SettingsMenu_MenuElement_WorkbookTypes"
         ).click()
         self.driver.find_element_by_name("demoflowedit").click()
+        time.sleep(2)
         verify = self.driver.find_element_by_name("CLD").is_displayed()
         return verify
 
@@ -4737,9 +4742,11 @@ class assaycld():
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_SettingsMenu_MenuElement_WorkbookTypes"
         ).click()
+        time.sleep(2)
         self.driver.find_element_by_name("demoflowedit").click()
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_AppLevel_TemplateBuilder_WorkflowsView_Workflows_Edit").click()
+        time.sleep(2)
         verify = self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_AppLevel_TemplateBuilder_ManageWorkflowView_Cancel"
         ).is_displayed()
