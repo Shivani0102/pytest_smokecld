@@ -45,7 +45,7 @@ class assaycld():
     def __init__(self, driver):
         self.driver = driver
 
-    def createTestRun(self, test_ids=[], name="Assay Analyzer 2.0 Automated Smoke Test CLD"):
+    def createTestRun(self, test_ids=[], name="Assay Analyzer 2.0 Automated Reg Test CLD"):
         response = client.send_post(
             'add_run/2',
             {'name': name,
