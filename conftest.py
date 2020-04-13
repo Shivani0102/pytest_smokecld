@@ -52,8 +52,8 @@ def teardown_module():
 def driver():
     appdata = os.getenv('APPDATA')
     # try:
-    #     if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\History.xml"):
-    #         os.remove(appdata + "\Assay Analyzer 2.0\D37712\History.xml")
+    #     if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml"):
+    #         os.remove(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml")
     # except:
     #     print("history file not found")
     try:
@@ -75,8 +75,15 @@ def driver():
     except:
         print("json file not found")
 
-    path = os.getcwd() + "/open_tejas.bat"
-    subprocess.call(path)
+    desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
+    try:
+        if os.path.isfile(desktop + "\workbooktest.workbook"):
+            os.remove(desktop + "\workbooktest.workbook")
+    except:
+        print("workbook file not found")
+
+    # path = os.getcwd() + "/open_tejas.bat"
+    # subprocess.call(path)
     desired_caps = {}
     desired_caps["app"] = "Root"
     global driver
@@ -102,5 +109,5 @@ def driver():
         desired_capabilities=new_caps)
     driver.implicitly_wait(10)
     yield driver
-    verify = driver.find_element_by_name("ASSAY ANALYZER 2.0").is_displayed()
-    return verify
+    # verify = driver.find_element_by_name("ASSAY ANALYZER 2.0").is_displayed()
+    # return verify
