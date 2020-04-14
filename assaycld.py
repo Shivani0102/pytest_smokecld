@@ -2467,24 +2467,26 @@ class assaycld():
 
     @allure.step('to verify total for cell count verified for second condition')
     def verify_scndcond(self):
+        time.sleep(2)
         actionchains = ActionChains(self.driver)
+        self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
+        time.sleep(2)
         scndcond = self.driver.find_elements_by_accessibility_id("AutomationId_FilterBuilder_DimensionSelector")
         scndcond[1].click()
-        time.sleep(2)
-        self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
         time.sleep(3)
-        for x in range(0, 4):
+        for x in range(0, 5):
             actionchains.send_keys(Keys.ARROW_DOWN).perform()
 
         time.sleep(3)
         self.driver.find_element_by_name("Load:Cell_Count_Verified").click()
+        self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
         # time.sleep(3)
-        time.sleep(2)
-        increase = self.driver.find_elements_by_accessibility_id("increase")
+        time.sleep(3)
+        increase = self.driver.find_elements_by_accessibility_id("decrease")
         increase[3].click()
         time.sleep(2)
-        # celltypedata1 = self.driver.find_element_by_name("Pens: ").is_displayed()
-        # return celltypedata1
+        celltypedata1 = self.driver.find_element_by_name("Pens: ").is_displayed()
+        return celltypedata1
 
     @allure.step('to verify pen count and save the filter')
     def verify_gettotalpencount(self):

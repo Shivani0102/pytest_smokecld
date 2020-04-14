@@ -732,20 +732,20 @@ def test_verify_addmultiplecondition_222540():
     lp.filter_builder_increase()
     lp.verify_addmultiplecondition()
     lp.verify_scndcond()
-#     lp.verify_stringtypeparameter1()
-#     verify = lp.verify_gettotalpencount()
-#     assert verify == "1687", "count not verified"
-#
-#
-# def test_close_fil():
-#     lp.close_filter()
-#     lp.verify_openexplorer()
+    lp.verify_stringtypeparameter1()
+    verify = lp.verify_gettotalpencount()
+    assert verify == "1687", "count not verified"
+
+
+def test_close_fil():
+    lp.close_filter()
+    lp.verify_openexplorer()
 #     lp.open_gallery()
 #     verify1 = lp.verify_selectgalleryfilter()
 #     assert verify1 == "Visible 1687 of 1758 pens", "count not matched"
 #     lp.close_gallery()
-
-
+#
+#
 # """testcase T42235"""
 # """boolean"""
 #
@@ -889,7 +889,7 @@ def test_verify_addmultiplecondition_222540():
 #
 # def test__closegall():
 #     lp.close_gallery()
-#
+
 #
 # """testcase C222553"""
 #
