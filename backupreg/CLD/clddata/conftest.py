@@ -52,15 +52,10 @@ def teardown_module():
 def driver():
     appdata = os.getenv('APPDATA')
     # try:
-    #     if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml"):
-    #         os.remove(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml")
+    #     if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\History.xml"):
+    #         os.remove(appdata + "\Assay Analyzer 2.0\D37712\History.xml")
     # except:
     #     print("history file not found")
-    try:
-        if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\Pen States.dat"):
-            os.remove(appdata + "\Assay Analyzer 2.0\D37712\Pen States.dat")
-    except:
-        print("penstates file not found")
 
     try:
         if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\CustomParameters.dat"):
@@ -68,19 +63,25 @@ def driver():
     except:
         print("customparam file not found")
 
-    desktop = str(os.path.join(Path.home(), "Desktop\D54823"))
+    try:
+        if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\Pens states.dat"):
+            os.remove(appdata + "\Assay Analyzer 2.0\D37712\Pens states.dat")
+    except:
+        print("pen states file not found")
+
+    desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
+    print(desktop)
     try:
         if os.path.isfile(desktop + "\Assay Analyzer Version 20191129.2.json"):
             os.remove(desktop + "\Assay Analyzer Version 20191129.2.json")
     except:
         print("json file not found")
 
-    desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
     try:
         if os.path.isfile(desktop + "\workbooktest.workbook"):
             os.remove(desktop + "\workbooktest.workbook")
     except:
-        print("workbook file not found")
+        print("workbook not found")
 
     path = os.getcwd() + "/open_tejas.bat"
     subprocess.call(path)
@@ -109,5 +110,5 @@ def driver():
         desired_capabilities=new_caps)
     driver.implicitly_wait(10)
     yield driver
-    # verify = driver.find_element_by_name("ASSAY ANALYZER 2.0").is_displayed()
-    # return verify
+    verify = driver.find_element_by_name("ASSAY ANALYZER 2.0").is_displayed()
+    return verify

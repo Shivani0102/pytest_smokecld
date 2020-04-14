@@ -146,7 +146,7 @@ class assaycld():
 
     @allure.step('to maximize assay analyzer window')
     def maximize(self):
-        self.driver.find_element_by_accessibility_id("MaximizeButton").click()
+        self.driver.find_element_by_accessibility_id("PART_Max").click()
         # allure.attach(driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
 
     '''Testcase T35913'''
@@ -233,7 +233,7 @@ class assaycld():
         time.sleep(2)
         self.driver.find_element_by_accessibility_id(
             "AutomationId_WorkbookExplorer_AdditionalButton_AddChipFolder(s)").click()
-        time.sleep(3)
+        time.sleep(2)
         self.driver.find_element_by_name("Desktop (pinned)").click()
         time.sleep(3)
         self.driver.find_element_by_name("D37712").click()
@@ -457,6 +457,7 @@ class assaycld():
     @allure.step('to open data template from settings')
     def verify_data_import_templates_element(self):
         self.driver.find_element_by_accessibility_id("AutomationId_MainWindow_NavigationMenu_MenuElement_File").click()
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id(
             "AutomationId_MainWindow_NavigationMenu_MenuElement_Settings").click()
         self.driver.find_element_by_name("Data Import Template").click()
@@ -938,12 +939,12 @@ class assaycld():
 
     @allure.step('to verify column name option in gallery settings')
     def column_name(self):
-        column = self.driver.find_element_by_accessibility_id("Name").is_displayed()
+        column = self.driver.find_element_by_accessibility_id("Column Name").is_displayed()
         return column
 
     @allure.step('to verify column footer option in gallery settings')
     def column_footer(self):
-        footer = self.driver.find_element_by_accessibility_id("Parameters").is_displayed()
+        footer = self.driver.find_element_by_accessibility_id("Column Footer").is_displayed()
         return footer
 
     @allure.step('to verify row height option in gallery settings')
@@ -1092,9 +1093,13 @@ class assaycld():
         element = []
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_OpenSettings").click()
         self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
-        element = self.driver.find_elements_by_accessibility_id("AutomationId_GallerySettings_ColumnFooters")
+        time.sleep(3)
+        element = self.driver.find_elements_by_accessibility_id("AutomationId_GallerySettings_ColumnFootersAlt")
+        # element = self.driver.find_elements_by_class_name("RadComboBox")
+        # element[7].click()
+        time.sleep(3)
         actionchains = ActionChains(self.driver)
-        actionchains.move_to_element_with_offset(element[6], 50, 1)
+        actionchains.move_to_element_with_offset(element[7], 50, 1)
         actionchains.click()
         actionchains.perform()
         for x in range(0, 3):
@@ -1236,7 +1241,9 @@ class assaycld():
     def add_graph(self):
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_GraphType").click()
         self.driver.find_element_by_name("Scatter Plot").click()
+        time.sleep(3)
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_Chip").click()
+        time.sleep(2)
         self.driver.find_element_by_name("D37712").click()
         verify = self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_ScatterPlot").is_displayed()
         return verify
@@ -1342,9 +1349,15 @@ class assaycld():
             "AutomationId_WorkbookExplorer_ContextMenu_ElementsTree_Element_Graph")
         actionchains = ActionChains(self.driver)
         actionchains.double_click(open).perform()
-        time.sleep(5)
 
     def verify_xaxis(self):
+        time.sleep(2)
+        # self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_GraphType").click()
+        self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_GraphType").click()
+        time.sleep(2)
+        self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_Chip").click()
+        self.driver.find_element_by_name("D37712").click()
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_ScatterPlot_XAxis_Values").click()
         xaxis = self.driver.find_element_by_name("Empty:Pen_Id").is_displayed()
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_ScatterPlot_XAxis_Values").click()
@@ -1420,14 +1433,19 @@ class assaycld():
         open = self.driver.find_element_by_accessibility_id(
             "AutomationId_WorkbookExplorer_ContextMenu_ElementsTree_Element_Graph1")
         actionchains.double_click(open).perform()
-
+        time.sleep(2)
+        
     def verify_axis(self):
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_Histogram_XAxis_Values").click()
         axis = self.driver.find_element_by_name("Empty:Cell_Count_Verified").is_displayed()
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_Histogram_XAxis_Values").click()
         return axis
 
     def verify_bin(self):
+        self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_Chip").click()
+        self.driver.find_element_by_name("D37712").click()
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_Histogram_BinCounts").click()
         bin = self.driver.find_element_by_name("5").is_displayed()
         self.driver.find_element_by_accessibility_id("AutomationId_GraphBuilder_Histogram_BinCounts").click()
@@ -1538,11 +1556,10 @@ class assaycld():
     def verify_shortinformation(self):
         self.driver.find_element_by_name("Help").click()
         self.driver.find_element_by_name("About").click()
-        # self.driver.find_element_by_name("Version").is_displayed()
+        self.driver.find_element_by_name("Version 20191129.2").is_displayed()
         desc = self.driver.find_element_by_name(
-            "Powerful software that is designed to work with gigabytes of data obtained from Optoﬂuidic platforms developed by Berkeley Lights. The main usage of the app is to help biologists easily find, check and export data to pdf files in minutes."
-        ).is_displayed()
-        pr = self.driver.find_elements_by_accessibility_id("CloseButton")
+            "Powerful software that is designed to work with gigabytes of data obtained from Optoﬂuidic platforms developed by Berkeley Lights. The main usage of the app is to help biologists easily find, check and export data to pdf files in minutes.").is_displayed()
+        pr = self.driver.find_elements_by_accessibility_id("PART_Close")
         print(pr)
         pr[1].click()
         return desc
@@ -1659,13 +1676,14 @@ class assaycld():
         # self.driver.find_element_by_accessibility_id("CancelButton").click()
         try:
             time.sleep(3)
-            data = self.driver.find_element_by_name("CancelButton")
+            data = self.driver.find_element_by_name("CONFIRMATION")
             data1 = data.is_displayed()
         except:
             data1 = False
 
         if data1 == True:
             self.driver.find_element_by_accessibility_id("CancelButton").click()
+
         return workbook
 
     # def verify_useropenworkbook(self):
@@ -1684,14 +1702,13 @@ class assaycld():
     def verify_graphbutton(self):
         self.driver.find_element_by_accessibility_id(
             "AutomationId_WorkbookExplorer_AdditionalButton_AddNewGraph").click()
-        graphbutton = self.driver.find_element_by_name("Graph Builder")
-        graphverify=graphbutton.is_displayed()
+        graphbutton = self.driver.find_element_by_name("Graph Builder").is_displayed()
         time.sleep(3)
         actionchains = ActionChains(self.driver)
         chip = self.driver.find_element_by_name("Graph Builder")
         actionchains.context_click(chip).perform()
         self.driver.find_element_by_name("Hide").click()
-        return graphverify
+        return graphbutton
 
     """testcase T42383"""
 
@@ -1703,9 +1720,6 @@ class assaycld():
             "AutomationId_MainWindow_NavigationMenu_MenuElement_NewWorkbook").click()
         self.driver.find_element_by_accessibility_id(
             "AutomationId_MainWindow_NavigationMenu_MenuElement_CLD").click()
-        time.sleep(2)
-        # self.driver.find_element_by_name("CancelButton").click()
-        """commented as not working for in new build"""
         try:
             time.sleep(3)
             data = self.driver.find_element_by_name("CONFIRMATION")
@@ -1714,7 +1728,7 @@ class assaycld():
             data1 = False
 
         if data1 == True:
-            self.driver.find_element_by_name("CancelButton").click()
+            self.driver.find_element_by_name("Cancel").click()
 
     @allure.step('to reloadchip for raw data')
     def verify_reloadchips(self):
@@ -1757,8 +1771,8 @@ class assaycld():
         actionchains.context_click(chip).perform()
         time.sleep(3)
         self.driver.find_element_by_name("Remove chip(s)").click()
-        close = self.driver.find_element_by_accessibility_id("CancelButton")
-        close.click()
+        close = self.driver.find_elements_by_accessibility_id("PART_Close")
+        close[1].click()
         chipvisible = self.driver.find_element_by_name("D37712").is_displayed()
         return chipvisible
 
@@ -1862,13 +1876,12 @@ class assaycld():
         self.driver.find_element_by_name("Hide").click()
         time.sleep(3)
         appdata = os.getenv('APPDATA')
-        print(appdata)
-        os.remove(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml")
+        os.remove(appdata + "\Assay Analyzer 2.0\D37712\History.xml")
         chip = self.driver.find_element_by_name("D37712")
         actionchains.context_click(chip).perform()
         self.driver.find_element_by_name("Open in Timeline").click()
         time.sleep(3)
-        verifyfile = path.exists(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml")
+        verifyfile = path.exists(appdata + "\Assay Analyzer 2.0\D37712\History.xml")
         return verifyfile
 
     """testcase T42301"""
@@ -1879,7 +1892,7 @@ class assaycld():
         verifydata = " <CsvPath>Processed Data\D50238_2019-01-29_14-34-13_2019-01-29_11-19-56.549_TNFa_FITC_0_TNFa_FITC.csv</CsvPath>"
         verifyfile = path.exists(appdata + "\Assay Analyzer 2.0\D50238\CustomParameters.dat")
         if verifyfile == True:
-            with open(appdata + "\Assay Analyzer 2.0\D50238\CLD.History.xml", 'r') as file:
+            with open(appdata + "\Assay Analyzer 2.0\D50238\History.xml", 'r') as file:
                 if verifydata in file.read():
                     print("data verified")
                     return True
@@ -1893,7 +1906,7 @@ class assaycld():
         verifydata = "<Type>Empty</Type>"
         verifyfile = path.exists(appdata + "\Assay Analyzer 2.0\D50238\CustomParameters.dat")
         if verifyfile == True:
-            with open(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml", 'r') as file:
+            with open(appdata + "\Assay Analyzer 2.0\D37712\History.xml", 'r') as file:
                 if verifydata in file.read():
                     return True
                 else:
@@ -1904,7 +1917,7 @@ class assaycld():
         verifydata = "<Type>Load</Type>"
         verifyfile = path.exists(appdata + "\Assay Analyzer 2.0\D50238\CustomParameters.dat")
         if verifyfile == True:
-            with open(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml", 'r') as file:
+            with open(appdata + "\Assay Analyzer 2.0\D37712\History.xml", 'r') as file:
                 if verifydata in file.read():
                     return True
                 else:
@@ -1915,7 +1928,7 @@ class assaycld():
         verifydata = "<Type>Assay</Type>"
         verifyfile = path.exists(appdata + "\Assay Analyzer 2.0\D50238\CustomParameters.dat")
         if verifyfile == True:
-            with open(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml", 'r') as file:
+            with open(appdata + "\Assay Analyzer 2.0\D37712\History.xml", 'r') as file:
                 if verifydata in file.read():
                     return True
                 else:
@@ -1926,7 +1939,7 @@ class assaycld():
         verifydata = "<Type>Culture</Type>"
         verifyfile = path.exists(appdata + "\Assay Analyzer 2.0\D50238\CustomParameters.dat")
         if verifyfile == True:
-            with open(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml", 'r') as file:
+            with open(appdata + "\Assay Analyzer 2.0\D37712\History.xml", 'r') as file:
                 if verifydata in file.read():
                     return True
                 else:
@@ -2158,8 +2171,8 @@ class assaycld():
     def verify_parameteringallery(self):
         self.driver.find_element_by_accessibility_id("CellElement_0_0").click()
         time.sleep(3)
-        # verify = self.driver.find_element_by_name("Cparameter1: False").is_displayed()
-        # return verify
+        verify = self.driver.find_element_by_name("Cparameter1: ").is_displayed()
+        return verify
 
     """testcase T42284"""
 
@@ -2206,17 +2219,14 @@ class assaycld():
         fieldclick = self.driver.find_element_by_name("Fields")
         actionchains.double_click(fieldclick).perform()
 
-    def verify_movetoattribute(self):
-        time.sleep(3)
-        actionchains = ActionChains(self.driver)
-        self.driver.find_element_by_name("Load : CellType").click()
-        for x in range(0, 5):
-            actionchains.send_keys(Keys.ARROW_DOWN).perform()
-        time.sleep(4)
-
     @allure.step('to save new log parameter')
     def verify_selectattribute(self):
+        time.sleep(3)
         actionchains = ActionChains(self.driver)
+        self.driver.find_element_by_name("Load : PenId").click()
+        for x in range(0, 6):
+            actionchains.send_keys(Keys.ARROW_DOWN).perform()
+        time.sleep(4)
         scndattr = self.driver.find_element_by_name("Assay : Score").click()
         actionchains.double_click(scndattr).perform()
         time.sleep(2)
@@ -2465,25 +2475,24 @@ class assaycld():
         time.sleep(3)
         self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_AddCondition").click()
 
-    @allure.step('to verify total for cell count verified for second condition')
-    def verify_scndcond(self):
-        time.sleep(2)
-        actionchains = ActionChains(self.driver)
-        self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
-        time.sleep(2)
         scndcond = self.driver.find_elements_by_accessibility_id("AutomationId_FilterBuilder_DimensionSelector")
         scndcond[1].click()
+
+    @allure.step('to verify total for cell count verified for second condition')
+    def verify_scndcond(self):
+        actionchains = ActionChains(self.driver)
         time.sleep(3)
-        for x in range(0, 5):
+        for x in range(0, 4):
             actionchains.send_keys(Keys.ARROW_DOWN).perform()
 
-        time.sleep(3)
-        self.driver.find_element_by_name("Load:Cell_Count_Verified").click()
-        self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
         # time.sleep(3)
+        self.driver.find_element_by_name("Load:Cell_Count_Verified").click()
         time.sleep(3)
-        increase = self.driver.find_elements_by_accessibility_id("decrease")
+        time.sleep(2)
+        increase = self.driver.find_elements_by_accessibility_id("increase")
         increase[3].click()
+        time.sleep(2)
+        self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
         time.sleep(2)
         celltypedata1 = self.driver.find_element_by_name("Pens: ").is_displayed()
         return celltypedata1
@@ -2704,7 +2713,7 @@ class assaycld():
         time.sleep(3)
         self.driver.find_element_by_name("Remove").click()
         time.sleep(2)
-        self.driver.find_element_by_accessibility_id("OKButton").click()
+        self.driver.find_element_by_name("OK").click()
         time.sleep(3)
         try:
             verify = self.driver.find_element_by_name("editedfilter").is_displayed()
@@ -2819,7 +2828,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_2DFilter_Expand").click()
         time.sleep(3)
         verify = self.driver.find_element_by_class_name("ExpandTwoDFilterControl").is_displayed()
-        closeexpand = self.driver.find_elements_by_accessibility_id("CloseButton")
+        closeexpand = self.driver.find_elements_by_accessibility_id("PART_Close")
         print(closeexpand)
         closeexpand[1].click()
         return verify
@@ -2924,7 +2933,7 @@ class assaycld():
         time.sleep(3)
         self.driver.find_element_by_name("Remove").click()
         time.sleep(2)
-        self.driver.find_element_by_accessibility_id("OKButton").click()
+        self.driver.find_element_by_name("OK").click()
 
     @allure.step('to verify if filter is removed from gallery')
     def verify_removedfilter(self):
@@ -3914,7 +3923,7 @@ class assaycld():
         self.driver.find_element_by_name("Remove").click()
         time.sleep(2)
         verify = self.driver.find_element_by_name("CONFIRMATION").is_displayed()
-        self.driver.find_element_by_accessibility_id("OKButton").click()
+        self.driver.find_element_by_name("OK").click()
         return verify
 
     def verify_removedgraph(self):
@@ -4349,8 +4358,8 @@ class assaycld():
     def removehistory(self):
         appdata = os.getenv('APPDATA')
         try:
-            if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml"):
-                os.remove(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml")
+            if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\History.xml"):
+                os.remove(appdata + "\Assay Analyzer 2.0\D37712\History.xml")
         except:
             print("history file not found")
 

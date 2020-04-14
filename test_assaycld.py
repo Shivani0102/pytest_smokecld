@@ -740,258 +740,258 @@ def test_verify_addmultiplecondition_222540():
 def test_close_fil():
     lp.close_filter()
     lp.verify_openexplorer()
-#     lp.open_gallery()
-#     verify1 = lp.verify_selectgalleryfilter()
-#     assert verify1 == "Visible 1687 of 1758 pens", "count not matched"
-#     lp.close_gallery()
-#
-#
-# """testcase T42235"""
-# """boolean"""
-#
-# """testcase C222543"""
-#
-#
-# def test_verify_openfilterwindow_222543():
-#     global test
-#     test = str(test_case_ids[35])
-#     lp.time_start()
-#     verify = lp.verify_savedfilter()
-#     assert verify == True, "saved filter not found"
-#     verify1 = lp.verify_openfilterwindow()
-#     assert verify1 == True, "edit filter window not found"
-#     lp.verify_closefilter()
-#
-#
-# """testcase C222544"""
-#
-#
-# def test_verify_openchipfromfilter_222544():
-#     global test
-#     test = str(test_case_ids[36])
-#     lp.time_start()
-#     verify = lp.verify_openchipfromfilter()
-#     assert verify == "1758", "pen count not matched"
-#     lp.verify_closefilter()
-#
-#
-# """testcase C222545"""
-#
-#
-# def test_verify_disableenablefilter_222545():
-#     global test
-#     test = str(test_case_ids[37])
-#     lp.time_start()
-#     lp.verify_disableenablefilter()
-#     verify = lp.disabletoggle()
-#     assert verify == False, "condition 1 is not disabled"
-#     verify1 = lp.verify_secondtoggledisable()
-#     assert verify1 == False, "condition 2 not disabled"
-#
-#
-# """testcase C222546"""
-#
-#
-# def test_verify_deletefiltercond_222546():
-#     global test
-#     test = str(test_case_ids[38])
-#     lp.time_start()
-#     verify = lp.verify_deletefiltercond()
-#     assert verify == False, "condition not removed"
-#     verify1 = lp.verify_getpencountafterdeletion()
-#     assert verify1 == True, "correct pen count not found"
-#
-#
-# """testcase C222547"""
-#
-#
-# def test_verify_editfiltername_222547():
-#     global test
-#     test = str(test_case_ids[39])
-#     lp.close_filter()
-#     lp.verify_openexplorer()
-#     lp.verify_editfiltername()
-#     lp.verify_removename()
-#     verify1 = lp.verify_changedname()
-#     assert verify1 == True, "filter name not edited"
-#
-#
-# """testcase C222548"""
-#
-#
-# def test_verify_filterclick_222548():
-#     global test
-#     test = str(test_case_ids[40])
-#     lp.time_start()
-#     verify = lp.verify_filterclick()
-#     assert verify == True, "filter window not found"
-#
-#
-# """testcase C222549"""
-#
-#
-# def test_verify_removefilter_222549():
-#     global test
-#     test = str(test_case_ids[41])
-#     lp.time_start()
-#     verify = lp.verify_removefilter()
-#     assert verify == False, "filter not removed"
-#
-#
-# """testcase C222550"""
-#
-#
-# def test_verify_customparaminfilter_222550():
-#     global test
-#     test = str(test_case_ids[42])
-#     lp.click_filter()
-#     lp.add_chip_in_filter()
-#     lp.filter_name("cust")
-#     lp.add_condition_filter()
-#     verify = lp.verify_customparaminfilter()
-#     assert verify == True, "custom parameter not found"
-#
-#
-# """testcase C222551"""
-#
-#
-# def test_verify_filterconditionusingparam_222551():
-#     global test
-#     test = str(test_case_ids[43])
-#     lp.time_start()
-#     verify = lp.verify_filterconditionusingparam()
-#     assert verify == "829", "count not found"
-#     lp.close_filter()
-#
-#
-# """testcase C222552"""
-#
-#
-# def test_verify_filterpen_222552():
-#     global test
-#     test = str(test_case_ids[44])
-#     lp.time_start()
-#     lp.verify_openexplorer()
-#     lp.open_gallery()
-#     lp.verify_filterpen()
-#     lp.close_gallery()
-#     lp.click_filter()
-#     lp.add_chip_in_filter()
-#     lp.filter_name("filterpen")
-#     lp.add_condition_filter()
-#     lp.verify_selectfilter()
-#     lp.close_filter()
-#     lp.verify_openexplorer()
-#     lp.open_gallery()
-#     verify = lp.verif_filteringallery()
-#     assert verify == True, "rejected pen not visible"
-#
-#
-# def test__closegall():
-#     lp.close_gallery()
+    lp.open_gallery()
+    verify1 = lp.verify_selectgalleryfilter()
+    assert verify1 == "Visible 1687 of 1758 pens", "count not matched"
+    lp.close_gallery()
 
-#
-# """testcase C222553"""
-#
-#
-# def test_verify_validationmessage_222553():
-#     global test
-#     test = str(test_case_ids[45])
-#     lp.time_start()
-#     verify = lp.verify_validationmessage()
-#     assert verify == True, "validation message not found"
-#
-#
-# """testcase T35983"""
-#
-#
-# def test_filtertwodcondition():
-#     # global test
-#     # test = "126398"
-#     lp.time_start()
-#     lp.click_filter()
-#     lp.add_chip_in_filter()
-#     lp.filter_name("filter2")
-#     lp.filter_twod_condition()
-#     xaxis = lp.filter_twod_xaxis()
-#     assert xaxis == True, "xaxis combobox not found"
-#     yaxis = lp.filter_twod_yaxis()
-#     assert yaxis == True, "yaxis combobox not found"
-#     # verify = lp.filter_verify_chart()
-#     # assert verify == True, "2-D Condition not working"
-#
-#
-# """testcase T35984"""
-#
-#
-# def test_filtertwodconditonsave():
-#     # global test
-#     # test = "126399"
-#     lp.time_start()
-#     lp.verify_savefilter()
-#
-#
-# """testcase C222556"""
-#
-#
-# def test_verify_changegraph_222556():
-#     global test
-#     test = str(test_case_ids[46])
-#     lp.time_start()
-#     verify = lp.verify_changegraph()
-#     assert verify == True, "graph not changed"
-#
-#
-# """testcase T42371"""
-# """-------------"""
-#
-# """testcase C222558"""
-#
-#
-# def test_verify_expand2dfilter_222558():
-#     global test
-#     test = str(test_case_ids[47])
-#     lp.time_start()
-#     verify = lp.verify_expand2dfilter()
-#     assert verify == True, "expanded window not found"
-#
-#
-# """testcase C222560"""
-#
-#
-# def test_verify_2Dconditiontogallery_222560():
-#     global test
-#     test = str(test_case_ids[48])
-#     lp.time_start()
-#     verify = lp.verify_2Dconditiontogallery()
-#     assert verify == "0", "pen count not correct"
-#
-#
-# def test_closefil():
-#     lp.close_filter()
-#     lp.verify_openexplorer()
-#     lp.open_gallery()
-#     verify = lp.verify_filteringallery()
-#     assert verify == True, "pen count not matched"
-#
-#
-# # def test_closegall():
-# #     lp.close_gallfil()
-#
-#
-# """testcase C222562"""
-#
-#
-# def test_verify_dragtofilter_222562():
-#     global test
-#     test = str(test_case_ids[49])
-#     lp.time_start()
+
+"""testcase T42235"""
+"""boolean"""
+
+"""testcase C222543"""
+
+
+def test_verify_openfilterwindow_222543():
+    global test
+    test = str(test_case_ids[35])
+    lp.time_start()
+    verify = lp.verify_savedfilter()
+    assert verify == True, "saved filter not found"
+    verify1 = lp.verify_openfilterwindow()
+    assert verify1 == True, "edit filter window not found"
+    lp.verify_closefilter()
+
+
+"""testcase C222544"""
+
+
+def test_verify_openchipfromfilter_222544():
+    global test
+    test = str(test_case_ids[36])
+    lp.time_start()
+    verify = lp.verify_openchipfromfilter()
+    assert verify == "1758", "pen count not matched"
+    lp.verify_closefilter()
+
+
+"""testcase C222545"""
+
+
+def test_verify_disableenablefilter_222545():
+    global test
+    test = str(test_case_ids[37])
+    lp.time_start()
+    lp.verify_disableenablefilter()
+    verify = lp.disabletoggle()
+    assert verify == False, "condition 1 is not disabled"
+    verify1 = lp.verify_secondtoggledisable()
+    assert verify1 == False, "condition 2 not disabled"
+
+
+"""testcase C222546"""
+
+
+def test_verify_deletefiltercond_222546():
+    global test
+    test = str(test_case_ids[38])
+    lp.time_start()
+    verify = lp.verify_deletefiltercond()
+    assert verify == False, "condition not removed"
+    verify1 = lp.verify_getpencountafterdeletion()
+    assert verify1 == True, "correct pen count not found"
+
+
+"""testcase C222547"""
+
+
+def test_verify_editfiltername_222547():
+    global test
+    test = str(test_case_ids[39])
+    lp.close_filter()
+    lp.verify_openexplorer()
+    lp.verify_editfiltername()
+    lp.verify_removename()
+    verify1 = lp.verify_changedname()
+    assert verify1 == True, "filter name not edited"
+
+
+"""testcase C222548"""
+
+
+def test_verify_filterclick_222548():
+    global test
+    test = str(test_case_ids[40])
+    lp.time_start()
+    verify = lp.verify_filterclick()
+    assert verify == True, "filter window not found"
+
+
+"""testcase C222549"""
+
+
+def test_verify_removefilter_222549():
+    global test
+    test = str(test_case_ids[41])
+    lp.time_start()
+    verify = lp.verify_removefilter()
+    assert verify == False, "filter not removed"
+
+"""commented for new build as bug in log parameter condition(222550 and 222551 and 222552"""
+    # """testcase C222550"""
+    #
+    #
+    # def test_verify_customparaminfilter_222550():
+    #     global test
+    #     test = str(test_case_ids[42])
+    #     lp.click_filter()
+    #     lp.add_chip_in_filter()
+    #     lp.filter_name("cust")
+    #     lp.add_condition_filter()
+    #     verify = lp.verify_customparaminfilter()
+    #     assert verify == True, "custom parameter not found"
+    #
+    #
+    # """testcase C222551"""
+    #
+    #
+    # def test_verify_filterconditionusingparam_222551():
+    #     global test
+    #     test = str(test_case_ids[43])
+    #     lp.time_start()
+    #     verify = lp.verify_filterconditionusingparam()
+    #     assert verify == "829", "count not found"
+    #     lp.close_filter()
+    #
+    #
+    # """testcase C222552"""
+    #
+    #
+    # def test_verify_filterpen_222552():
+    #     global test
+    #     test = str(test_case_ids[44])
+    #     lp.time_start()
+    #     lp.verify_openexplorer()
+    #     lp.open_gallery()
+    #     lp.verify_filterpen()
+    #     lp.close_gallery()
+    #     lp.click_filter()
+    #     lp.add_chip_in_filter()
+    #     lp.filter_name("filterpen")
+    #     lp.add_condition_filter()
+    #     lp.verify_selectfilter()
+    #     lp.close_filter()
+    #     lp.verify_openexplorer()
+    #     lp.open_gallery()
+    #     verify = lp.verif_filteringallery()
+    #     assert verify == True, "rejected pen not visible"
+    #
+    #
+    # def test__closegall():
+    #     lp.close_gallery()
+    #
+    #
+"""testcase C222553"""
+
+
+def test_verify_validationmessage_222553():
+    global test
+    test = str(test_case_ids[45])
+    lp.time_start()
+    verify = lp.verify_validationmessage()
+    assert verify == True, "validation message not found"
+
+
+"""testcase T35983"""
+
+
+def test_filtertwodcondition():
+    # global test
+    # test = "126398"
+    lp.time_start()
+    lp.click_filter()
+    lp.add_chip_in_filter()
+    lp.filter_name("filter2")
+    lp.filter_twod_condition()
+    xaxis = lp.filter_twod_xaxis()
+    assert xaxis == True, "xaxis combobox not found"
+    yaxis = lp.filter_twod_yaxis()
+    assert yaxis == True, "yaxis combobox not found"
+    # verify = lp.filter_verify_chart()
+    # assert verify == True, "2-D Condition not working"
+
+
+"""testcase T35984"""
+
+
+def test_filtertwodconditonsave():
+    # global test
+    # test = "126399"
+    lp.time_start()
+    lp.verify_savefilter()
+
+
+"""testcase C222556"""
+
+
+def test_verify_changegraph_222556():
+    global test
+    test = str(test_case_ids[46])
+    lp.time_start()
+    verify = lp.verify_changegraph()
+    assert verify == True, "graph not changed"
+
+
+"""testcase T42371"""
+"""-------------"""
+
+"""testcase C222558"""
+
+
+def test_verify_expand2dfilter_222558():
+    global test
+    test = str(test_case_ids[47])
+    lp.time_start()
+    verify = lp.verify_expand2dfilter()
+    assert verify == True, "expanded window not found"
+
+
+"""testcase C222560"""
+
+
+def test_verify_2Dconditiontogallery_222560():
+    global test
+    test = str(test_case_ids[48])
+    lp.time_start()
+    verify = lp.verify_2Dconditiontogallery()
+    assert verify == "0", "pen count not correct"
+
+
+def test_closefil():
+    lp.close_filter()
+    lp.verify_openexplorer()
+    lp.open_gallery()
+    verify = lp.verify_filteringallery()
+    assert verify == True, "pen count not matched"
+
+
+# def test_closegall():
 #     lp.close_gallfil()
-#     lp.verify_dragtofilter()
-#     verify = lp.verify_drggedchip()
-#     assert verify == True, "added chip not displayed in filter"
-#
-#
+
+
+"""testcase C222562"""
+
+
+def test_verify_dragtofilter_222562():
+    global test
+    test = str(test_case_ids[49])
+    lp.time_start()
+    lp.close_gallfil()
+    lp.verify_dragtofilter()
+    verify = lp.verify_drggedchip()
+    assert verify == True, "added chip not displayed in filter"
+
+"""commented for new build-bug in penstate dropdown in filter"""
 # """testcase C222564"""
 #
 #
@@ -1005,7 +1005,7 @@ def test_close_fil():
 #     lp.add_condition_filter()
 #     verify = lp.verify_changesin1D()
 #     assert verify == True, "graph not changed for 1D"
-#
+# #
 #
 # """testcase C222568"""
 #
@@ -1019,7 +1019,8 @@ def test_close_fil():
 #     verify = lp.verify_decreasinginmultiplecond()
 #     assert verify == True, "decreasing count not found"
 #
-#
+
+"""commented for above bug in 222564 and 222568"""
 # """testcase C222569"""
 #
 #
@@ -1034,42 +1035,43 @@ def test_close_fil():
 #     verify = lp.verify_removedfilter()
 #     assert verify == False, "filter not removed from gallery"
 #     lp.click()
-#
-#
-# """testcase C222570"""
-#
-#
-# def test_verify_filterdroprefresh_222570():
-#     global test
-#     test = str(test_case_ids[53])
-#     lp.time_start()
-#     lp.close_gallfil()
-#     lp.click_filter()
-#     verify = lp.verify_filterdroprefresh()
-#     assert verify == True
-#     lp.verify_closefilter()
-#     verify = lp.remove_2ndchip()
-#     assert verify == False, "2nd chip not removed"
-#
-#
-# """testcase C222571"""
-#
-#
-# def test_verify_filterstuck_222571():
-#     global test
-#     test = str(test_case_ids[54])
-#     lp.open_raw_data()
-#     lp.click_filter()
-#     lp.add_chip_in_filter()
-#     lp.remove_custom_parameter()
-#     lp.close_raw_data()
-#     lp.verify_filterstuck()
-#     # assert verify == True, "filter got stuck"
-#
-#
-# def test_closefilt():
-#     lp.verify_closefilter()
-#
+
+
+"""testcase C222570"""
+
+
+def test_verify_filterdroprefresh_222570():
+    global test
+    test = str(test_case_ids[53])
+    lp.time_start()
+    """commented for above condition"""
+    # lp.close_gallfil()
+    lp.click_filter()
+    verify = lp.verify_filterdroprefresh()
+    assert verify == True
+    lp.verify_closefilter()
+    verify = lp.remove_2ndchip()
+    assert verify == False, "2nd chip not removed"
+
+
+"""testcase C222571"""
+
+
+def test_verify_filterstuck_222571():
+    global test
+    test = str(test_case_ids[54])
+    lp.open_raw_data()
+    lp.click_filter()
+    lp.add_chip_in_filter()
+    lp.remove_custom_parameter()
+    lp.close_raw_data()
+    lp.verify_filterstuck()
+    # assert verify == True, "filter got stuck"
+
+
+def test_closefilt():
+    lp.verify_closefilter()
+
 #
 # """testcase 753"""
 #
@@ -1125,8 +1127,8 @@ def test_close_fil():
 #     assert digit == True, "digit after comma not found"
 #     pen = lp.pen_reject_approval()
 #     assert pen == True, "pen reject approval not found"
-#
-#
+
+
 # """testcase C222574"""
 #
 #
@@ -1143,6 +1145,7 @@ def test_close_fil():
 #     assert verify2 == False, "column empty is selected"
 #     verify3 = lp.verify_loadrankfornonselection()
 #     assert verify3 == False, "column load is selected"
+#     lp.verify_defaultcheckbxselection()
 #     lp.verify_defaultcheckbxselection()
 #
 #
