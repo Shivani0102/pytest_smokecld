@@ -82,8 +82,8 @@ def driver():
     except:
         print("workbook file not found")
 
-    path = os.getcwd() + "/open_tejas.bat"
-    subprocess.call(path)
+    # path = os.getcwd() + "/open_tejas.bat"
+    # subprocess.call(path)
     desired_caps = {}
     desired_caps["app"] = "Root"
     global driver
