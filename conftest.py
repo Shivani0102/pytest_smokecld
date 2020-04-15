@@ -57,7 +57,7 @@ def driver():
     # except:
     #     print("history file not found")
     try:
-        if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\Pen States.dat"):
+        if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\Pens states.dat"):
             os.remove(appdata + "\Assay Analyzer 2.0\D37712\Pen States.dat")
     except:
         print("penstates file not found")

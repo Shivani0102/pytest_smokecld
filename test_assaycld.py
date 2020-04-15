@@ -212,6 +212,7 @@ def test_addchip():
     chip = lp.add_chip()
     assert chip == True, "chip not found"
 
+
 #
 # """testcase C222476"""
 #
@@ -475,150 +476,152 @@ def test_addchip():
 #     lp.close_timeline()
 #
 #
-# """testcase 754"""
-#
-#
-# def test_rawdata():
-#     # global test
-#     # test = "754"
-#     lp.time_start()
-#     verify = lp.open_raw_data()
-#     assert verify == "Raw Data"
-#
-#
-# """testcase C222507"""
-#
-#
-# def test_verify_groupbyfeature_222507():
-#     global test
-#     test = str(test_case_ids[24])
-#     lp.time_start()
-#     lp.verify_groupbyfeature()
-#     verify1 = lp.verify_groupbypenid1()
-#     assert verify1 == True, "penid groupby not found for 1"
-#     verify2 = lp.verify_groupbypenid2()
-#     assert verify2 == True, "penid groupby not found for 2"
-#     verify3 = lp.verify_groupbypenid3()
-#     assert verify3 == True, "penid groupby not found for 3"
-#     #
-#     #
-#     # """testcase C222508"""
-#     #
-#     #
-#     # def test_verify_hierarichalgrouping_222508():
-#     #     global test
-#     #     test = str(test_case_ids[25])
-#     #     lp.time_start()
-#     #     lp.verify_hierarichalgrouping()
-#     #     verify = lp.verify_groupbyemptypenid1()
-#     #     assert verify == "1", "empty penid1 not found"
-#     #     verify1 = lp.verify_groupbyemptypenid2()
-#     #     assert verify1 == "D37712", "empty penid2 not found"
-#     #     # verify2 = lp.verify_groupbyemptypenid3()
-#     #     # assert verify2 == True, "empty penid3
-#     #
-#     # def test_closegrouping():
-#     #     lp.verify_closegrouping()
-#
-# """testcase 222511"""
-#
-#
-# def test_verify_addparamusingcompoperator_222511():
-#     global test
-#     test = str(test_case_ids[26])
-#     lp.time_start()
-#     lp.verify_addparameterusingcompoperator()
-#     lp.verify_otherattribute()
-#     verify = lp.raw_data_verify_parameter1()
-#     assert verify == True, "compparameter1 not added"
-#
-#
-# """testcase C222513"""
-#
-#
-# def test_verify_Cparameteringrid_222513():
-#     global test
-#     test = str(test_case_ids[27])
-#     lp.time_start()
-#     verify = lp.verify_Cparameteringrid()
-#     assert verify == True, "added Cparameter is not found in grid"
-#
-# """commented for new build(assertion not working)"""
-# """testcase C222514"""
-#
-#
-# def test_verify_parameteringallery_222514():
-#     global test
-#     test = str(test_case_ids[28])
-#     lp.time_start()
-#     lp.close_raw_data()
-#     verify = lp.open_gallery()
-#     assert verify == "Gallery"
-#     lp.verify_parameteringallery()
-#     # verify = lp.verify_parameteringallery()
-#     # assert verify == True, "parameter not found in gallery attribute"
-#
-#
-# """testcase C222515"""
-#
-#
-# def test_verifyremoveparameter_222515():
-#     global test
-#     test = str(test_case_ids[29])
-#     lp.time_start()
-#     lp.close_gallery()
-#     lp.open_raw_data()
-#     lp.remove_new_parameter()
-#
-#
-# """testcase T42253"""
-# """Lparamater"""
-#
-# """testcase C222523"""
-# """commented for new build(log param not working-bug in new build)"""
-# #
-# #
-# # def test_verify_logparameter_222523():
-# #     global test
-# #     test = str(test_case_ids[30])
-# #     lp.verify_logparameter()
-# #     lp.verify_logselect()
-# #     lp.verify_movetoright()
-# #     lp.verify_movetoattribute()
-# #     lp.verify_selectattribute()
-# #     verify = lp.raw_data_verify_Logparameter()
-# #     assert verify == True, "logparameter not found"
-# #
-#
-# """testcase C222531"""
-#
-#
-# def test_verify_attrinexpressioneditor_222531():
-#     global test
-#     test = str(test_case_ids[31])
-#     lp.time_start()
-#     verify = lp.verify_attrinexpressioneditor()
-#     assert verify == True, "assay not found"
-#     verify1 = lp.verify_cultureattr()
-#     assert verify1 == True, "culture not found"
-#
-#
-# """testcase C222532"""
-#
-#
-# def test_verify_editnumericvalue_222532():
-#     global test
-#     test = str(test_case_ids[32])
-#     lp.time_start()
-#     verify = lp.verify_editnumericvalue()
-#     assert verify == "21", "numeric value not changed"
-#     verify1 = lp.verify_changetodefault()
-#     assert verify1 == "1", "numeric value not changed to default"
-#
-#
-# def test_closerawdata():
-#     lp.time_start()
-#     lp.close_raw_data()
+"""testcase 754"""
+
+
+def test_rawdata():
+    # global test
+    # test = "754"
+    lp.time_start()
+    verify = lp.open_raw_data()
+    assert verify == "Raw Data"
+
+
+"""testcase C222507"""
+
+
+def test_verify_groupbyfeature_222507():
+    global test
+    test = str(test_case_ids[24])
+    lp.time_start()
+    lp.verify_groupbyfeature()
+    verify1 = lp.verify_groupbypenid1()
+    assert verify1 == True, "penid groupby not found for 1"
+    verify2 = lp.verify_groupbypenid2()
+    assert verify2 == True, "penid groupby not found for 2"
+    verify3 = lp.verify_groupbypenid3()
+    assert verify3 == True, "penid groupby not found for 3"
+    #
+    #
+    # """testcase C222508"""
+    #
+    #
+    # def test_verify_hierarichalgrouping_222508():
+    #     global test
+    #     test = str(test_case_ids[25])
+    #     lp.time_start()
+    #     lp.verify_hierarichalgrouping()
+    #     verify = lp.verify_groupbyemptypenid1()
+    #     assert verify == "1", "empty penid1 not found"
+    #     verify1 = lp.verify_groupbyemptypenid2()
+    #     assert verify1 == "D37712", "empty penid2 not found"
+    #     # verify2 = lp.verify_groupbyemptypenid3()
+    #     # assert verify2 == True, "empty penid3
+    #
+    # def test_closegrouping():
+    #     lp.verify_closegrouping()
+
+
+"""testcase 222511"""
+
+
+def test_verify_addparamusingcompoperator_222511():
+    global test
+    test = str(test_case_ids[26])
+    lp.time_start()
+    lp.verify_addparameterusingcompoperator()
+    lp.verify_otherattribute()
+    verify = lp.raw_data_verify_parameter1()
+    assert verify == True, "compparameter1 not added"
+
+
+"""testcase C222513"""
+
+
+def test_verify_Cparameteringrid_222513():
+    global test
+    test = str(test_case_ids[27])
+    lp.time_start()
+    verify = lp.verify_Cparameteringrid()
+    assert verify == True, "added Cparameter is not found in grid"
+
+
+"""commented for new build(assertion not working)"""
+"""testcase C222514"""
+
+
+def test_verify_parameteringallery_222514():
+    global test
+    test = str(test_case_ids[28])
+    lp.time_start()
+    lp.close_raw_data()
+    verify = lp.open_gallery()
+    assert verify == "Gallery"
+    lp.verify_parameteringallery()
+    # verify = lp.verify_parameteringallery()
+    # assert verify == True, "parameter not found in gallery attribute"
+
+
+"""testcase C222515"""
+
+
+def test_verifyremoveparameter_222515():
+    global test
+    test = str(test_case_ids[29])
+    lp.time_start()
+    lp.close_gallery()
+    lp.open_raw_data()
+    lp.remove_new_parameter()
+
+
+"""testcase T42253"""
+"""Lparamater"""
+
+"""testcase C222523"""
+"""commented for new build(log param not working-bug in new build)"""
+
+
+def test_verify_logparameter_222523():
+    global test
+    test = str(test_case_ids[30])
+    lp.verify_logparameter()
+    lp.verify_logselect()
+    lp.verify_movetoright()
+    lp.verify_movetoattribute()
+    lp.verify_selectattribute()
+    verify = lp.raw_data_verify_Logparameter()
+    assert verify == True, "logparameter not found"
+
+
+"""testcase C222531"""
+
+
+def test_verify_attrinexpressioneditor_222531():
+    global test
+    test = str(test_case_ids[31])
+    lp.time_start()
+    verify = lp.verify_attrinexpressioneditor()
+    assert verify == True, "assay not found"
+    verify1 = lp.verify_cultureattr()
+    assert verify1 == True, "culture not found"
+
+
+"""testcase C222532"""
+
+
+def test_verify_editnumericvalue_222532():
+    global test
+    test = str(test_case_ids[32])
+    lp.time_start()
+    verify = lp.verify_editnumericvalue()
+    assert verify == "21", "numeric value not changed"
+    verify1 = lp.verify_changetodefault()
+    assert verify1 == "1", "numeric value not changed to default"
+
+
+def test_closerawdata():
+    lp.time_start()
+    lp.close_raw_data()
 
 
 """filter builder"""
@@ -837,60 +840,62 @@ def test_verify_removefilter_222549():
     verify = lp.verify_removefilter()
     assert verify == False, "filter not removed"
 
+
 """commented for new build as bug in log parameter condition(222550 and 222551 and 222552"""
-    # """testcase C222550"""
-    #
-    #
-    # def test_verify_customparaminfilter_222550():
-    #     global test
-    #     test = str(test_case_ids[42])
-    #     lp.click_filter()
-    #     lp.add_chip_in_filter()
-    #     lp.filter_name("cust")
-    #     lp.add_condition_filter()
-    #     verify = lp.verify_customparaminfilter()
-    #     assert verify == True, "custom parameter not found"
-    #
-    #
-    # """testcase C222551"""
-    #
-    #
-    # def test_verify_filterconditionusingparam_222551():
-    #     global test
-    #     test = str(test_case_ids[43])
-    #     lp.time_start()
-    #     verify = lp.verify_filterconditionusingparam()
-    #     assert verify == "829", "count not found"
-    #     lp.close_filter()
-    #
-    #
-    # """testcase C222552"""
-    #
-    #
-    # def test_verify_filterpen_222552():
-    #     global test
-    #     test = str(test_case_ids[44])
-    #     lp.time_start()
-    #     lp.verify_openexplorer()
-    #     lp.open_gallery()
-    #     lp.verify_filterpen()
-    #     lp.close_gallery()
-    #     lp.click_filter()
-    #     lp.add_chip_in_filter()
-    #     lp.filter_name("filterpen")
-    #     lp.add_condition_filter()
-    #     lp.verify_selectfilter()
-    #     lp.close_filter()
-    #     lp.verify_openexplorer()
-    #     lp.open_gallery()
-    #     verify = lp.verif_filteringallery()
-    #     assert verify == True, "rejected pen not visible"
-    #
-    #
-    # def test__closegall():
-    #     lp.close_gallery()
-    #
-    #
+"""testcase C222550"""
+
+
+def test_verify_customparaminfilter_222550():
+    global test
+    test = str(test_case_ids[42])
+    lp.click_filter()
+    lp.add_chip_in_filter()
+    lp.filter_name("cust")
+    lp.add_condition_filter()
+    verify = lp.verify_customparaminfilter()
+    assert verify == True, "custom parameter not found"
+
+
+"""testcase C222551"""
+
+
+def test_verify_filterconditionusingparam_222551():
+    global test
+    test = str(test_case_ids[43])
+    lp.time_start()
+    verify = lp.verify_filterconditionusingparam()
+    assert verify == "829", "count not found"
+    lp.close_filter()
+
+
+"""commented for bug in new build (pen state in filter builder)"""
+# """testcase C222552"""
+#
+#
+# def test_verify_filterpen_222552():
+#     global test
+#     test = str(test_case_ids[44])
+#     lp.time_start()
+#     lp.verify_openexplorer()
+#     lp.open_gallery()
+#     lp.verify_filterpen()
+#     lp.close_gallery()
+#     lp.click_filter()
+#     lp.add_chip_in_filter()
+#     lp.filter_name("filterpen")
+#     lp.add_condition_filter()
+#     lp.verify_selectfilter()
+#     lp.close_filter()
+#     lp.verify_openexplorer()
+#     lp.open_gallery()
+#     verify = lp.verif_filteringallery()
+#     assert verify == True, "rejected pen not visible"
+#
+#
+# def test__closegall():
+#     lp.close_gallery()
+#
+
 """testcase C222553"""
 
 
@@ -898,6 +903,7 @@ def test_verify_validationmessage_222553():
     global test
     test = str(test_case_ids[45])
     lp.time_start()
+    lp.verify_openexplorer() #added this function here as above is commented
     verify = lp.verify_validationmessage()
     assert verify == True, "validation message not found"
 
@@ -974,9 +980,8 @@ def test_closefil():
     verify = lp.verify_filteringallery()
     assert verify == True, "pen count not matched"
 
-
-# def test_closegall():
-#     lp.close_gallfil()
+    # # def test_closegall():
+    # #     lp.close_gallfil()
 
 
 """testcase C222562"""
@@ -991,52 +996,54 @@ def test_verify_dragtofilter_222562():
     verify = lp.verify_drggedchip()
     assert verify == True, "added chip not displayed in filter"
 
-"""commented for new build-bug in penstate dropdown in filter"""
-# """testcase C222564"""
+
 #
-#
-# def test_verify_changesin1D_222564():
-#     global test
-#     test = str(test_case_ids[50])
-#     lp.time_start()
-#     lp.click_filter()
-#     lp.add_chip_in_filter()
-#     lp.filter_name("chng1D")
-#     lp.add_condition_filter()
-#     verify = lp.verify_changesin1D()
-#     assert verify == True, "graph not changed for 1D"
+# """commented for new build-bug in penstate dropdown in filter"""
+# # """testcase C222564"""
+# #
+# #
+# # def test_verify_changesin1D_222564():
+# #     global test
+# #     test = str(test_case_ids[50])
+# #     lp.time_start()
+# #     lp.click_filter()
+# #     lp.add_chip_in_filter()
+# #     lp.filter_name("chng1D")
+# #     lp.add_condition_filter()
+# #     verify = lp.verify_changesin1D()
+# #     assert verify == True, "graph not changed for 1D"
+# # #
+# #
+# # """testcase C222568"""
+# #
+# #
+# # def test_verify_decreasinginmultiplecond_222568():
+# #     global test
+# #     test = str(test_case_ids[51])
+# #     lp.time_start()
+# #     lp.verify_addmultiplecondition()
+# #     lp.verify_scndcond()
+# #     verify = lp.verify_decreasinginmultiplecond()
+# #     assert verify == True, "decreasing count not found"
 # #
 #
-# """testcase C222568"""
+# """commented for above bug in 222564 and 222568"""
+# # """testcase C222569"""
+# #
+# #
+# # def test_verify_removefiltergallery_222569():
+# #     global test
+# #     test = str(test_case_ids[52])
+# #     lp.time_start()
+# #     lp.close_filter()
+# #     lp.verify_openexplorer()
+# #     lp.verify_removefiltergallery()
+# #     lp.open_gallery()
+# #     verify = lp.verify_removedfilter()
+# #     assert verify == False, "filter not removed from gallery"
+# #     lp.click()
 #
 #
-# def test_verify_decreasinginmultiplecond_222568():
-#     global test
-#     test = str(test_case_ids[51])
-#     lp.time_start()
-#     lp.verify_addmultiplecondition()
-#     lp.verify_scndcond()
-#     verify = lp.verify_decreasinginmultiplecond()
-#     assert verify == True, "decreasing count not found"
-#
-
-"""commented for above bug in 222564 and 222568"""
-# """testcase C222569"""
-#
-#
-# def test_verify_removefiltergallery_222569():
-#     global test
-#     test = str(test_case_ids[52])
-#     lp.time_start()
-#     lp.close_filter()
-#     lp.verify_openexplorer()
-#     lp.verify_removefiltergallery()
-#     lp.open_gallery()
-#     verify = lp.verify_removedfilter()
-#     assert verify == False, "filter not removed from gallery"
-#     lp.click()
-
-
 """testcase C222570"""
 
 
@@ -1127,8 +1134,8 @@ def test_closefilt():
 #     assert digit == True, "digit after comma not found"
 #     pen = lp.pen_reject_approval()
 #     assert pen == True, "pen reject approval not found"
-
-
+#
+#
 # """testcase C222574"""
 #
 #
@@ -1145,7 +1152,6 @@ def test_closefilt():
 #     assert verify2 == False, "column empty is selected"
 #     verify3 = lp.verify_loadrankfornonselection()
 #     assert verify3 == False, "column load is selected"
-#     lp.verify_defaultcheckbxselection()
 #     lp.verify_defaultcheckbxselection()
 #
 #
@@ -1196,7 +1202,7 @@ def test_closefilt():
 #     test = str(test_case_ids[59])
 #     lp.time_start()
 #     verify = lp.verify_totalpencount()
-#     assert verify == "1758", "pen count not found"
+#     assert verify == "PenId: 1758", "pen count not found"
 #
 #
 # """testcase C222588"""
@@ -1207,11 +1213,11 @@ def test_closefilt():
 #     test = str(test_case_ids[60])
 #     lp.time_start()
 #     verify = lp.verify_beforerejectedpens()
-#     assert verify == "Pen_2", "pen count not found"
+#     assert verify == "Pen_1", "pen count not found"
 #     verify1 = lp.verify_afterrejectedpens()
 #     assert verify1 == False, "pen not rejected"
 #
-#
+
 # """testcase C222589"""
 #
 #
@@ -1327,7 +1333,7 @@ def test_closefilt():
 #     assert verify3 == True, "Images Per Image Sequence not found"
 #     verify4 = lp.verify_archiveitem3()
 #     assert verify4 == True, "Images and CSVs not found"
-#
+
 #
 # """testcase C222602"""
 #
@@ -1360,8 +1366,8 @@ def test_closefilt():
 #     assert verify1 == True, "range not found"
 #     verify2 = lp.verify_onlyrangeinzip()
 #     assert verify2 == True, "different range found"
-#
-#
+
+
 # """testcase C222604"""
 #
 #
@@ -2486,7 +2492,6 @@ def test_closefilt():
 
 def test_removeworkbook():
     lp.deleteworkbook()
-
 
 # """-----------------------------------------------------------------------------------------------------------------------"""
 # """old"""

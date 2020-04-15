@@ -1094,7 +1094,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
         element = self.driver.find_elements_by_accessibility_id("AutomationId_GallerySettings_ColumnFooters")
         actionchains = ActionChains(self.driver)
-        actionchains.move_to_element_with_offset(element[6], 50, 1)
+        actionchains.move_to_element_with_offset(element[6], 50, 55)
         actionchains.click()
         actionchains.perform()
         for x in range(0, 3):
@@ -1105,7 +1105,7 @@ class assaycld():
         time.sleep(3)
         self.driver.find_element_by_accessibility_id("AutomationId_GallerySettings_Apply").click()
         return len(element)
-        # time.sleep(5)
+        time.sleep(5)
 
     @allure.step('to verify Empty: PenId: is displayed')
     def verify_attribute1(self):
@@ -2165,6 +2165,10 @@ class assaycld():
 
     @allure.step('to add new log parameter in new parameter window')
     def verify_logparameter(self):
+        self.driver.find_element_by_name("Assay_2 : Score").click()
+        actionchains = ActionChains(self.driver)
+        for x in range(0, 10):
+            actionchains.send_keys(Keys.ARROW_UP).perform()
         time.sleep(3)
         self.driver.find_element_by_accessibility_id("AutomationId_RawData_NewParameter").click()
         self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Entries").click()
@@ -2207,23 +2211,25 @@ class assaycld():
         actionchains.double_click(fieldclick).perform()
 
     def verify_movetoattribute(self):
-        time.sleep(3)
+        time.sleep(2)
         actionchains = ActionChains(self.driver)
         self.driver.find_element_by_name("Load : CellType").click()
-        for x in range(0, 5):
-            actionchains.send_keys(Keys.ARROW_DOWN).perform()
         time.sleep(4)
+        for x in range(0, 6):
+            actionchains.send_keys(Keys.ARROW_DOWN).perform()
+        time.sleep(2)
 
     @allure.step('to save new log parameter')
     def verify_selectattribute(self):
         actionchains = ActionChains(self.driver)
         scndattr = self.driver.find_element_by_name("Assay : Score").click()
         actionchains.double_click(scndattr).perform()
-        time.sleep(2)
-        self.driver.find_element_by_name("OK").click()
+        time.sleep(3)
+        self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Apply").click()
 
     @allure.step('to verify added log parameter in column')
     def raw_data_verify_Logparameter(self):
+        time.sleep(3)
         self.driver.find_element_by_name("ChipId").click()
         actionchains = ActionChains(self.driver)
         for x in range(0, 10):
@@ -2292,19 +2298,19 @@ class assaycld():
     def verify_emptyrankforselection(self):
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_OpenSettings").click()
         time.sleep(4)
-        columnempty = self.driver.find_element_by_accessibility_id("CellElement_0_1").is_selected()
+        columnempty = self.driver.find_element_by_accessibility_id("CellElement_0_2").is_selected()
         return columnempty
 
     @allure.step('to verify if column load rank is selected in gallery setting')
     def verify_loadrankforselection(self):
-        columnempty = self.driver.find_element_by_accessibility_id("CellElement_1_1").is_selected()
-        return columnempty
+        columnload = self.driver.find_element_by_accessibility_id("CellElement_1_2").is_selected()
+        return columnload
 
     @allure.step('unselecting column in gallery setting')
     def verify_removecheckbxselection(self):
         time.sleep(4)
-        self.driver.find_element_by_accessibility_id("CellElement_0_1").click()
-        self.driver.find_element_by_accessibility_id("CellElement_1_1").click()
+        self.driver.find_element_by_accessibility_id("CellElement_0_2").click()
+        self.driver.find_element_by_accessibility_id("CellElement_1_2").click()
         self.driver.find_element_by_accessibility_id("AutomationId_GallerySettings_Apply").click()
 
     @allure.step('to verify if column empty is not selected in gallery setting')
@@ -2312,19 +2318,19 @@ class assaycld():
         time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_OpenSettings").click()
         time.sleep(4)
-        columnempty = self.driver.find_element_by_accessibility_id("CellElement_0_1").is_selected()
+        columnempty = self.driver.find_element_by_accessibility_id("CellElement_0_2").is_selected()
         return columnempty
 
     @allure.step('to verify if column load rank is selected in gallery setting')
     def verify_loadrankfornonselection(self):
-        columnempty = self.driver.find_element_by_accessibility_id("CellElement_1_1").is_selected()
+        columnempty = self.driver.find_element_by_accessibility_id("CellElement_1_2").is_selected()
         return columnempty
 
     @allure.step('making column to default selection in gallery setting')
     def verify_defaultcheckbxselection(self):
         time.sleep(4)
-        self.driver.find_element_by_accessibility_id("CellElement_0_1").click()
-        self.driver.find_element_by_accessibility_id("CellElement_1_1").click()
+        self.driver.find_element_by_accessibility_id("CellElement_0_2").click()
+        self.driver.find_element_by_accessibility_id("CellElement_1_2").click()
         self.driver.find_element_by_accessibility_id("AutomationId_GallerySettings_Apply").click()
 
     """testcase T42216"""
@@ -2362,7 +2368,7 @@ class assaycld():
         columnattr = self.driver.find_elements_by_class_name("GridViewHeaderCell")
         # print(columnattr)
         time.sleep(3)
-        column = columnattr[3].get_attribute("Name")
+        column = columnattr[8].get_attribute("Name")
         print(column)
         return column
 
@@ -2381,7 +2387,7 @@ class assaycld():
         columnattr = self.driver.find_elements_by_class_name("GridViewHeaderCell")
         # print(columnattr)
         time.sleep(3)
-        column = columnattr[3].get_attribute("Name")
+        column = columnattr[8].get_attribute("Name")
         print(column)
         return column
 
@@ -2404,7 +2410,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("Empty").click()
         self.driver.find_element_by_accessibility_id("Empty").click()
         time.sleep(4)
-        columnattr = self.driver.find_element_by_name("1758")
+        columnattr = self.driver.find_element_by_name("PenId: 1758")
         time.sleep(3)
         column = columnattr.get_attribute("Name")
         self.driver.find_element_by_accessibility_id("Empty").click()
@@ -2414,7 +2420,7 @@ class assaycld():
 
     @allure.step('to verify pen id in gallery')
     def verify_beforerejectedpens(self):
-        columnattr = self.driver.find_element_by_name("Pen_2")
+        columnattr = self.driver.find_element_by_name("Pen_1")
         time.sleep(3)
         column = columnattr.get_attribute("Name")
         return column
@@ -2427,7 +2433,7 @@ class assaycld():
         time.sleep(5)
 
         try:
-            columnattr = self.driver.find_element_by_name("Pen_2").is_displayed()
+            columnattr = self.driver.find_element_by_name("Pen_1").is_displayed()
             return columnattr
         except:
             b = False
@@ -3124,7 +3130,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
         element = self.driver.find_elements_by_accessibility_id("AutomationId_GallerySettings_ColumnFooters")
         actionchains = ActionChains(self.driver)
-        actionchains.move_to_element_with_offset(element[6], 50, 1)
+        actionchains.move_to_element_with_offset(element[6], 50, 55)
         actionchains.click()
         actionchains.perform()
         for x in range(0, 4):
@@ -3134,7 +3140,7 @@ class assaycld():
     @allure.step('to verify validation message after selecting more than 5 items')
     def verify_displayedmessage(self):
         actionchains = ActionChains(self.driver)
-        ele = self.driver.find_element_by_name("Culture: CellCountVerified")
+        ele = self.driver.find_element_by_name("Load: CellCountVerified")
         hover = actionchains.move_to_element(ele)
         hover.perform()
         time.sleep(3)
@@ -3193,7 +3199,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_ExportMenu").click()
         time.sleep(2)
         self.driver.find_element_by_name("Images only").click()
-        saveas = self.driver.find_element_by_name("Save As").is_displayed()
+        saveas = self.driver.find_element_by_name("ENTER PEN IDS").is_displayed()
         return saveas
 
     @allure.step('to save and verify Images only zip file in explorer')
