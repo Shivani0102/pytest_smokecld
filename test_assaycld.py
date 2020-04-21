@@ -2131,13 +2131,13 @@ def test_verify_columnsections_222680():
     test = str(test_case_ids[114])
     lp.verify_opensettings()
     lp.verify_columnsections()
-    lp.open_gallery()
+    # lp.open_gallery()
     verify = lp.verify_unselectattrcolumn()
     assert verify == False, "cell type column is not unselected"
 
 
 def test_closegall():
-    lp.close_gallery()
+    lp.close_gallfil()
 
 
 """testcase C222681"""

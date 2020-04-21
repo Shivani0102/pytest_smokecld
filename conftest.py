@@ -70,8 +70,8 @@ def driver():
 
     desktop = str(os.path.join(Path.home(), "Desktop\D37712"))
     try:
-        if os.path.isfile(desktop + "\Assay Analyzer Version 20191129.2.json"):
-            os.remove(desktop + "\Assay Analyzer Version 20191129.2.json")
+        if os.path.isfile(desktop + "\AssayVersion2.0.json"):
+            os.remove(desktop + "\AssayVersion2.0.json")
     except:
         print("json file not found")
 
@@ -82,8 +82,8 @@ def driver():
     except:
         print("workbook file not found")
 
-    path = os.getcwd() + "/open_tejas.bat"
-    subprocess.call(path)
+    # path = os.getcwd() + "/open_tejas.bat"
+    # subprocess.call(path)
     desired_caps = {}
     desired_caps["app"] = "Root"
     global driver

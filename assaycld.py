@@ -340,8 +340,8 @@ class assaycld():
         time.sleep(2)
         chip = self.driver.find_element_by_name("D37712")
         actionchains.context_click(chip).perform()
-        time.sleep(2)
-        self.driver.find_element_by_name("Open in Gallery").click()
+        galopen = self.driver.find_element_by_name("Open in Gallery")
+        galopen.click()
         time.sleep(8)
         gallery = self.driver.find_element_by_name("Gallery").is_displayed()
         return gallery
@@ -358,8 +358,10 @@ class assaycld():
 
     @allure.step('to close gallery window')
     def close_gallery(self):
+        time.sleep(3)
         actionchains = ActionChains(self.driver)
-        self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
+        gal = self.driver.find_element_by_accessibility_id("AutomationId_Gallery")
+        gal.click()
         gallery = self.driver.find_element_by_accessibility_id("AutomationId_Gallery")
         actionchains.context_click(gallery).perform()
         time.sleep(2)
@@ -728,6 +730,7 @@ class assaycld():
     def add_chip_in_filter(self):
         self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_Chips").click()
         self.driver.find_element_by_name("D37712").click()
+        # self.driver.find_element_by_name("D37712").click()
         time.sleep(2)
 
     '''comment'''
@@ -4125,7 +4128,7 @@ class assaycld():
         for x in range(0, 69):
             keyboard.press('backspace')
         time.sleep(2)
-        self.driver.find_element_by_class_name("Edit").send_keys("Assay Analyzer Version 20191129.2")
+        self.driver.find_element_by_class_name("Edit").send_keys("AssayVersion2.0")
         time.sleep(2)
         self.driver.find_element_by_name("Save").click()
         time.sleep(2)
@@ -4153,8 +4156,8 @@ class assaycld():
         return saveas
 
     def verify_savedfile(self):
-        verify = self.driver.find_element_by_name("Assay Analyzer Version 20191129.2.json").is_displayed()
-        self.driver.find_element_by_name("Assay Analyzer Version 20191129.2.json").click()
+        verify = self.driver.find_element_by_name("AssayVersion2.0.json").is_displayed()
+        self.driver.find_element_by_name("AssayVersion2.0.json").click()
         return verify
 
     def verify_importconfirmation(self):
@@ -4173,8 +4176,10 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_SettingsWindow_AppLevel_Reset").click()
         verify = self.driver.find_element_by_name(
             "Are you sure you want to reset application settings to default values?").is_displayed()
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id("OKButton").click()
         self.driver.find_element_by_name("Apply").click()
+        time.sleep(4)
         return verify
 
     """testcase T42295"""
@@ -4186,13 +4191,13 @@ class assaycld():
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_ColumnsByCSVTypeView_ColumnsListBySelectedType_ColumnName_Target_Index").click()
         self.driver.find_element_by_name("Apply").click()
+
+    def verify_savedcsvcol(self):
         time.sleep(4)
         self.driver.find_element_by_accessibility_id("AutomationId_MainWindow_NavigationMenu_MenuElement_File").click()
         time.sleep(2)
-        self.driver.find_element_by_accessibility_id(
-            "AutomationId_MainWindow_NavigationMenu_MenuElement_Settings").click()
-
-    def verify_savedcsvcol(self):
+        sett = self.driver.find_element_by_name("Settings")
+        sett.click()
         self.driver.find_element_by_accessibility_id(
             "AutomationId_SettingsWindow_SettingsMenu_MenuElement_ColumnsByCSVType").click()
 
@@ -4441,6 +4446,12 @@ class assaycld():
     #     return verify
 
     def verify_unselectattrcolumn(self):
+        time.sleep(2)
+        chip = self.driver.find_element_by_name("D37712")
+        actionchains.context_click(chip).perform()
+        galopen = self.driver.find_element_by_name("Open in Gallery")
+        galopen.click()
+        time.sleep(6)
         self.driver.find_element_by_accessibility_id("CellElement_0_0").click()
         time.sleep(2)
         try:
