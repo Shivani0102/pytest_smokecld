@@ -57,14 +57,14 @@ def driver():
     # except:
     #     print("history file not found")
     try:
-        if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\Pens states.dat"):
-            os.remove(appdata + "\Assay Analyzer 2.0\D37712\Pens states.dat")
+        if os.path.isfile(appdata + "\Assay Analyzer\D37712\Pens states.dat"):
+            os.remove(appdata + "\Assay Analyzer\D37712\Pens states.dat")
     except:
         print("penstates file not found")
 
     try:
-        if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\CustomParameters.dat"):
-            os.remove(appdata + "\Assay Analyzer 2.0\D37712\CustomParameters.dat")
+        if os.path.isfile(appdata + "\Assay Analyzer\D37712\CustomParameters.dat"):
+            os.remove(appdata + "\Assay Analyzer\D37712\CustomParameters.dat")
     except:
         print("customparam file not found")
 
@@ -82,8 +82,19 @@ def driver():
     except:
         print("workbook file not found")
 
-    # path = os.getcwd() + "/open_tejas.bat"
-    # subprocess.call(path)
+    try:
+        if os.path.isfile(desktop + "\reordercol.workbook"):
+            os.remove(desktop + "\reordercol.workbook")
+    except:
+        print("workbook file not found")
+    try:
+        if os.path.isfile(desktop + "\CLD.reordercol"):
+            os.remove(desktop + "\CLD.reordercol")
+    except:
+        print("workbook file not found")
+
+    path = os.getcwd() + "/open_tejas.bat"
+    subprocess.call(path)
     desired_caps = {}
     desired_caps["app"] = "Root"
     global driver
