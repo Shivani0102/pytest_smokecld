@@ -113,17 +113,17 @@ def test_maximize_222468():
 #     verify = lp.verify_version_number()
 #     assert verify == True, "version number not found"
 #
-
-"""testcase T222471"""
-
-
-def test_verifyshortinfo():
-    global test
-    test = str(test_case_ids[4])
-    verify = lp.verify_shortinformation()
-    assert verify == True, "content not found"
-
-
+#
+# """testcase T222471"""
+#
+#
+# def test_verifyshortinfo():
+#     global test
+#     test = str(test_case_ids[4])
+#     verify = lp.verify_shortinformation()
+#     assert verify == True, "content not found"
+#
+#
 # """testcase C222475"""
 #
 #
@@ -132,7 +132,7 @@ def test_verifyshortinfo():
 #     test = str(test_case_ids[5])
 #     verify = lp.verify_filterbuilder()
 #     assert verify == True, "filter builder window not found"
-#
+
 #     # """Testcase 31260"""
 #     #
 #     # def test_notify_newversion_31260():
@@ -142,20 +142,20 @@ def test_verifyshortinfo():
 #     #     lp.clickupdate()
 #     #     verify= lp.verify_version_notify()
 #     #     assert verify==True,"version update not notified"
+
 #
-# #
-# # """Testcase 31266"""
-# #
-# # def test_notify_latestnewversion_31266():
-# #     # global test
-# #     # test = str(test_case_ids[5])
-# #     lp.time_start()
-# #     lp.clickupdate()
-# #     verify= lp.verify_latestversion_check()
-# #     assert verify==True,"latest version update not notified"
-# #     lp.closenotify()
-# #
+# """Testcase 31266"""
 #
+# def test_notify_latestnewversion_31266():
+#     # global test
+#     # test = str(test_case_ids[5])
+#     lp.time_start()
+#     lp.clickupdate()
+#     verify= lp.verify_latestversion_check()
+#     assert verify==True,"latest version update not notified"
+#     lp.closenotify()
+#
+
 # """testcase T35914"""
 #
 #
@@ -180,7 +180,7 @@ def test_verifyshortinfo():
 #
 #
 # """testcase T35915"""
-
+#
 #
 # def test_verifyworkbooktypeelement():
 #     # global test
@@ -197,7 +197,7 @@ def test_verifyshortinfo():
 #     assert copy == True, "copy button not found"
 #     remove = lp.verify_workbook_type_element_remove()
 #     assert remove == True, "remove button not found"
-#
+
 #
 # """testcase T35885"""
 #
@@ -216,7 +216,7 @@ def test_verifyshortinfo():
 #     assert addfilter == True, "add filter button not found"
 #     addgraph = lp.workbook_explorer_addgraph()
 #     assert addgraph == True, "add graph button not found"
-#
+
 
 """Testcase T36382"""
 
@@ -238,7 +238,7 @@ def test_addchip():
     lp.time_start()
     chip = lp.add_chip()
     assert chip == True, "chip not found"
-
+#
 #
 # """testcase C222476"""
 #
@@ -393,7 +393,7 @@ def test_addchip():
 #    verify= lp.verify_remove_view()
 #    assert verify==True,"Remove view confirmation not display"
 #    verify= lp.verify_viewin_workexplorer()
-#    assert verify==False,"view is displayed in workbook area"
+#    assert verify== False,"view is displayed in workbook area"
 #
 # def test_backdefault():
 #     lp.time_start()
@@ -552,19 +552,20 @@ def test_addchip():
 #     lp.time_start()
 #     verify = lp.open_raw_data()
 #     assert verify == "Raw Data"
-
-    # """testcase T35904"""
-    #
-    #
-    # def test_rawdatasorting_222505():
-    #     global test
-    #     test = str(test_case_ids[177])
-    #     lp.time_start()
-    #     verify = lp.raw_data_column_sorting()
-    #     assert verify == "1"
-    #     verify1 = lp.raw_data_column_sorting1()
-    #     assert verify1 == "1758", "Decreasing order sorting not working."
-    #     lp.raw_data_column_sortingdef()
+#
+#     #
+#     # """testcase T35904"""
+#     #
+#     #
+#     # def test_rawdatasorting_222505():
+#     #     global test
+#     #     test = str(test_case_ids[177])
+#     #     lp.time_start()
+#     #     verify = lp.raw_data_column_sorting()
+#     #     assert verify == "1"
+#     #     verify1 = lp.raw_data_column_sorting1()
+#     #     assert verify1 == "1758", "Decreasing order sorting not working."
+#     #     lp.raw_data_column_sortingdef()
 #
 #
 # """testcase C222507"""
@@ -581,23 +582,23 @@ def test_addchip():
 #     assert verify2 == True, "penid groupby not found for 2"
 #     verify3 = lp.verify_groupbypenid3()
 #     assert verify3 == True, "penid groupby not found for 3"
-    #
-    # """testcase C222508"""
-    #
-    # def test_verify_hierarichalgrouping_222508():
-    #     global test
-    #     test = str(test_case_ids[25])
-    #     lp.time_start()
-    #     lp.verify_hierarichalgrouping()
-    #     verify = lp.verify_groupbyemptypenid1()
-    #     assert verify == "1", "empty penid1 not found"
-    #     verify1 = lp.verify_groupbyemptypenid2()
-    #     assert verify1 == "D37712", "empty penid2 not found"
-    #     # verify2 = lp.verify_groupbyemptypenid3()
-    #     # assert verify2 == True, "empty penid3
-    #
-    # def test_closegrouping():
-    #     lp.verify_closegrouping()
+#     #
+#     # """testcase C222508"""
+#     #
+#     # def test_verify_hierarichalgrouping_222508():
+#     #     global test
+#     #     test = str(test_case_ids[25])
+#     #     lp.time_start()
+#     #     lp.verify_hierarichalgrouping()
+#     #     verify = lp.verify_groupbyemptypenid1()
+#     #     assert verify == "1", "empty penid1 not found"
+#     #     verify1 = lp.verify_groupbyemptypenid2()
+#     #     assert verify1 == "D37712", "empty penid2 not found"
+#     #     # verify2 = lp.verify_groupbyemptypenid3()
+#     #     # assert verify2 == True, "empty penid3
+#     #
+#     # def test_closegrouping():
+#     #     lp.verify_closegrouping()
 #
 #
 # """testcase 222511"""
@@ -670,9 +671,9 @@ def test_addchip():
 #     verify = lp.raw_data_verify_Logparameter()
 #     assert verify == True, "logparameter not found"
 #
-#
+# #
 # """testcase C222531"""
-
+#
 #
 # def test_verify_attrinexpressioneditor_222531():
 #     global test
@@ -820,7 +821,7 @@ def test_addchip():
 #     assert verify == True, "logical parameter1 not added"
 #     verify=lp.rawdata_gridparameter_added()
 #     assert verify == True, "logical parameter1 not added in grid"
-#
+# #
 #
 # def test_closerawdata():
 #     lp.time_start()
@@ -867,7 +868,7 @@ def test_addchip():
 #     assert verify == True, "selected parameter not found"
 #     lp.close_raw_data()
 #
-
+#
 #
 # """filter builder"""
 #
@@ -959,7 +960,7 @@ def test_addchip():
 #     verify = lp.filter_save_button_oned()
 #     assert verify == True, "1-D filter not saved"
 #
-
+#
 # """testcase C222540"""
 #
 #
@@ -1110,7 +1111,7 @@ def test_addchip():
 #     lp.time_start()
 #     verify = lp.verify_filterconditionusingparam()
 #     assert verify == "616", "count not found"
-#
+# #
 #
 # """commented for bug in new build (pen state in filter builder)"""
 # """testcase C222552"""
@@ -1287,7 +1288,7 @@ def test_addchip():
 #     verify = lp.verify_removedfilter()
 #     assert verify == False, "filter not removed from gallery"
 #     lp.click()
-
+#
 #
 # """testcase C222570"""
 #
@@ -1296,8 +1297,8 @@ def test_addchip():
 #     global test
 #     test = str(test_case_ids[53])
 #     lp.time_start()
-#     """commented for above condition"""
-#     # lp.close_gallfil()
+#     # """commented for above condition"""
+#     lp.close_gallfil()
 #     lp.click_filter()
 #     verify = lp.verify_filterdroprefresh()
 #     assert verify == True
@@ -1466,165 +1467,165 @@ def test_addchip():
 #     lp.time_start()
 #     # lp.close_filter()
 #     lp.verify_openexplorer()
+#
 
-
-# """CLD Smoke"""
-
-    #
-    # """testcase 750"""
-    #
-    #
-    # def test_clickfilter_222533_30547():
-    #     global test
-    #     test = str(test_case_ids[194])
-    #     lp.time_start()
-    #     verify = lp.click_filter()
-    #     assert verify == True, "filter window not found"
-    #
-    # """testcase T35899"""
-    #
-    #
-    # def test_addchipinfilter_222534_30548():
-    #     global test
-    #     test = str(test_case_ids[17])
-    #     lp.time_start()
-    #     lp.add_chip_in_filter()
-    #
-    #
-    # """testcase T35900"""
-    #
-    #
-    # def test_filtername_222535_30549():
-    #     global test
-    #     test = str(test_case_ids[18])
-    #     lp.time_start()
-    #     lp.filter_name("fil")
-    #
-    #
-    # """testcase T35901"""
-    #
-    #
-    # def test_addconditioninfilter_222536_30550():
-    #     global test
-    #     test = str(test_case_ids[19])
-    #     lp.time_start()
-    #     lp.add_condition_filter()
-    #     penid = lp.penid()
-    #     assert penid == True, "penid not found"
-    #     state = lp.pen_state()
-    #     assert state == True, "penstate not found"
-    #     # loadpenid = lp.load_pen_filter()
-    #     # assert loadpenid == True, "load penid not found"
-    #     # deviceid = lp.load_device_id()
-    #     # assert deviceid == True, "load device id not found"
-    #     # countverified = lp.load_cell_count_verified()
-    #     # assert countverified == True, "load cell count verified not found"
-    #     # cellcount = lp.load_cell_count()
-    #     # assert cellcount == True, "cell count not found"
-    #     lp.abc()
-    #
-    #
-    # """testcase T35902"""
-    #
-    #
-    # def test_filterbuildersetminmax_222537_30551():
-    #     global test
-    #     test = str(test_case_ids[20])
-    #     lp.time_start()
-    #     verify = lp.filter_builder_set_min()
-    #     assert verify == True, "min button not found"
-    #     verify1 = lp.filter_builder_set_max()
-    #     assert verify1 == True, "max button not found"
-    #     verify2 = lp.filter_builder_increase()
-    #     assert verify2 == True, "min and max button not working"
-    #
-    #
-    # """testcase T35903"""
-    #
-    #
-    # def test_filtersavebuttononed_222539_30553():
-    #     global test
-    #     test = str(test_case_ids[21])
-    #     lp.time_start()
-    #     lp.filter_close()
-    #     verify = lp.filter_save_button_oned()
-    #     assert verify == True, "1-D filter not saved"
-    #     verify = lp.click_filter()
-    #     assert verify == True, "filter window not found"
-    #     #
-    #     # def test_closeoned():
-    #     #     lp.close_filter()
-    #     #
-    #
-    #
-    # """testcase T35983"""
-    #
-    #
-    # def test_filtertwodcondition_222554_30569():
-    #     global test
-    #     test = str(test_case_ids[22])
-    #     lp.time_start()
-    #     lp.add_chip_in_filter()
-    #     lp.filter_name("filter1")
-    #     lp.filter_twod_condition()
-    #     xaxis = lp.filter_twod_xaxis()
-    #     assert xaxis == True, "xaxis combobox not found"
-    #     yaxis = lp.filter_twod_yaxis()
-    #     assert yaxis == True, "yaxis combo box not found"
-    #     verify = lp.filter_verify_chart()
-    #     assert verify == True, "2-D Condition not working"
-    #
-    #
-    # """testcase T35984"""
-    #
-    #
-    # def test_filtertwodconditonsave_222555_30570():
-    #     global test
-    #     test = str(test_case_ids[23])
-    #     lp.time_start()
-    #     lp.close_twod()
-    #     verify = lp.filter_save_button_twod()
-    #     assert verify == True, "2-D filter not saved"
-    #     # lp.close_filter()
-    #
-    #
-    # def test_close():
-    #     lp.time_start()
-    #     lp.close()
-
+#     # """CLD Smoke"""
+#
 # #
-
-"""testcase 753"""
-
-
-def test_opengallery():
-    # global test
-    # test = "753"
-    lp.time_start()
-    verify = lp.open_gallery()
-    assert verify == True, "gallery window not found"
-
-
-"""testcase T35969"""
-
-
-def test_galleryimagesequence():
-    # global test
-    # test = "768"
-    lp.time_start()
-    verify = lp.gallery_image_sequence_empty()
-    assert verify == True, "empty not found"
-    verify1 = lp.gallery_image_sequence_load()
-    assert verify1 == True, "Load not found"
-    verify2 = lp.gallery_image_sequence_culture()
-    assert verify2 == True, "culture not found"
-    verify3 = lp.gallery_image_sequence_assay()
-    assert verify3 == True, "Assay not found"
-    verify4 = lp.gallery_image_sequence_culture2()
-    assert verify4 == True, "Culture2 not found"
-    verify5 = lp.gallery_image_sequence_assay2()
-    assert verify5 == True, "assay2 not found"
-
+# #     """testcase 750"""
+# #
+# #
+# #     def test_clickfilter_222533_30547():
+# #         global test
+# #         test = str(test_case_ids[194])
+# #         lp.time_start()
+# #         verify = lp.click_filter()
+# #         assert verify == True, "filter window not found"
+# #
+# #     """testcase T35899"""
+# #
+# #
+# #     def test_addchipinfilter_222534_30548():
+# #         global test
+# #         test = str(test_case_ids[17])
+# #         lp.time_start()
+# #         lp.add_chip_in_filter()
+# #
+# #
+# #     """testcase T35900"""
+# #
+# #
+# #     def test_filtername_222535_30549():
+# #         global test
+# #         test = str(test_case_ids[18])
+# #         lp.time_start()
+# #         lp.filter_name("fil")
+# #
+# #
+# #     """testcase T35901"""
+# #
+# #
+# #     def test_addconditioninfilter_222536_30550():
+# #         global test
+# #         test = str(test_case_ids[19])
+# #         lp.time_start()
+# #         lp.add_condition_filter()
+# #         penid = lp.penid()
+# #         assert penid == True, "penid not found"
+# #         state = lp.pen_state()
+# #         assert state == True, "penstate not found"
+# #         # loadpenid = lp.load_pen_filter()
+# #         # assert loadpenid == True, "load penid not found"
+# #         # deviceid = lp.load_device_id()
+# #         # assert deviceid == True, "load device id not found"
+# #         # countverified = lp.load_cell_count_verified()
+# #         # assert countverified == True, "load cell count verified not found"
+# #         # cellcount = lp.load_cell_count()
+# #         # assert cellcount == True, "cell count not found"
+# #         lp.abc()
+# #
+# #
+# #     """testcase T35902"""
+# #
+# #
+# #     def test_filterbuildersetminmax_222537_30551():
+# #         global test
+# #         test = str(test_case_ids[20])
+# #         lp.time_start()
+# #         verify = lp.filter_builder_set_min()
+# #         assert verify == True, "min button not found"
+# #         verify1 = lp.filter_builder_set_max()
+# #         assert verify1 == True, "max button not found"
+# #         verify2 = lp.filter_builder_increase()
+# #         assert verify2 == True, "min and max button not working"
+# #
+# #
+# #     """testcase T35903"""
+# #
+# #
+# #     def test_filtersavebuttononed_222539_30553():
+# #         global test
+# #         test = str(test_case_ids[21])
+# #         lp.time_start()
+# #         lp.filter_close()
+# #         verify = lp.filter_save_button_oned()
+# #         assert verify == True, "1-D filter not saved"
+# #         verify = lp.click_filter()
+# #         assert verify == True, "filter window not found"
+# #         #
+# #         # def test_closeoned():
+# #         #     lp.close_filter()
+# #         #
+# #
+# #
+# #     """testcase T35983"""
+# #
+# #
+# #     def test_filtertwodcondition_222554_30569():
+# #         global test
+# #         test = str(test_case_ids[22])
+# #         lp.time_start()
+# #         lp.add_chip_in_filter()
+# #         lp.filter_name("filter1")
+# #         lp.filter_twod_condition()
+# #         xaxis = lp.filter_twod_xaxis()
+# #         assert xaxis == True, "xaxis combobox not found"
+# #         yaxis = lp.filter_twod_yaxis()
+# #         assert yaxis == True, "yaxis combo box not found"
+# #         verify = lp.filter_verify_chart()
+# #         assert verify == True, "2-D Condition not working"
+# #
+# #
+# #     """testcase T35984"""
+# #
+# #
+# #     def test_filtertwodconditonsave_222555_30570():
+# #         global test
+# #         test = str(test_case_ids[23])
+# #         lp.time_start()
+# #         lp.close_twod()
+# #         verify = lp.filter_save_button_twod()
+# #         assert verify == True, "2-D filter not saved"
+# #         # lp.close_filter()
+# #
+# #
+# #     def test_close():
+# #         lp.time_start()
+# #         lp.close()
+#
+# #
+#
+# """testcase 753"""
+#
+#
+# def test_opengallery():
+#     # global test
+#     # test = "753"
+#     lp.time_start()
+#     verify = lp.open_gallery()
+#     assert verify == True, "gallery window not found"
+#
+#
+# """testcase T35969"""
+#
+#
+# def test_galleryimagesequence():
+#     # global test
+#     # test = "768"
+#     lp.time_start()
+#     verify = lp.gallery_image_sequence_empty()
+#     assert verify == True, "empty not found"
+#     verify1 = lp.gallery_image_sequence_load()
+#     assert verify1 == True, "Load not found"
+#     verify2 = lp.gallery_image_sequence_culture()
+#     assert verify2 == True, "culture not found"
+#     verify3 = lp.gallery_image_sequence_assay()
+#     assert verify3 == True, "Assay not found"
+#     verify4 = lp.gallery_image_sequence_culture2()
+#     assert verify4 == True, "Culture2 not found"
+#     verify5 = lp.gallery_image_sequence_assay2()
+#     assert verify5 == True, "assay2 not found"
+#
 #
 # """TestCase T35893"""
 #
@@ -1744,9 +1745,10 @@ def test_galleryimagesequence():
 #     # # assert verify5 == True, "selected attribute not found"
 #     lp.gallery_export_pdf()
 #
+#
 # """testcase C222574"""
 #
-
+#
 # def test_verify_rankforselection_239898():
 #     global test
 #     test = str(test_case_ids[55])
@@ -1776,21 +1778,22 @@ def test_galleryimagesequence():
 #     verify1 = lp.verify_rowheightincreasedvalue()
 #     assert verify1 == "140", "row height value not increased"
 #
+
 #
-"""testcase C222579"""
-
-
-def test_verify_reorderingofcolumns_239903():
-    global test
-    test = str(test_case_ids[57])
-    lp.time_start()
-    verify = lp.verify_reorderingofcolumns()
-    assert verify == "Assay", "header value not found"
-    lp.verify_columnchange()
-    verify1 = lp.verify_reorderingofchangedcolumns()
-    assert verify1 == "Assay_2", "header value not changed"
-
-
+# """testcase C222579"""
+#
+#
+# def test_verify_reorderingofcolumns_239903():
+#     global test
+#     test = str(test_case_ids[57])
+#     lp.time_start()
+#     verify = lp.verify_reorderingofcolumns()
+#     assert verify == "Assay", "header value not found"
+#     lp.verify_columnchange()
+#     verify1 = lp.verify_reorderingofchangedcolumns()
+#     assert verify1 == "Assay_2", "header value not changed"
+#
+#
 # """testcase C222581"""
 #
 #
@@ -1865,356 +1868,354 @@ def test_verify_reorderingofcolumns_239903():
 #     lp.time_start()
 #     verify = lp.verify_removegalleryfilter()
 #     assert verify == True, "filter not removed from gallery"
-
-
-"""testcase C222592"""
-
-
-def test_verify_changepenstate_239916():
-    global test
-    test = str(test_case_ids[64])
-    lp.time_start()
-    verify = lp.verify_changepenstate()
-    assert verify == True, "state not changed"
-    lp.close_gallery()
-
-
-"""testcase C222593"""
-
-
-def test_verify_savedpenstate_239917():
-    global test
-    test = str(test_case_ids[65])
-    lp.time_start()
-    lp.open_gallery()
-    lp.verify_savedpenstate()
-    lp.close_gallery()
-    lp.open_gallery()
-    verify = lp.verify_selectedpen()
-    assert verify == True, "pen not selected"
-
-
-"""testcase C222597"""
-
-
-def test_verify_datacolumn_239921():
-    global test
-    test = str(test_case_ids[66])
-    lp.time_start()
-    lp.gallery_select_data_attribute()
-    verify1 = lp.verify_attribute1()
-    assert verify1 == True, "selected attribute not found"
-    verify2 = lp.verify_attribute2()
-    assert verify2 == True, "selected attribute not found"
-    verify3 = lp.verify_attribute3()
-    assert verify3 == True, "selected attribute not found"
-    verify4 = lp.verify_attribute4()
-    assert verify4 == True, "selected attribute not found"
-
+#
+#
+# """testcase C222592"""
+#
+#
+# def test_verify_changepenstate_239916():
+#     global test
+#     test = str(test_case_ids[64])
+#     lp.time_start()
+#     verify = lp.verify_changepenstate()
+#     assert verify == True, "state not changed"
+#     lp.close_gallery()
+#
+#
+# """testcase C222593"""
+#
+#
+# def test_verify_savedpenstate_239917():
+#     global test
+#     test = str(test_case_ids[65])
+#     lp.time_start()
+#     lp.open_gallery()
+#     lp.verify_savedpenstate()
+#     lp.close_gallery()
+#     lp.open_gallery()
+#     verify = lp.verify_selectedpen()
+#     assert verify == True, "pen not selected"
+#
+#
+# """testcase C222597"""
+#
+#
+# def test_verify_datacolumn_239921():
+#     global test
+#     test = str(test_case_ids[66])
+#     lp.time_start()
+#     lp.gallery_select_data_attribute()
+#     verify1 = lp.verify_attribute1()
+#     assert verify1 == True, "selected attribute not found"
+#     verify2 = lp.verify_attribute2()
+#     assert verify2 == True, "selected attribute not found"
+#     verify3 = lp.verify_attribute3()
+#     assert verify3 == True, "selected attribute not found"
+#     verify4 = lp.verify_attribute4()
+#     assert verify4 == True, "selected attribute not found"
+#
+#
+# #
+# """testcase C222598"""
+#
+#
+# def test_validationattrmessage_239922():
+#     global test
+#     test = str(test_case_ids[67])
+#     lp.time_start()
+#     lp.verify_validationattrmessage()
+#     verify = lp.verify_displayedmessage()
+#     assert verify == True, "validation message not found"
+#
+#
+# """testcase C222601"""
+#
+#
+# def test_verify_exporttoarchive_239925():
+#     global test
+#     test = str(test_case_ids[68])
+#     lp.time_start()
+#     verify = lp.verify_exporttoarchive()
+#     assert verify == True, "archive button not found"
+#     verify1 = lp.verify_exporttoarchiveclick()
+#     assert verify1 == True, "Images only not displayed"
+#     verify2 = lp.verify_archiveitem1()
+#     assert verify2 == True, "Images Per Pen not displayed"
+#     verify3 = lp.verify_archiveitem2()
+#     assert verify3 == True, "Images Per Image Sequence not found"
+#     verify4 = lp.verify_archiveitem3()
+#     assert verify4 == True, "Images and CSVs not found"
+#
+#
+# """testcase C222602"""
+#
+#
+# def test_verify_exportselectedthumb_239926():
+#     global test
+#     test = str(test_case_ids[69])
+#     lp.time_start()
+#     verify = lp.verify_exportselectedthumb()
+#     assert verify == True, "file explorer not found"
+#     # lp.verify_exportdefaultfilename()
+#     verify1 = lp.verify_exportdefaultfilename()
+#     assert verify1 == True, "zip file not found"
+#     verify2 = lp.verify_datainzip()
+#     assert verify2 == True, "jpg not found"
+#
+#
+# """testcase C222603"""
+#
+#
+# def test_verify_penidforexporting_239927():
+#     global test
+#     test = str(test_case_ids[70])
+#     lp.time_start()
+#     verify = lp.verify_penidforexporting()
+#     assert verify == True, "penid window not found"
+#     lp.verify_rangeforpenid()
+#     lp.verify_saverangefile()
+#     verify1 = lp.verify_rangeinzip()
+#     assert verify1 == True, "range not found"
+#     verify2 = lp.verify_onlyrangeinzip()
+#     assert verify2 == True, "different range found"
+#
+#
+# """testcase C222604"""
+#
+#
+# def test_verifyunselectcolumn_239928():
+#     global test
+#     test = str(test_case_ids[71])
+#     lp.time_start()
+#     verify = lp.verify_selectedcolumn1()
+#     assert verify == True, "column not found"
+#     verify1 = lp.verify_selectedcolumn2()
+#     assert verify1 == True, "column not found"
+#     lp.verify_unselectcolumn()
+#     verify2 = lp.verify_unselectedcolumn1()
+#     assert verify2 == False, "column not removed"
+#     lp.verify_changecoltodefault()
+#
+#
+# """testcase C222605"""
+#
+#
+# def test_verify_penrejectiondisabled_239929():
+#     global test
+#     test = str(test_case_ids[72])
+#     lp.time_start()
+#     verify = lp.verify_penrejectiondisabled()
+#     assert verify == False, "confirmation message not disabled"
+#     verify1 = lp.verify_rejectedpen()
+#     assert verify1 == False, "pen not rejected"
+#
+#
+# """testcase C222606"""
+#
+#
+# def test_verify_rejectionmessage_239930():
+#     global test
+#     test = str(test_case_ids[73])
+#     lp.time_start()
+#     verify = lp.verify_rejectionmessage()
+#     assert verify == True, "rejection confirmation message not found"
+#
+#
+# """testcase C222608"""
+#
+#
+# def test_verify_cancelpenreject_239932():
+#     global test
+#     test = str(test_case_ids[74])
+#     lp.time_start()
+#     verify = lp.verify_cancelpenreject()
+#     assert verify == True, "cancel button not found"
+#     verify = lp.verify_cancelrejectedpen()
+#     assert verify == True, "pen got rejected"
+#
+# #
+# """testcase C222613"""
+#
+#
+# def test_verify_archive1000_239937():
+#     global test
+#     test = str(test_case_ids[75])
+#     lp.time_start()
+#     lp.verify_archive1000()
+#     verify = lp.verify_range1000inzip()
+#     assert verify == True, "file is less than 1000pens"
+#
+#
+# """testcase C222616"""
+#
+#
+# def test_verify_unselectpenarchive_239940():
+#     global test
+#     test = str(test_case_ids[76])
+#     lp.time_start()
+#     lp.verify_unselectpenarchive()
+#     verify = lp.verify_unselectinzip()
+#     assert verify == False, "rejected pen not deleted"
+#
+#
+# """testcase C222617"""
+#
+#
+# def test_verify_headersortingpersist_239941():
+#     global test
+#     test = str(test_case_ids[77])
+#     lp.time_start()
+#     lp.verify_headersortingpersist()
+#     verify = lp.verify_defaultcolumnsorting()
+#     assert verify == True, "default column pen not found"
+#     verify = lp.verify_changedcolumnsorting()
+#     assert verify == True, "changed column pen not found"
+#     lp.close_gallery()
+#
+#
+# """new gallery testcase"""
+#
+# """testcase C239904"""
+#
+#
+# def test_verifygalleryimageenlarge_239904():
+#     global test
+#     test = str(test_case_ids[143])
+#     lp.time_start()
+#     lp.open_gallery()
+#     assert lp.verifygalleryimageenlarge() == True, "enlarge image not found"
+#
+#
+# """testcase C239906"""
+#
+#
+# def test_verifypseudoenable_239906():
+#     global test
+#     test = str(test_case_ids[144])
+#     lp.time_start()
+#     assert lp.verifypseudoenable() == True, "pseudo coloring is not enabled"
+#
+#
+# """testcase C239910"""
+#
+#
+# def test_verify_pdfbutton_239910():
+#     global test
+#     test = str(test_case_ids[146])
+#     lp.time_start()
+#     assert lp.verify_pdfbutton() == True, "export window not found"
+#
+#
+# """testcase C239939"""
+#
+#
+# def test_verifycolumnsorting_239939():
+#     global test
+#     test = str(test_case_ids[145])
+#     lp.time_start()
+#     assert lp.verifycolumnsorting() == True, "assay element before sorting not found"
+#     assert lp.verifycolmnsorting1() == True, "one sorting at one time"
+#
+#
+# """testcase C239943"""
+#
+#
+# def test_verifygalllistenabled_239943():
+#     global test
+#     test = str(test_case_ids[147])
+#     lp.time_start()
+#     assert lp.verifygalllistenabled() == "true", "create list is disabled after selecting pen"
+#     assert lp.verifygalllistdisabled() == "false", "create list is disabled without selecting pen"
+#
+#
+# """testcase C239944"""
+#
+#
+# def test_verifycreatedpenlist_239944():
+#     global test
+#     test = str(test_case_ids[148])
+#     lp.time_start()
+#     assert lp.verifycreatedpenlist() == True, "create list dialog window not found"
+#     assert lp.verifysavedpenlist() == True, "create pen list not found"
+#     lp.close_gallery()
+#
+#
+# """testcase C239945"""
+#
+#
+# def test_opensavedlist_239945():
+#     global test
+#     test = str(test_case_ids[149])
+#     lp.time_start()
+#     assert lp.opensavedlist() == True, "saved pen count not found for pen list"
+#
+#
+# """testcase C239946"""
+#
+#
+# def test_verifyoverrlaycolumn_239946():
+#     global test
+#     test = str(test_case_ids[150])
+#     lp.time_start()
+#     assert lp.verifyoverrlaycolumn() == True, "overlay row not found"
+#     assert lp.verifydeleteoverrlaycolumn() == True, "delete button in overlay row not found"
+#
+#
+# """testcase 239947"""
+#
+#
+# def test_verifyoverrlaycolumn_239947():
+#     global test
+#     test = str(test_case_ids[151])
+#     lp.time_start()
+#     assert lp.selectoverrlaycolumn() == True, "selected column header under overlay not found"
+#
+#
+# """testcase C126336"""
+#
+#
+# def test_digitsaftercomma_126336():
+#     global test
+#     test = str(test_case_ids[152])
+#     lp.time_start()
+#     assert lp.digitsaftercomma() == True, "4digits after comma not found"
 
 #
-"""testcase C222598"""
-
-
-def test_validationattrmessage_239922():
-    global test
-    test = str(test_case_ids[67])
-    lp.time_start()
-    lp.verify_validationattrmessage()
-    verify = lp.verify_displayedmessage()
-    assert verify == True, "validation message not found"
-
-
-"""testcase C222601"""
-
-
-def test_verify_exporttoarchive_239925():
-    global test
-    test = str(test_case_ids[68])
-    lp.time_start()
-    verify = lp.verify_exporttoarchive()
-    assert verify == True, "archive button not found"
-    verify1 = lp.verify_exporttoarchiveclick()
-    assert verify1 == True, "Images only not displayed"
-    verify2 = lp.verify_archiveitem1()
-    assert verify2 == True, "Images Per Pen not displayed"
-    verify3 = lp.verify_archiveitem2()
-    assert verify3 == True, "Images Per Image Sequence not found"
-    verify4 = lp.verify_archiveitem3()
-    assert verify4 == True, "Images and CSVs not found"
-
-
-"""testcase C222602"""
-
-
-def test_verify_exportselectedthumb_239926():
-    global test
-    test = str(test_case_ids[69])
-    lp.time_start()
-    verify = lp.verify_exportselectedthumb()
-    assert verify == True, "file explorer not found"
-    # lp.verify_exportdefaultfilename()
-    verify1 = lp.verify_exportdefaultfilename()
-    assert verify1 == True, "zip file not found"
-    verify2 = lp.verify_datainzip()
-    assert verify2 == True, "jpg not found"
-
-
-"""testcase C222603"""
-
-
-def test_verify_penidforexporting_239927():
-    global test
-    test = str(test_case_ids[70])
-    lp.time_start()
-    verify = lp.verify_penidforexporting()
-    assert verify == True, "penid window not found"
-    lp.verify_rangeforpenid()
-    lp.verify_saverangefile()
-    verify1 = lp.verify_rangeinzip()
-    assert verify1 == True, "range not found"
-    verify2 = lp.verify_onlyrangeinzip()
-    assert verify2 == True, "different range found"
-
-
-"""testcase C222604"""
-
-
-def test_verifyunselectcolumn_239928():
-    global test
-    test = str(test_case_ids[71])
-    lp.time_start()
-    verify = lp.verify_selectedcolumn1()
-    assert verify == True, "column not found"
-    verify1 = lp.verify_selectedcolumn2()
-    assert verify1 == True, "column not found"
-    lp.verify_unselectcolumn()
-    verify2 = lp.verify_unselectedcolumn1()
-    assert verify2 == False, "column not removed"
-    lp.verify_changecoltodefault()
-
-
-"""testcase C222605"""
-
-
-def test_verify_penrejectiondisabled_239929():
-    global test
-    test = str(test_case_ids[72])
-    lp.time_start()
-    verify = lp.verify_penrejectiondisabled()
-    assert verify == False, "confirmation message not disabled"
-    verify1 = lp.verify_rejectedpen()
-    assert verify1 == False, "pen not rejected"
-
-
-"""testcase C222606"""
-
-
-def test_verify_rejectionmessage_239930():
-    global test
-    test = str(test_case_ids[73])
-    lp.time_start()
-    verify = lp.verify_rejectionmessage()
-    assert verify == True, "rejection confirmation message not found"
-
-
-"""testcase C222608"""
-
-
-def test_verify_cancelpenreject_239932():
-    global test
-    test = str(test_case_ids[74])
-    lp.time_start()
-    verify = lp.verify_cancelpenreject()
-    assert verify == True, "cancel button not found"
-    verify = lp.verify_cancelrejectedpen()
-    assert verify == True, "pen got rejected"
-
-
-"""testcase C222613"""
-
-
-def test_verify_archive1000_239937():
-    global test
-    test = str(test_case_ids[75])
-    lp.time_start()
-    lp.verify_archive1000()
-    verify = lp.verify_range1000inzip()
-    assert verify == True, "file is less than 1000pens"
-
-
-"""testcase C222616"""
-
-
-def test_verify_unselectpenarchive_239940():
-    global test
-    test = str(test_case_ids[76])
-    lp.time_start()
-    lp.verify_unselectpenarchive()
-    verify = lp.verify_unselectinzip()
-    assert verify == False, "rejected pen not deleted"
-
-
-"""testcase C222617"""
-
-
-def test_verify_headersortingpersist_239941():
-    global test
-    test = str(test_case_ids[77])
-    lp.time_start()
-    lp.verify_headersortingpersist()
-    verify = lp.verify_defaultcolumnsorting()
-    assert verify == True, "default column pen not found"
-    verify = lp.verify_changedcolumnsorting()
-    assert verify == True, "changed column pen not found"
-    lp.close_gallery()
-
-
-"""new gallery testcase"""
-
-"""testcase C239904"""
-
-
-def test_verifygalleryimageenlarge_239904():
-    global test
-    test = str(test_case_ids[143])
-    lp.time_start()
-    lp.open_gallery()
-    assert lp.verifygalleryimageenlarge() == True, "enlarge image not found"
-
-
-"""testcase C239906"""
-
-
-def test_verifypseudoenable_239906():
-    global test
-    test = str(test_case_ids[144])
-    lp.time_start()
-    assert lp.verifypseudoenable() == True, "pseudo coloring is not enabled"
-
-
-"""testcase C239910"""
-
-
-def test_verify_pdfbutton_239910():
-    global test
-    test = str(test_case_ids[146])
-    lp.time_start()
-    assert lp.verify_pdfbutton() == True, "export window not found"
-
-
-"""testcase C239939"""
-
-
-def test_verifycolumnsorting_239939():
-    global test
-    test = str(test_case_ids[145])
-    lp.time_start()
-    assert lp.verifycolumnsorting() == True, "assay element before sorting not found"
-    assert lp.verifycolmnsorting1() == True, "one sorting at one time"
-
-
-"""testcase C239943"""
-
-
-def test_verifygalllistenabled_239943():
-    global test
-    test = str(test_case_ids[147])
-    lp.time_start()
-    assert lp.verifygalllistenabled() == "true", "create list is disabled after selecting pen"
-    assert lp.verifygalllistdisabled() == "false", "create list is disabled without selecting pen"
-
-
-"""testcase C239944"""
-
-
-def test_verifycreatedpenlist_239944():
-    global test
-    test = str(test_case_ids[148])
-    lp.time_start()
-    assert lp.verifycreatedpenlist() == True, "create list dialog window not found"
-    assert lp.verifysavedpenlist() == True, "create pen list not found"
-    lp.close_gallery()
-
-
-"""testcase C239945"""
-
-
-def test_opensavedlist_239945():
-    global test
-    test = str(test_case_ids[149])
-    lp.time_start()
-    assert lp.opensavedlist() == True, "saved pen count not found for pen list"
-
-
-"""testcase C239946"""
-
-
-def test_verifyoverrlaycolumn_239946():
-    global test
-    test = str(test_case_ids[150])
-    lp.time_start()
-    assert lp.verifyoverrlaycolumn() == True, "overlay row not found"
-    assert lp.verifydeleteoverrlaycolumn() == True, "delete button in overlay row not found"
-
-
-"""testcase 239947"""
-
-
-def test_verifyoverrlaycolumn_239947():
-    global test
-    test = str(test_case_ids[151])
-    lp.time_start()
-    assert lp.selectoverrlaycolumn() == True, "selected column header under overlay not found"
-
-
-"""testcase C126336"""
-
-
-def test_digitsaftercomma_126336():
-    global test
-    test = str(test_case_ids[152])
-    lp.time_start()
-    assert lp.digitsaftercomma() == True, "4digits after comma not found"
-
-
-"""testcase 31306"""
-
-
-def test_verifylistmultiplechip_31306():
-    # global test
-    # test = str(test_case_ids[152])
-    lp.time_start()
-    lp.close_gallery()
-    lp.verifylistmultiplechip()
-    assert lp.openscndchip() == True, "create list window not found"
-    assert lp.verifysavedscndchiplist() == True, "saved open in gallery not found"
-    lp.close_gallery()
-
-
-"""testcase 31307"""
-
-
-def test_verifysavemultiplechiplist():
-    # global test
-    # test = str(test_case_ids[152])
-    lp.time_start()
-    assert lp.verifysavemultiplechiplist() == True, "create list window not found"
-    lp.close_gallery()
-
-    # """workbooktestfunction"""
-    #
-    #
-    # def test_function():
-    #     global test
-    #     test = str(test_case_ids[102])
-    #     lp.time_start()
-    #     lp.verify_useropentestworkbook()
-    # Can't automate Can not select pen by creating polygon rectangle using mouse
-    #
-    #
-
-
+#
+# def test_verifylistmultiplechip_31306():
+#     # global test
+#     # test = str(test_case_ids[152])
+#     lp.time_start()
+#     lp.close_gallery()
+#     lp.verifylistmultiplechip()
+#     assert lp.openscndchip() == True, "create list window not found"
+#     assert lp.verifysavedscndchiplist() == True, "saved open in gallery not found"
+#     lp.close_gallery()
+#
+#
+# """testcase 31307"""
+#
+#
+# def test_verifysavemultiplechiplist():
+#     # global test
+#     # test = str(test_case_ids[152])
+#     lp.time_start()
+#     assert lp.verifysavemultiplechiplist() == True, "create list window not found"
+#     lp.close_gallery()
+#
+#     # """workbooktestfunction"""
+#     #
+#     #
+#     # def test_function():
+#     #     global test
+#     #     test = str(test_case_ids[102])
+#     #     lp.time_start()
+#     #     lp.verify_useropentestworkbook()
+#     # Can't automate		Can not select pen by creating polygon rectangle using mouse
+#     #
+#     #
+#
+#
 # """testcase T35970"""
 #
 #
@@ -2303,6 +2304,8 @@ def test_verifysavemultiplechiplist():
 #     verify = lp.graph_builder_axis_attribute()
 #     assert verify == True, "graph not found"
 #
+#     """CLD"""
+#
 #
 # """testcase C222624"""
 #
@@ -2370,6 +2373,7 @@ def test_verifysavemultiplechiplist():
 #     assert verify == True, "link to raw data button not found"
 #     verify1 = lp.verify_rawdataredirecting()
 #     assert verify1 == True, "rawdata window not found"
+#     time.sleep(3)
 #     lp.close_raw_data()
 #     lp.close_rawlink()
 #
@@ -2533,49 +2537,48 @@ def test_verifysavemultiplechiplist():
 #     # assert verify2 == True, "validation message not found"
 #     # lp.close_graph()
 #
-#
-# """CLD smoke"""
-# # """testcase T35972"""
-# #
-# #
-# # def test_graphbuilderaxisattribute_222621_30612():
-# #     global test
-# #     test = str(test_case_ids[187])
-# #     lp.time_start()
-# #     verify = lp.add_graph_button()
-# #     assert verify == "Graph Builder"
-# #     verify1 = lp.add_graph()
-# #     assert verify1 == True, "scatter plot not found"
-# #     verify = lp.graph_builder_axis_attribute()
-# #     assert verify == True, "graph not found"
-# #
-# #
-# # """testcase T35973"""
-# #
-# #
-# # def test_graphbuilderchangegroupby_222625_30616():
-# #     global test
-# #     test = str(test_case_ids[188])
-# #     lp.time_start()
-# #     verify = lp.verify_legend()
-# #     assert verify == True, "legend not found"
-# #     verify1 = lp.graph_builder_change_groupby()  # to test on VM for new build
-# #     assert verify1 == True, "graph not found"
-# #
-# #
-# # """testcase T35976"""
-# #
-# #"""test ID already in reg
-# # def test_graphbuildersave_222642_30633():
-# #     global test
-# #     test = str(test_case_ids[36])
-# #     lp.time_start()
-# #     verify = lp.graph_builder_save()
-# #     assert verify == True, "graph not saved"
-# #
-# #
-# # def test_closegrph():
-# #     lp.close_graph()
+#     """CLD smoke"""
+#     # """testcase T35972"""
+#     #
+#     #
+#     # def test_graphbuilderaxisattribute_222621_30612():
+#     #     global test
+#     #     test = str(test_case_ids[187])
+#     #     lp.time_start()
+#     #     verify = lp.add_graph_button()
+#     #     assert verify == "Graph Builder"
+#     #     verify1 = lp.add_graph()
+#     #     assert verify1 == True, "scatter plot not found"
+#     #     verify = lp.graph_builder_axis_attribute()
+#     #     assert verify == True, "graph not found"
+#     #
+#     #
+#     # """testcase T35973"""
+#     #
+#     #
+#     # def test_graphbuilderchangegroupby_222625_30616():
+#     #     global test
+#     #     test = str(test_case_ids[188])
+#     #     lp.time_start()
+#     #     verify = lp.verify_legend()
+#     #     assert verify == True, "legend not found"
+#     #     verify1 = lp.graph_builder_change_groupby()  # to test on VM for new build
+#     #     assert verify1 == True, "graph not found"
+#     #
+#     #
+#     # """testcase T35976"""
+#     #
+#     # """test ID already in reg
+#     # def test_graphbuildersave_222642_30633():
+#     #     global test
+#     #     test = str(test_case_ids[36])
+#     #     lp.time_start()
+#     #     verify = lp.graph_builder_save()
+#     #     assert verify == True, "graph not saved"
+#     #
+#     #
+#     # def test_closegrph():
+#     #     lp.close_graph()
 #
 #
 # """testcase T35978"""
@@ -2614,6 +2617,7 @@ def test_verifysavemultiplechiplist():
 #     verify = lp.histogram_select_xaxis()
 #     assert verify == True, "graph not found"
 #
+#
 # """testcase T35981"""
 #
 #
@@ -2621,9 +2625,12 @@ def test_verifysavemultiplechiplist():
 #     global test
 #     test = str(test_case_ids[195])
 #     lp.time_start()
-#     verify = lp.histogram_save()
+#     verify = lp.histogram_save1()
 #     assert verify == True, "histogram not saved"
+#     lp.close_graph()
+#
 #     # lp.close_graph()
+#
 #
 # """testcase C222651"""
 #
@@ -2632,6 +2639,9 @@ def test_verifysavemultiplechiplist():
 #     global test
 #     test = str(test_case_ids[95])
 #     lp.time_start()
+#     lp.add_graph_histogram()
+#     lp.histogram_select_attribute()
+#     lp.histogram_select_xaxis()
 #     lp.verify_changebinquantity()
 #     verify = lp.verify_bincount()
 #     assert verify == True, "range upto 10 not found"
@@ -2742,19 +2752,6 @@ def test_verifysavemultiplechiplist():
 #     lp.close_graph()
 #
 #
-#
-# """testcase T35982"""
-#
-#
-# def test_openhistogram_222655_30647():
-#     global test
-#     test = str(test_case_ids[42])
-#     lp.time_start()
-#     lp.open_histogram()
-#
-#
-# """testcase T35980"""
-#
 # """CLD"""
 #
 # """testcase C222639"""
@@ -2857,7 +2854,7 @@ def test_verifysavemultiplechiplist():
 #     assert lp.verifylistpencount() == True, "create list is enabled without selecting pen"
 #     lp.close_gallery()
 #
-#
+
 #
 # """Settings"""
 #
@@ -3036,8 +3033,8 @@ def test_verifysavemultiplechiplist():
 #     assert verify1 == True, "Formula section not found"
 #     verify2 = lp.verify_doublingtime()
 #     assert verify2 == True, "doublint time section not found"
-#     verify3 = lp.verify_rQP()
-#     assert verify3 == True, "rQP section not found"
+#     #     verify3 = lp.verify_rQP()
+#     #     assert verify3 == True, "rQP section not found"
 #     lp.verify_openexplorer()
 #     lp.open_gallery()
 #     """commented as not getting verified with id in new build"""
@@ -3047,7 +3044,7 @@ def test_verifysavemultiplechiplist():
 #     # verify5 = lp.verify_section2ingallery()
 #     # assert verify5 == True, "rQP not found in gallery"
 #     lp.close_gallery()
-#
+
 #
 # """comment from below"""
 #
@@ -3303,7 +3300,7 @@ def test_verifysavemultiplechiplist():
 #     verify10 = lp.verify_savedbook()
 #     assert verify10 == True, "changes to setting not found"
 #
-#
+
 # """testcase C222694"""
 #
 #
@@ -3354,8 +3351,8 @@ def test_verifysavemultiplechiplist():
 #     assert verify == True, "selected data template not found"
 #     verify = lp.verify_Formula1()
 #     assert verify == True, "selected formula1 not found"
-#     verify = lp.verify_Formula2()
-#     assert verify == True, "selected formula2 not found"
+#     lp.verify_Formula2()
+#     # assert verify == True, "selected formula2 not found"
 #
 #
 # """testcase C222698"""
@@ -3385,150 +3382,151 @@ def test_verifysavemultiplechiplist():
 #
 # """testcase C222700"""
 #
-#
-# def test_verify_templateinwrkbook_222700():
-#     global test
-#     test = str(test_case_ids[133])
-#     lp.time_start()
-#     lp.verify_templateinwrkbook()
-#     lp.verify_opensettings()
-#     verify1 = lp.verify_savedfiltertemp()
-#     assert verify1 == True, "saved filter template demotemp not found"
-#     verify2 = lp.verify_savedfiltertemp1()
-#     assert verify2 == True, "saved filter template demotemp1 not found"
-#
-#     # """remove parameter"""
-#     #
-#     #
-#     # def test_removenewparameter():
-#     #     lp.time_start()
-#     #     time.sleep(3)
-#     #     lp.open_raw_data()
-#     #     assert lp.remove_new_parameter() == False, "parameter not deleted"
-#     #     time.sleep(3)
-#     #     lp.close_raw_data()
-#
-# """testcase C222703"""
-#
-#
-# def test_verify_filterbuilder_222703():
-#     global test
-#     test = str(test_case_ids[134])
-#     lp.time_start()
-#     lp.verify_Filterbuilder()
-#     lp.verify_opensettings()
-#     verify1 = lp.verify_savedfiltertemp()
-#     assert verify1 == True, "saved filter template demotemp not found"
-#     verify2 = lp.verify_savedfiltertemp1()
-#     assert verify2 == True, "saved filter template demotemp1 not found"
-#     lp.canceltempwindow()
-#
-#
-# """testcase C222607"""
-#
-#
-# def test_verify_rejectallpens_239931():
-#     global test
-#     test = str(test_case_ids[78])
-#     lp.time_start()
-#     lp.open_gallery()
-#     verify = lp.verify_rejectallpens()
-#     assert verify == True, "PenRejectApproval is not checked"
-#     verify1 = lp.verify_clickrejectpen()
-#     assert verify1 == True, "confirmation message not found"
-#     verify2 = lp.verify_rejectedpen1()
-#     assert verify2 == False, "pen_4 not rejected"
-#     verify3 = lp.verify_rejectedpen2()
-#     assert verify3 == False, "pen_5 not rejected"
-#     lp.close_gallery()
-#
-#
-# """testcase C222522"""
-# #
-#
-# def test_savedreordweing_rawdata_222522():
-#     global test
-#     test = str(test_case_ids[170])
-#     lp.open_raw_data()
-#     lp.raw_data_reordering_column()
-#     lp.save_workbook()
-#     lp.close_raw_data()
-#     lp.open_workbook_type()
-#     lp.click1()
-#     lp.open_workbook()
-#     lp.open_raw_data()
-#     verify = lp.raw_data_verifyreordering()
-#     assert verify == '1', "PenId column is display"
-#
-#
-# """Testcase C234945"""
-#
-#
-# def test_verify_AbDWorkbbok_234945():
-#     global test
-#     test = str(test_case_ids[175])
-#     lp.verify_workbook_type_element()
-#     verify = lp.open_AbDworkbook_type()
-#     assert verify == True, "AbD Worbook is not opened"
-#
-#
-# """Testcase C234939"""
-#
-#
-# def test_verify_historyfile_worflow_234939():
-#     global test
-#     test = str(test_case_ids[176])
-#     lp.deletehistoryfile()
-#     lp.open_Tcellworkbook()
-#     lp.add_chip()
-#     lp.open_raw_data()
-#     verify = lp.verify_alertwindow()
-#     assert verify == True, "Alert window not displayed"
-#     lp.verify_chiplocation()
-#     lp.verify_CLDopen()
-#     lp.add_chip()
-#     lp.open_timeline()
-#     verify = lp.verify_historyfile()
-#     assert verify == True, "historyfile not found"
-#     lp.close_timeline()
-# #
-#
-#  #
-#     # "below testcase failed in latest build"
-#     # """Testcase 31895"""
-#     #
-#     # def test_installatest_version_31895():
-#     #     # global test
-#     #     # test = str(test_case_ids[5])
-#     #     lp.time_start()
-#     #     lp.clickupdate()
-#     #     verify= lp.install_latestversion()
-#     #     assert verify==True,"save confimation not display"
-#     #     # lp.closenotify()
-#
-#     #
-#     # def test_installconfirmation():
-#     #     lp.time_start()
-#     #     lp.verify_CLDopen()
-#     #     lp.clickupdate()
-#     #     # lp.verify_installconfirmation() # need much time to install latest update
-#     #     lp.closenotify()
 
+def test_verify_templateinwrkbook_222700():
+    global test
+    test = str(test_case_ids[133])
+    lp.time_start()
+    lp.verify_templateinwrkbook()
+    lp.verify_opensettings()
+    verify1 = lp.verify_savedfiltertemp()
+    assert verify1 == True, "saved filter template demotemp not found"
+    verify2 = lp.verify_savedfiltertemp1()
+    assert verify2 == True, "saved filter template demotemp1 not found"
+
+    # """remove parameter"""
+    #
+    #
+    # def test_removenewparameter():
+    #     lp.time_start()
+    #     time.sleep(3)
+    #     lp.open_raw_data()
+    #     assert lp.remove_new_parameter() == False, "parameter not deleted"
+    #     time.sleep(3)
+    #     lp.close_raw_data()
+
+"""testcase C222703"""
+
+
+def test_verify_filterbuilder_222703():
+    global test
+    test = str(test_case_ids[134])
+    lp.time_start()
+    lp.verify_Filterbuilder()
+    lp.verify_opensettings()
+    verify1 = lp.verify_savedfiltertemp()
+    assert verify1 == True, "saved filter template demotemp not found"
+    verify2 = lp.verify_savedfiltertemp1()
+    assert verify2 == True, "saved filter template demotemp1 not found"
+    lp.canceltempwindow()
+
+
+"""testcase C222607"""
+
+
+def test_verify_rejectallpens_239931():
+    global test
+    test = str(test_case_ids[78])
+    lp.time_start()
+    lp.open_gallery()
+    verify = lp.verify_rejectallpens()
+    assert verify == True, "PenRejectApproval is not checked"
+    verify1 = lp.verify_clickrejectpen()
+    assert verify1 == True, "confirmation message not found"
+    verify2 = lp.verify_rejectedpen1()
+    assert verify2 == False, "pen_4 not rejected"
+    verify3 = lp.verify_rejectedpen2()
+    assert verify3 == False, "pen_5 not rejected"
+    lp.close_gallery()
+
+
+"""testcase C222522"""
 #
 
+def test_savedreordweing_rawdata_222522():
+    global test
+    test = str(test_case_ids[170])
+    lp.open_raw_data()
+    lp.raw_data_reordering_column()
+    lp.save_workbook()
+    lp.close_raw_data()
+    lp.verify_changeworkbook()
+    # lp.click1()
+    lp.open_workbook()
+    lp.open_raw_data()
+    verify = lp.raw_data_verifyreordering()
+    assert verify == '1', "PenId column is display"
+
+
+"""Testcase C234945"""
+
+
+def test_verify_AbDWorkbbok_234945():
+    global test
+    test = str(test_case_ids[175])
+    lp.verify_workbook_type_element()
+    verify = lp.open_AbDworkbook_type()
+    assert verify == True, "AbD Worbook is not opened"
+
+
+"""Testcase C234939"""
+
+
+def test_verify_historyfile_worflow_234939():
+    global test
+    test = str(test_case_ids[176])
+    lp.deletehistoryfile()
+    lp.open_Tcellworkbook()
+    lp.add_chip()
+    lp.open_raw_data()
+    verify = lp.verify_alertwindow()
+    assert verify == True, "Alert window not displayed"
+    lp.verify_chiplocation()
+    lp.verify_CLDopen()
+    lp.add_chip()
+    lp.open_timeline()
+    verify = lp.verify_historyfile()
+    assert verify == True, "historyfile not found"
+    lp.close_timeline()
 #
-#
-# """----------------------------------------------------------------------"""
-#
-#
-# def test_removeworkbook():
-#     lp.deleteworkbook()
-#
-#
-# # """-----------------------------------------------------------------------------------------------------------------------"""
-# """old"""
-#
-#
-# def test_close():
-#     lp.time_start()
-#     lp.close()
+
+ #
+    # "below testcase failed in latest build"
+    # """Testcase 31895"""
+    #
+    # def test_installatest_version_31895():
+    #     # global test
+    #     # test = str(test_case_ids[5])
+    #     lp.time_start()
+    #     lp.clickupdate()
+    #     verify= lp.install_latestversion()
+    #     assert verify==True,"save confimation not display"
+    #     # lp.closenotify()
+
+    #
+    # def test_installconfirmation():
+    #     lp.time_start()
+    #     lp.verify_CLDopen()
+    #     lp.clickupdate()
+    #     # lp.verify_installconfirmation() # need much time to install latest update
+    #     lp.closenotify()
+
+
+
+
+
+"""----------------------------------------------------------------------"""
+
+
+def test_removeworkbook():
+    lp.deleteworkbook()
+
+
+# """-----------------------------------------------------------------------------------------------------------------------"""
+"""old"""
+
+
+def test_close():
+    lp.time_start()
+    lp.close()
+

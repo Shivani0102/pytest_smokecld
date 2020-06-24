@@ -581,6 +581,8 @@ class assaycld():
 
     """testcase T42284"""
 
+    """testcase T42284"""
+
     @allure.step('to add new log parameter in new parameter window')
     def verify_logparameter(self):
         time.sleep(13)
@@ -596,13 +598,13 @@ class assaycld():
         actionchains = ActionChains(self.driver)
         actionchains.send_keys(Keys.ARROW_DOWN).perform()
         actionchains.send_keys(Keys.RETURN).perform()
-        time.sleep(5)
+        time.sleep(3)
 
         self.driver.find_element_by_accessibility_id(
             "AutomationId_RawData_ParameterEditor_ParameterInput").send_keys(
             "Logparameter1")
         self.driver.find_element_by_name("Functions").click()
-        time.sleep(4)
+        time.sleep(2)
         atanclick = self.driver.find_element_by_name("Atan")
         atanclick.click()
         time.sleep(3)
@@ -610,7 +612,7 @@ class assaycld():
             actionchains.send_keys(Keys.ARROW_DOWN).perform()
 
     def verify_logselect(self):
-        time.sleep(4)
+        time.sleep(3)
         actionchains = ActionChains(self.driver)
         logclick = self.driver.find_element_by_name("Log")  # Log()
         actionchains.double_click(logclick).perform()
@@ -630,7 +632,7 @@ class assaycld():
         actionchains = ActionChains(self.driver)
         self.driver.find_element_by_name("Assay : Score").click()
         time.sleep(4)
-        for x in range(0, 2):
+        for x in range(0, 3):
             actionchains.send_keys(Keys.ARROW_DOWN).perform()
         time.sleep(2)
         # time.sleep(3)
@@ -645,26 +647,29 @@ class assaycld():
         scndattr = self.driver.find_element_by_name("Assay_2 : Score").click()
         actionchains.double_click(scndattr).perform()
         time.sleep(3)
-        self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Apply").click()
-        time.sleep(2)
+        # self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Apply").click()
+        # time.sleep(2)
         try:
             time.sleep(3)
             data = self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Apply")
             data1 = data.is_enabled()
+            if data1 == False:
+                self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Close").click()
+            else:
+                self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Apply").click()
+
         except:
             data1 = True
-
-        if data1 == False:
-            self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Close").click()
+            return data1
 
     @allure.step('to verify added log parameter in column')
     def raw_data_verify_Logparameter(self):
-        time.sleep(3)
+        time.sleep(10)
         self.driver.find_element_by_name("ChipId").click()
         actionchains = ActionChains(self.driver)
         for x in range(0, 3):
             actionchains.send_keys(Keys.ARROW_DOWN).perform()
-        time.sleep(5)
+        time.sleep(3)
         parameter = self.driver.find_element_by_name("Assay_2 : Logparameter1").is_displayed()
         return parameter
 
@@ -756,7 +761,6 @@ class assaycld():
     @allure.step('Drag and drop position of attribute in raw data and verify reordering happen')
     def raw_data_reordering_column(self):
         actionchains = ActionChains(self.driver)
-        # self.driver.find_element_by_accessibility_id("PenId").click()
         time.sleep(3)
         sort = self.driver.find_element_by_accessibility_id("CellElement_0_1")
         element = sort.get_attribute("Name")
@@ -1381,7 +1385,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_MainWindow_NavigationMenu_MenuElement_T-Cell").click()
         # driver.find_element_by_accessibility_id("CancelButton").click()
         try:
-            verify1 = self.driver.find_element_by_name("Confirmation").is_displayed()
+            self.driver.find_element_by_name("Confirmation").is_displayed()
             time.sleep(2)
             self.driver.find_element_by_name("No").click()
         except:
@@ -1405,7 +1409,7 @@ class assaycld():
         # actionchains.context_click(chip).perform()
         # self.driver.find_element_by_name("Open in Timeline").click()
         time.sleep(3)
-        verifyfile = path.exists(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml")
+        verifyfile = path.exists(appdata + "\Assay Analyzer\D37712\CLD.History.xml")
         return verifyfile
 
     def verify_CLDopen(self):
@@ -1459,7 +1463,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_Chips").click()
         self.driver.find_element_by_name("D37712").click()
         # self.driver.find_element_by_name("D37712").click()
-        time.sleep(3)
+        # time.sleep(3)
 
     '''comment'''
     '''TestCase T35900'''
@@ -1542,13 +1546,13 @@ class assaycld():
         select = self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_DimensionSelector")
         time.sleep(2)
         select.click()
-        select1 = self.driver.find_element_by_accessibility_id("PART_EditableTextBox").send_keys("Empty")
+        self.driver.find_element_by_accessibility_id("PART_EditableTextBox").send_keys("Empty")
         penid = self.driver.find_element_by_name("Empty:Pen_Id").is_displayed()
         return penid
 
     @allure.step('to verify empty:deviceid in dropdown')
     def Empty_device_id(self):
-        time.sleep(2)
+        # time.sleep(2)
         deviceid = self.driver.find_element_by_name("Empty:Device_Id").is_displayed()
         return deviceid
 
@@ -1635,12 +1639,12 @@ class assaycld():
         '''driver.find_element_by_accessibility_id("HeaderCloseButton").click()
             driver.find_element_by_accessibility_id("HeaderDropDownMenu").click()
             driver.find_element_by_name("Tabbed document").click()'''
-        time.sleep(2)
+        time.sleep(4)
         self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_FilterDimension").click()
         self.driver.find_element_by_name("2-D").click()
         self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_AddCondition").click()
         self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_AggregationMode").click()
-        # time.sleep(3)
+        time.sleep(3)
         self.driver.find_element_by_name("Max").click()
 
     @allure.step('to click xaxis attribute in filter')
@@ -1666,19 +1670,13 @@ class assaycld():
         yaxis = self.driver.find_element_by_accessibility_id(
             "AutomationId_FilterBuilder_2DFilter_YAxis_Values")
         yaxis.click()
-        # drpdown=self.driver.find_element_by_accessibility_id("RadComboBox")
-        # drpdown[2].click()
         time.sleep(2)
         for x in range(0, 3):
             self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
-
-        # self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_2DFilter_YAxis_Values")
-        # yaxis.click()
         time.sleep(2)
         # axis_select = self.driver.find_element_by_accessibility_id("PART_EditableTextBox")
         # axis_select.send_keys("Empty")
         self.driver.find_element_by_name("Empty:Cell_Count_Verified").click()
-        # return yaxis
 
     @allure.step('to verify 2D filter chart')
     def filter_verify_chart(self):
@@ -1834,11 +1832,11 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("CellElement_0_0").click()
 
     def verify_attribute_penid(self):
-        penid = self.driver.find_element_by_name("PenId: ").is_displayed()
+        penid = self.driver.find_element_by_name("PenId: 2").is_displayed()
         return penid
 
     def verify_attribute_deviceid(self):
-        deviceid = self.driver.find_element_by_name("Device_Id: ").is_displayed()
+        deviceid = self.driver.find_element_by_name("DeviceId: ").is_displayed()
         return deviceid
 
     def verify_attribute_cellcountverified(self):
@@ -1868,12 +1866,14 @@ class assaycld():
 
     '''TestCase T35974'''
 
-    @allure.step('to select attributes in gallery settings')
+    @allure.step('to select attributes from gallery settings')
     def gallery_select_data_attribute(self):
         element = []
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_OpenSettings").click()
         self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
         element = self.driver.find_elements_by_accessibility_id("AutomationId_GallerySettings_ColumnFooters")
+        # element = self.driver.find_elements_by_class_name("RadComboBox")
+        # element[7].click()
         actionchains = ActionChains(self.driver)
         actionchains.move_to_element_with_offset(element[6], 60, 65)
         actionchains.click()
@@ -1886,29 +1886,6 @@ class assaycld():
         time.sleep(3)
         self.driver.find_element_by_accessibility_id("AutomationId_GallerySettings_Apply").click()
         return len(element)
-        time.sleep(5)
-        #
-        #
-        # element = []
-        # self.driver.find_element_by_accessibility_id("AutomationId_Gallery_OpenSettings").click()
-        # self.driver.find_element_by_accessibility_id("VerticalLargeIncrease").click()
-        # time.sleep(4)
-        # element1= self.driver.find_elements_by_accessibility_id("AutomationId_GallerySettings_ColumnFootersAlt")
-        # # element1.click()
-        # time.sleep(2)
-        # actionchains = ActionChains(self.driver)
-        # actionchains.move_to_element_with_offset(element[7], 50, 60)
-        # actionchains.click()
-        # actionchains.perform()
-        # for x in range(0, 3):
-        #     actionchains.send_keys(Keys.ARROW_DOWN).perform()
-        #     actionchains.send_keys(Keys.RETURN).perform()
-        # time.sleep(2)
-        # self.driver.find_element_by_accessibility_id("CellElement_6_0").click()
-        # time.sleep(3)
-        # self.driver.find_element_by_accessibility_id("AutomationId_GallerySettings_Apply").click()
-        # return len(element)
-        # time.sleep(5)
 
     @allure.step('to verify Empty: PenId: is displayed')
     def verify_attribute1(self):
@@ -1935,25 +1912,24 @@ class assaycld():
         verify5 = self.driver.find_element_by_name("Assay_2: rQP: ").is_displayed()
         return verify5
 
-    @allure.step('to click export pdf in gallery and save pdf in explorer')
+    @allure.step('to export pdf with seleted pens in gallery')
     def gallery_export_pdf(self):
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_ExportMenu_ExportToPDF").click()
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_ExportToPDF_Export").click()
         actionchains = ActionChains(self.driver)
+        self.driver.find_element_by_accessibility_id("1001").send_keys("data")
+        self.driver.find_element_by_accessibility_id("1").click()
+        time.sleep(2)
         try:
             time.sleep(3)
-            data = self.driver.find_element_by_name("data.pdf")
+            data = self.driver.find_element_by_name("Save As")
             data1 = data.is_displayed()
         except:
             data1 = False
 
         if data1 == True:
-            data.click()
-            actionchains.send_keys(Keys.DELETE).perform()
-
-        self.driver.find_element_by_accessibility_id("1001").send_keys("data")
-        self.driver.find_element_by_accessibility_id("1").click()
-        time.sleep(5)
+            self.driver.find_element_by_name("Yes").click()
+        time.sleep(4)
         self.driver.find_element_by_accessibility_id("CancelButton").click()
 
     '''TestCase T35910'''
@@ -1969,13 +1945,16 @@ class assaycld():
     def gallery_select_attribute(self):
         actionchains = ActionChains(self.driver)
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_OpenSettings").click()
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_GallerySettings_ColumnFooters").click()
-        actionchains.send_keys(Keys.ARROW_DOWN).perform()
-        actionchains.send_keys(Keys.RETURN).perform()
-        time.sleep(10)
+        time.sleep(2)
+        for x in range(0, 3):
+            actionchains.send_keys(Keys.ARROW_UP).perform()
+        time.sleep(4)
         # driver.find_element_by_accessibility_id("AutomationId_GallerySettings_ColumnFooters_Item_CellCount").click()
         self.driver.find_element_by_accessibility_id("AutomationId_GallerySettings_Apply").click()
-        cell = self.driver.find_element_by_name("CellCount: ").is_displayed()
+        time.sleep(6)
+        cell = self.driver.find_element_by_name("CellCount: 0").is_displayed()
         return cell
 
     '''TestCase T35969'''
@@ -2364,7 +2343,7 @@ class assaycld():
     def verify_filterbuilder(self):
         self.driver.find_element_by_accessibility_id(
             "AutomationId_WorkbookExplorer_AdditionalButton_AddNewFilter").click()
-        time.sleep(5)
+        time.sleep(4)
         filterwind = self.driver.find_element_by_accessibility_id("HeaderElement").is_displayed()  # "Rad Pane Group"
         time.sleep(3)
         pr = self.driver.find_elements_by_accessibility_id("HeaderDropDownMenu")
@@ -2595,7 +2574,6 @@ class assaycld():
         # self.driver.find_element_by_name("CancelButton").click()
         """commented as not working for in new build"""
         try:
-            time.sleep(3)
             data = self.driver.find_element_by_name("Confirmation")
             data1 = data.is_displayed()
         except:
@@ -2674,22 +2652,29 @@ class assaycld():
         actionchains = ActionChains(self.driver)
         actionchains.context_click(chip).perform()
         self.driver.find_element_by_name("Remove Pen List(s)").click()
-        time.sleep(5)
-        raw = self.driver.find_element_by_name("Confirmation").is_displayed()
         time.sleep(3)
+        raw = self.driver.find_element_by_name("Confirmation").is_displayed()
+        time.sleep(2)
         self.driver.find_element_by_name("Yes").click()
         return raw
 
+    @allure.step('verify view penlist display in workbook Explorer')
     def verify_viewin_workexplorer(self):
-        # verify = self.driver.find_element_by_name("view").is_displayed()
-        # return verify
-
+        # try:
+        #     verify = self.driver.find_element_by_name("view").is_displayed()
+        #     return verify
+        # except:
+        #     data= False
+        #     return data
         try:
             verify = self.driver.find_element_by_name("view").is_displayed()
-            return verify
+            if verify == True:
+                return True
+            else:
+                return False
         except:
-            data= False
-            return data
+            return False
+
 
     def verify_unselectpen(self):
         empty = self.driver.find_element_by_accessibility_id("Empty").is_displayed()
@@ -3078,15 +3063,28 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_GallerySettings_Apply").click()
         return dropdown
 
+
     """testcase T42273"""
 
     @allure.step('to verify column header in gallery')
     def verify_reorderingofcolumns(self):
         columnattr = self.driver.find_elements_by_class_name("GridViewHeaderCell")
-        # print(columnattr)
+        print(columnattr)
         time.sleep(3)
         column = columnattr[3].get_attribute("Name")
+        column1 = columnattr[1].get_attribute("Name")
+        column5 = columnattr[2].get_attribute("Name")
+        column6 = columnattr[3].get_attribute("Name")
+        column2 = columnattr[5].get_attribute("Name")
+        column3 = columnattr[4].get_attribute("Name")
+        column4 = columnattr[6].get_attribute("Name")
         print(column)
+        print(column1)
+        print(column2)
+        print(column5)
+        print(column6)
+        print(column3)
+        print(column4)
         return column
 
     @allure.step('changing the column position in gallery')
@@ -3102,7 +3100,7 @@ class assaycld():
     def verify_reorderingofchangedcolumns(self):
         time.sleep(4)
         columnattr = self.driver.find_elements_by_class_name("GridViewHeaderCell")
-        # print(columnattr)
+        print(columnattr)
         time.sleep(3)
         column = columnattr[3].get_attribute("Name")
         print(column)
@@ -3151,7 +3149,11 @@ class assaycld():
 
         try:
             columnattr = self.driver.find_element_by_name("Pen_1").is_displayed()
-            return columnattr
+            if columnattr==False:
+                return False
+            else:
+                return True
+            # return columnattr
         except:
             b = False
             return b
@@ -3216,7 +3218,6 @@ class assaycld():
         try:
             scrolldata1 = self.driver.find_element_by_accessibility_id("VerticalLargeIncrease")
             scrolldata2 = scrolldata1.is_displayed()
-            time.sleep(2)
             scrolldata1.click()
         except:
             scrolldata2 == False
@@ -3231,7 +3232,6 @@ class assaycld():
         time.sleep(2)
         self.driver.find_element_by_name("Load:Cell_Count").click()
         try:
-            time.sleep(2)
             scrolldata3 = self.driver.find_element_by_accessibility_id("VerticalLargeIncrease")
             scroll = scrolldata3.is_displayed()
         except:
@@ -3256,12 +3256,16 @@ class assaycld():
             time.sleep(2)
             totalpen = self.driver.find_element_by_accessibility_id("VerticalLargeDecrease")
             total = totalpen.is_displayed()
+            if total == True:
+                self.driver.find_element_by_accessibility_id("VerticalLargeDecrease").click()
+            else:
+                return False
         except:
             total = False
 
-        if total == True:
-            self.driver.find_element_by_accessibility_id("VerticalLargeDecrease").click()
-        time.sleep(3)
+        # if total == True:
+        #     self.driver.find_element_by_accessibility_id("VerticalLargeDecrease").click()
+        # time.sleep(3)
         return getcount
         # to show filter in gallery user verify_save_filter1 method becoz above testcase failed
 
@@ -3284,7 +3288,11 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
         try:
             getcount = self.driver.find_element_by_name("Visible 1755 of 1758 pens").is_displayed()
-            return getcount
+            if getcount == True:
+                return True
+            else:
+                return False
+            # return getcount
         except:
             b = False
             return b
@@ -3351,7 +3359,8 @@ class assaycld():
         actionchains.context_click(savedfilter).perform()
         time.sleep(2)
         self.driver.find_element_by_name("Edit").click()
-        time.sleep(4)
+        # time.sleep(4)
+        time.sleep(2)
         editfilter = self.driver.find_element_by_class_name("RadBusyIndicator").is_displayed()
         return editfilter
 
@@ -3425,12 +3434,22 @@ class assaycld():
     def verify_deletefiltercond(self):
         delete = self.driver.find_elements_by_accessibility_id("AutomationId_FilterBuilder_Filter_Remove")
         delete[1].click()
-        time.sleep(4)
+        time.sleep(2)
+        # time.sleep(4)
+        # try:
+        #     verify = self.driver.find_element_by_name("1687").is_displayed()
+        #     return verify
+        # except:
+        #     b = False
+        #     return b
         try:
             verify = self.driver.find_element_by_name("1687").is_displayed()
-            return verify
+            if verify == False:
+                return False
+            else:
+                return True
         except:
-            b = False
+            b= False
             return b
 
     @allure.step('to verify pen count after removed condition')
@@ -3468,6 +3487,15 @@ class assaycld():
         time.sleep(3)
         getname = self.driver.find_element_by_name("editedfilter").is_displayed()
         return getname
+        #
+        # try:
+        #     verify = self.driver.find_element_by_name("editedfilter").is_displayed()
+        #     if verify == True:
+        #         return True
+        #     else:
+        #         return False
+        # except:
+        #     return False
 
     """testcase T42240"""
 
@@ -3496,12 +3524,24 @@ class assaycld():
         time.sleep(2)
         self.driver.find_element_by_accessibility_id("OKButton").click()
         time.sleep(3)
+
+        # try:
+        #     verify = self.driver.find_element_by_name("editedfilter").is_displayed()
+        #     return verify
+        # except:
+        #     a = False
+        #     return a
+
         try:
             verify = self.driver.find_element_by_name("editedfilter").is_displayed()
-            return verify
+            if verify == False:
+                return False
+            else:
+                return True
         except:
             a = False
             return a
+
 
     """testcase T42242"""
 
@@ -3555,16 +3595,27 @@ class assaycld():
     def verif_filteringallery(self):
         time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_Filters").click()
-        time.sleep(3)
+        time.sleep(2)
         self.driver.find_element_by_name("filterpen").click()
-        time.sleep(5)
+        time.sleep(3)
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
+        # try:
+        #     getcount = self.driver.find_element_by_name("Visible 1 of 1758 pens").is_displayed()
+        #     return getcount
+        # except:
+        #     b = False
+        #     return b
+
         try:
             getcount = self.driver.find_element_by_name("Visible 1 of 1758 pens").is_displayed()
-            return getcount
+            if getcount == True:
+                return True
+            else:
+                return False
         except:
             b = False
             return b
+
 
     """testcase T42245"""
 
@@ -3704,10 +3755,14 @@ class assaycld():
     def verify_disablecreatepen_filter(self):
 
         try:
-            time.sleep(3)
+            # time.sleep(3)
             penlist = self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_CreatePenList")
             verify = penlist.is_enabled()
-            return verify
+            if verify == False:
+                return False
+            else:
+                return True
+            # return verify
         except:
             b = False
             return b
@@ -3742,7 +3797,11 @@ class assaycld():
         time.sleep(2)
         try:
             count= self.driver.find_element_by_name("2").is_displayed()
-            return count
+            if count == True:
+                return True
+            else:
+                return False
+            # return count
         except:
             b = False
             return b
@@ -3815,16 +3874,28 @@ class assaycld():
     """testcase T42370"""
     @allure.step('to verify pen count after changing graph')
     def verify_changegraph(self):
+        time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_FilterBuilder_2DFilter_XAxis_Values").click()
         time.sleep(2)
         self.driver.find_element_by_name("Empty:Pen_Id").click()
         time.sleep(2)
+        # try:
+        #     verify = self.driver.find_element_by_name("1000").is_displayed()
+        #     return verify
+        # except:
+        #     b = False
+        #     return b
         try:
             verify = self.driver.find_element_by_name("1000").is_displayed()
-            return verify
+            if verify == True:
+                return True
+            else:
+                return False
         except:
             b = False
             return b
+
+
 
     """testcase T42371"""
 
@@ -3961,13 +4032,17 @@ class assaycld():
 
     @allure.step('to verify if filter is removed from gallery')
     def verify_removedfilter(self):
-        time.sleep(5)
+        time.sleep(2)
         # self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
         # time.sleep(2)
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery_Filters").click()
         try:
             verify = self.driver.find_element_by_name("filterpen").is_displayed()
-            return verify
+            if verify == True:
+                return True
+            else:
+                return False
+            # return verify
         except:
             b = False
             return b
@@ -4021,7 +4096,11 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("OKButton").click()
         try:
             a = self.driver.find_element_by_name("D50238").is_displayed()
-            return a
+            if a == True:
+                return True
+            else:
+                return False
+            # return a
         except:
             b = False
             return b
@@ -4111,7 +4190,11 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
         try:
             getcount = self.driver.find_element_by_name("Visible 1756 of 1758 pens").is_displayed()
-            return getcount
+            if getcount == True:
+                return True
+            else:
+                return False
+            # return getcount
         except:
             b = False
             return b
@@ -4127,7 +4210,12 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_Gallery").click()
         try:
             getcount = self.driver.find_element_by_name("Visible 1756 of 1758 pens").is_displayed()
-            return getcount
+            if getcount == True:
+                return True
+            else:
+                return False
+
+            # return getcount
         except:
             b = False
             return b
@@ -4451,17 +4539,24 @@ class assaycld():
         time.sleep(2)
         try:
             verify = self.driver.find_element_by_name("CancelButton").is_displayed()
-            return verify
+            if verify==True:
+                return True
+            else:
+                return False
         except:
             b = False
             return b
 
     @allure.step('to verify rejected pen in gallery')
     def verify_rejectedpen(self):
-        time.sleep(2)
+        # time.sleep(2)
         try:
-            sort = self.driver.find_element_by_name("Pen_1").is_displayed()
-            return sort
+            sort = self.driver.find_element_by_name("Pen_2").is_displayed()
+            if sort==False:
+                return False
+            else:
+                return True
+            # return sort
         except:
             b = False
             return b
@@ -4533,10 +4628,14 @@ class assaycld():
         return verify
 
     def verify_cancelrejectedpen(self):
-        time.sleep(2)
+        # time.sleep(2)
         try:
-            sort = self.driver.find_element_by_name("Pen_4").is_displayed()
-            return sort
+            sort = self.driver.find_element_by_name("Pen_5").is_displayed()
+            if sort==True:
+                return True
+            else:
+                return False
+            # return sort
         except:
             b = False
             return b
@@ -5295,7 +5394,7 @@ class assaycld():
 
     def verify_savedcsvcol(self):
         self.driver.find_element_by_name("Apply").click()
-        time.sleep(4)
+        time.sleep(16)
         self.driver.find_element_by_accessibility_id("AutomationId_MainWindow_NavigationMenu_MenuElement_File").click()
         time.sleep(2)
         self.driver.find_element_by_name("Settings").click()
@@ -5315,6 +5414,7 @@ class assaycld():
             "AutomationId_SettingsWindow_ColumnsByCSVTypeView_ColumnsListBySelectedType_ColumnName_Target_Index").click()
         time.sleep(2)
         self.driver.find_element_by_name("Apply").click()
+        time.sleep(14)
         return verify
 
     """testcase T42376"""
@@ -5499,17 +5599,17 @@ class assaycld():
         return verify
 
     def verify_doublingtime(self):
-        verify = self.driver.find_element_by_name("DoublingTime").is_displayed()
+        verify = self.driver.find_element_by_name("DoublingTime, rQP").is_displayed()
+        time.sleep(2)
+        self.driver.find_element_by_accessibility_id("AutomationId_SettingsWindow_Apply").click()
         return verify
-
-
 
 
     def verify_rQP(self):
-        verify = self.driver.find_element_by_name("rQP").is_displayed()
+        # verify = self.driver.find_element_by_name("rQP").is_displayed()
         self.driver.find_element_by_accessibility_id("AutomationId_SettingsWindow_Apply").click()
         time.sleep(3)
-        return verify
+        # return verify
 
     def removehistory(self):
         appdata = os.getenv('APPDATA')
@@ -6095,15 +6195,15 @@ class assaycld():
             "AutomationId_SettingsWindow_SettingsMenu_MenuElement_WorkbookTypes"
         ).click()
         self.driver.find_element_by_accessibility_id(
-            "AutomationId_SettingsWindow_AppLevel_TemplateBuilder_WorkflowsView_Workflows_Add"
-        ).click()
+            "AutomationId_SettingsWindow_AppLevel_TemplateBuilder_WorkflowsView_Workflows_Add").click()
         verify = self.driver.find_element_by_accessibility_id(
-            "AutomationId_SettingsWindow_AppLevel_TemplateBuilder_ManageWorkflowView"
-        ).is_displayed()
+            "AutomationId_SettingsWindow_AppLevel_TemplateBuilder_ManageWorkflowView").is_displayed()
         return verify
 
+
     def verify_workflowname(self):
-        verify = self.driver.find_element_by_name("Name :").is_displayed()
+        verify = self.driver.find_element_by_name("Workbook name").is_displayed()
+        # verify= self.driver.find_element_by_accessibility_id("AutomationId_SettingsWindow_AppLevel_TemplateBuilder_ManageWorkflowView_WorkflowName").is_displayed()
         return verify
 
     def verify_dataimport(self):
@@ -6243,13 +6343,13 @@ class assaycld():
         return verify
 
     def verify_Formula1(self):
-        verify = self.driver.find_element_by_name("DoublingTime").is_displayed()
+        verify = self.driver.find_element_by_name("DoublingTime, rQP").is_displayed()
         return verify
 
     def verify_Formula2(self):
-        verify = self.driver.find_element_by_name("rQP").is_displayed()
+        # verify = self.driver.find_element_by_name("rQP").is_displayed()
         self.driver.find_element_by_accessibility_id("AutomationId_SettingsWindow_Apply").click()
-        return verify
+        # return verify
 
     """testcase T42363"""
 
@@ -6485,7 +6585,7 @@ class assaycld():
         verify[1].click()
         self.driver.find_element_by_accessibility_id("AutomationId_GallerySettings_Apply").click()
         time.sleep(2)
-        check = self.driver.find_element_by_name("Score: 0.037").is_displayed()
+        check = self.driver.find_element_by_name("Score: 0.0179").is_displayed()
         return check
 
     """testcase 31306"""
@@ -6745,7 +6845,7 @@ class assaycld():
     @allure.step('to add new parameter window in raw data')
     def raw_data_new_parameter_smoke(self):
         self.driver.find_element_by_accessibility_id("AutomationId_RawData_NewParameter").click()
-        time.sleep(3)
+        time.sleep(2)
         verify = self.driver.find_element_by_name("New Parameter").is_displayed()
         # verify = self.driver.find_element_by_name("NEW PARAMETER").is_displayed()  #old id
 
@@ -6784,9 +6884,8 @@ class assaycld():
         actionchains = ActionChains(self.driver)
         penid = self.driver.find_elements_by_class_name("RadTreeViewItem")
         actionchains.double_click(penid[9]).perform()
-        time.sleep(3)
+        # time.sleep(3)
         try:
-            time.sleep(3)
             data = self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Apply")
             data1 = data.is_enabled()
         except:
@@ -6796,17 +6895,17 @@ class assaycld():
             self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Close").click()
         else:
             self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Apply").click()
-        # self.driver.find_element_by_accessibility_id("AutomationId_RawData_ParameterEditor_Apply").click()
+
 
 
     @allure.step('to verufy new parameter in raw data column')
     def raw_data_verify_parameter_smoke(self):
-        time.sleep(7)
+        time.sleep(10)
         self.driver.find_element_by_name("ChipId").click()
         actionchains = ActionChains(self.driver)
         for x in range(0, 8):
             actionchains.send_keys(Keys.ARROW_DOWN).perform()
-        time.sleep(5)
+        time.sleep(2)
         parameter = self.driver.find_element_by_name("Empty : parameter").is_displayed()
         return parameter
 
@@ -6830,4 +6929,7 @@ class assaycld():
         self.driver.find_element_by_accessibility_id("AutomationId_RawData_AllHeadersVisible").click()
         self.driver.find_element_by_accessibility_id("AutomationId_RawData_HeaderVisibility").click()
         verify = self.driver.find_element_by_accessibility_id("ChipId").is_displayed()
+        time.sleep(2)
+        self.driver.find_element_by_accessibility_id("AutomationId_RawData_AllHeadersVisible").click()
+        self.driver.find_element_by_accessibility_id("AutomationId_RawData_AllHeadersVisible").click()
         return verify
