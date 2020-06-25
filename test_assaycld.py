@@ -45,7 +45,7 @@ def test_Start_222466(driver):
     test = str(test_case_ids[0])
     lp.time_start()
     if update_testrail == True:
-        print("got it")
+        # print("got it")
         lp.createTestRun(test_case_ids)
 
 
