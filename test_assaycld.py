@@ -3387,7 +3387,7 @@ def test_verify_templateinwrkbook_222700():
     global test
     test = str(test_case_ids[133])
     lp.time_start()
-    lp.verify_templateinwrkbook()
+    # lp.verify_templateinwrkbook()
     lp.verify_opensettings()
     verify1 = lp.verify_savedfiltertemp()
     assert verify1 == True, "saved filter template demotemp not found"
