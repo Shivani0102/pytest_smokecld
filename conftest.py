@@ -51,11 +51,11 @@ def teardown_module():
 @pytest.fixture(scope="function")
 def driver():
     appdata = os.getenv('APPDATA')
-    # try:
-    #     if os.path.isfile(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml"):
-    #         os.remove(appdata + "\Assay Analyzer 2.0\D37712\CLD.History.xml")
-    # except:
-    #     print("history file not found")
+    try:
+        if os.path.isfile(appdata + "\Assay Analyzer\D37712\CLD.History.xml"):
+            os.remove(appdata + "\Assay Analyzer\D37712\CLD.History.xml")
+    except:
+        print("history file not found")
     try:
         if os.path.isfile(appdata + "\Assay Analyzer\D37712\Pens states.dat"):
             os.remove(appdata + "\Assay Analyzer\D37712\Pens states.dat")
